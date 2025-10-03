@@ -1,0 +1,3 @@
+name,email,message
+"John Doe",john@example.com,"<script>alert('XSS')</script>"
+"Jane Smith",jane@example.com,"Regular message"

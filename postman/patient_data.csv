@@ -1,0 +1,1001 @@
+patient_id,first_name,last_name,email,date_of_birth,medicine,diagnosis,income
+1,Otho,Georg,ogeorg0@chronoengine.com,11/13/2024,Famciclovir,H7013,$128122.87
+2,Evelyn,Bontoft,ebontoft1@sun.com,12/25/2023,"Menthol, Camphor",S32810K,$118519.09
+3,Rupert,Torald,rtorald2@seattletimes.com,6/20/2024,Phenobarbital,T38993,$78163.03
+4,Keary,Squire,ksquire3@sogou.com,2/2/2024,"aluminum hydroxide, magnesium hydroxide, dimethicone",G90,$138184.31
+5,Cosimo,Braban,cbraban4@bandcamp.com,4/10/2024,buspirone hydrochloride,Z89421,$291052.67
+6,Rickard,Cardall,rcardall5@printfriendly.com,4/28/2024,isosorbide dinitrate,T23412,$133300.71
+7,Sophia,Binnion,sbinnion6@time.com,2/22/2024,Hydrocortisone,F3341,$216099.43
+8,Ali,Cavaney,acavaney7@umn.edu,1/18/2024,Elm American,V520XXA,$252783.21
+9,Hastie,Caldroni,hcaldroni8@answers.com,11/21/2024,OCTINOXATE,S66021S,$18884.90
+10,Rollie,Edelmann,redelmann9@wikimedia.org,12/1/2024,Wheat Bunt,G619,
+11,Timmie,Woolner,twoolnera@themeforest.net,10/24/2024,Ruta Graveolens,H748X2,$333701.47
+12,Debera,Kezar,dkezarb@slideshare.net,2/10/2024,Olanzapine,V9029XS,$122648.38
+13,Norman,Coch,ncochc@fotki.com,3/18/2024,Olanzapine,S061X5S,$123209.16
+14,Jourdain,Fonzo,jfonzod@posterous.com,1/4/2024,carbamazepine,M4725,$135672.95
+15,Dolly,Creane,dcreanee@squarespace.com,7/30/2024,TOPIRAMATE,F4021,$116286.68
+16,Fee,Gandley,fgandleyf@instagram.com,3/24/2024,Elm American,S60476S,$121291.41
+17,Lynea,Couser,lcouserg@goo.gl,5/10/2024,Paroxetine Hydrochloride,S63288S,$395495.31
+18,Lesley,Rothermel,lrothermelh@cdc.gov,12/17/2023,Donepezil hydrochloride,O99834,$337827.87
+19,Lucius,Osler,losleri@howstuffworks.com,2/21/2024,Quetiapine Fumarate,H26131,$133046.77
+20,Thomasina,Leyden,tleydenj@squidoo.com,11/12/2024,Digoxin,S00442D,$107782.78
+21,Vinnie,Elleray,vellerayk@wired.com,3/24/2024,Octreotide acetate,Q71892,$393944.82
+22,Lyndsay,Latchmore,llatchmorel@csmonitor.com,1/14/2024,"Echinacea, Hydrastis canadensis, Lomatium dissectum, Nasturtium aquaticum, Tabebuia impetiginosa, Condurango, Ginkgo biloba, Ligusticum porteri, Astragalus membranaceus, Propolis, Thymus, Lycopodium c",S060X9S,
+23,Samuele,Prettyjohn,sprettyjohnm@google.es,8/2/2024,ETHYL ALCOHOL,S32425D,$379367.63
+24,Mord,Gumme,mgummen@pagesperso-orange.fr,3/1/2024,Bowel Nosode B Faecalis,T470X1,
+25,Paule,Costan,pcostano@elegantthemes.com,5/12/2024,Menthol,S63409A,$71465.06
+26,Leandra,Quince,lquincep@salon.com,6/7/2024,CHLORPHENIRAMINE MALEATE and PHENYLEPHRINE HYDROCHLORIDE,S61238D,$345365.76
+27,Kenton,Balffye,kbalffyeq@squarespace.com,12/4/2024,Benztropine Mesylate,S85812A,$182740.20
+28,Launce,Rowlinson,lrowlinsonr@intel.com,6/23/2024,aluminum hydroxide and magnesium carbonate,P0508,$212770.65
+29,Wilbert,Twitching,wtwitchings@instagram.com,2/28/2024,Morus alba,C84Z3,$16586.01
+30,Gayel,Morat,gmoratt@dyndns.org,11/10/2024,"OCTINOXATE, OCTISALATE, TITANIUM DIOXIDE",W5982XD,$286080.01
+31,Sergeant,Peirpoint,speirpointu@youku.com,7/1/2024,"Acetaminophen, Phenylephrine HCl, Dextromethorphan HBr and Guiafenesin",M84533K,
+32,Garnette,Rudolf,grudolfv@japanpost.jp,5/2/2024,ALUMINUM SESQUICHLOROHYDRATE,F12121,
+33,Corby,Longridge,clongridgew@whitehouse.gov,5/19/2024,Hydroxychloroquine Sulfate,S52136J,$43870.23
+34,Oralla,Hudel,ohudelx@youtu.be,7/15/2024,GLYCERIN,P130,$6538.08
+35,Melisa,Hubery,mhuberyy@senate.gov,3/17/2024,isopropyl alcohol,S98139D,$388727.62
+36,Kimberlyn,Pinsent,kpinsentz@eventbrite.com,2/23/2024,Paroxetine Hydrochloride,T654X,$131147.18
+37,Melly,Wrathall,mwrathall10@epa.gov,1/16/2024,Bromfenac sodium,Y909,$332728.15
+38,Dwight,Chartres,dchartres11@people.com.cn,11/20/2024,doxycycline hyclate,T423X5A,
+39,Fernandina,Drake,fdrake12@wix.com,2/12/2024,Nicotine Polacrilex,Y3750,$92355.42
+40,Jeanine,Shilling,jshilling13@usgs.gov,8/28/2024,digoxin,S13160A,$260008.21
+41,Joann,Jickles,jjickles14@github.io,2/23/2024,glycerin and propylene glycol,S52324M,$327683.88
+42,Alasdair,Barker,abarker15@blogs.com,2/24/2024,Pyrithione Zinc,S86929D,$178438.32
+43,Nils,Panchen,npanchen16@yellowpages.com,1/23/2024,Acetaminophen,A084,$372601.91
+44,Webster,Lofthouse,wlofthouse17@cpanel.net,8/13/2024,LIDOCAINE HYDROCHLORIDE ANHYDROUS,M25141,$87992.12
+45,Melinda,Luna,mluna18@hibu.com,3/14/2024,telmisartan,L720,$221134.25
+46,Benita,Beadle,bbeadle19@cdbaby.com,4/3/2024,alprazolam,V0499XD,$276536.45
+47,Whitman,Mattocks,wmattocks1a@jigsy.com,1/2/2024,caffeine citrate,T506X4D,$122574.28
+48,Carmina,Bahike,cbahike1b@vinaora.com,11/13/2024,"BLACK COHOSH, ANAMIRTA COCCULUS SEED, CYPRIPEDIUM PARVIFOLUM ROOT, STRYCHNOS IGNATII SEED, LILIUM LANCIFOLIUM FLOWERING TOP, PASSIFLORA INCARNATA FLOWERING TOP, PLATINUM, VALERIAN, and ZINC VALERATE DIHYDRATE",S21351,
+49,Tierney,Delmonti,tdelmonti1c@blogs.com,10/23/2024,Carbamazepine,Y38811D,$308256.15
+50,Phaidra,Matessian,pmatessian1d@wikipedia.org,2/9/2024,benzocaine and menthol,S15112,
+51,Lulu,Insole,linsole1e@engadget.com,1/10/2024,"Brompheniramine maleate, Dextromethorphan HBr, Phenylephrine HCl",S5591,$711.41
+52,Hunt,McPhate,hmcphate1f@marriott.com,9/16/2024,ALCOHOL,V0402XS,$10039.74
+53,Mei,Bennett,mbennett1g@yellowbook.com,10/13/2024,pantoprazole sodium,T438X4,$11678.47
+54,Chantalle,Newell,cnewell1h@geocities.com,5/26/2024,Diltiazem Hydrochloride,F10929,$5551.88
+55,Sandra,Scoggan,sscoggan1i@123-reg.co.uk,6/27/2024,sodium phosphate,S92404G,$376436.50
+56,Brooks,Berney,bberney1j@posterous.com,7/17/2024,Titanium dioxide,S31144A,$344534.99
+57,Kain,Reyson,kreyson1k@amazon.co.uk,11/25/2024,gentamicin sulfate,S82123H,$267315.73
+58,Lyndsie,Rosel,lrosel1l@paginegialle.it,10/25/2024,Cockroach American,S9581,$324411.27
+59,Meryl,Anstee,manstee1m@bbc.co.uk,5/23/2024,"Antimonium crudum, Belladonna, Calcarea carbonica,",M9914,$250481.63
+60,Rhea,Yarwood,ryarwood1n@yellowpages.com,9/15/2024,Quinapril,S82123D,$197408.36
+61,Bonny,Patriche,bpatriche1o@rambler.ru,6/18/2024,PAROXETINE HYDROCHLORIDE,T3253,$74772.94
+62,Prentice,Quinion,pquinion1p@opera.com,9/15/2024,Acetaminophen,S62292A,
+63,Frasco,Matzaitis,fmatzaitis1q@wunderground.com,11/17/2024,ALCOHOL,M1A0321,$76978.22
+64,Mendy,Ivashov,mivashov1r@cloudflare.com,7/30/2024,clomipramine hydrochloride,W6119XS,$159269.48
+65,Johnette,Todarello,jtodarello1s@merriam-webster.com,8/2/2024,RIBAVIRIN,M84362A,
+66,Lilllie,Mawne,lmawne1t@upenn.edu,3/1/2024,Pepper Tree Pollen,S82446Q,$95120.95
+67,Kleon,Ruggen,kruggen1u@alibaba.com,11/16/2024,Hydroxyzine Pamoate,T2610XD,$311463.17
+68,Scottie,Trundle,strundle1v@ask.com,1/17/2024,"Avobenzone, Homosalate, Octisalate, octocrylene, and Oxybenzone",G2589,$72251.78
+69,Dermot,Ingarfill,dingarfill1w@netscape.com,3/6/2024,Omeprazole,S6140,$185046.79
+70,Sissie,Gorgl,sgorgl1x@illinois.edu,9/6/2024,"carbidopa, levodopa, and entacapone",T83120A,$10776.73
+71,Nixie,Junkinson,njunkinson1y@unblog.fr,9/10/2024,Nystatin,S42151G,$167379.97
+72,Orin,Jeandillou,ojeandillou1z@stanford.edu,2/20/2024,Simvastatin,T848,$77964.74
+73,Hatty,Smitheram,hsmitheram20@oakley.com,1/4/2024,OXYBENZONE,T8052,$273850.77
+74,Eran,McSaul,emcsaul21@dailymail.co.uk,3/28/2024,Olanzapine,T507X6S,$102354.92
+75,Brennan,Jess,bjess22@narod.ru,5/19/2024,LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE,C8216,$231409.20
+76,Audrie,Rizziello,arizziello23@liveinternet.ru,1/30/2024,Aluminum Zirconium Tetrachlorohydrex GLY,T2210XS,$24998.24
+77,Berkie,Coppledike,bcoppledike24@slate.com,11/26/2024,"Octinoxate, Oxybenzone",T50992,$315753.92
+78,Carl,Ioannou,cioannou25@gravatar.com,11/10/2024,BENZETHONIUM CHLORIDE,T83192D,$50732.89
+79,Marena,Lansberry,mlansberry26@last.fm,10/9/2024,Nicotine Polacrilex,S8252XG,$365441.99
+80,Griffy,Roly,groly27@wordpress.org,6/23/2024,HYDROQUINONE,S82452H,$55842.78
+81,Janette,Corday,jcorday28@answers.com,12/21/2023,benazepril hydrochloride and hydrochlorothiazide,S66012S,$236528.20
+82,Ezechiel,McQuarrie,emcquarrie29@upenn.edu,5/15/2024,DOCUSATE SODIUM,T63813S,
+83,Mikey,Leacock,mleacock2a@google.pl,11/29/2024,Levofloxacin,S21109D,$384462.01
+84,Daune,Bewsy,dbewsy2b@kickstarter.com,8/25/2024,"Otinoxate, Zinc Oxide",S99041S,
+85,Vita,McPhail,vmcphail2c@dailymail.co.uk,8/29/2024,"Leucine, Phenylalanine, Lysine, Methionine, Isoleucine, Valine, Histidine, Threonine, Tryptophan, Alanine, Glycine, Arginine, Proline, Serine, Tyrosine, Sodium Acetate, Dibasic Potassium Phosphate, Ma",K299,$68914.50
+86,Elisabet,Burker,eburker2d@miitbeian.gov.cn,9/2/2024,Octinoxate and Octocrylene and Oxybenzone and Octisalate and Meradimate and Titantium Dioxide,S85909S,
+87,Marysa,MacKnight,mmacknight2e@stumbleupon.com,3/14/2024,Grass Mix 8,T513X3A,$190000.07
+88,Wallie,McGeechan,wmcgeechan2f@ted.com,1/24/2024,ciprofloxacin hydrochloride and hydrocortisone,S81851D,$167714.36
+89,Hasty,Deners,hdeners2g@skyrock.com,11/12/2024,Lamotrigine,V174XXS,$80141.35
+90,Alfie,Sinkings,asinkings2h@blog.com,7/12/2024,Diphenhydramine HCl,S62633B,$45991.20
+91,Dulcea,Banfill,dbanfill2i@ustream.tv,6/24/2024,"DL-Camphor, L-Menthol, Methylsalicylate",P020,$26674.98
+92,Garvey,Skelington,gskelington2j@1und1.de,7/23/2024,Titanium Dioxide,V00211A,$338266.51
+93,Dario,Bradie,dbradie2k@miitbeian.gov.cn,2/10/2024,Pamidronate Disodium,S66503,$227720.67
+94,Pepillo,Bineham,pbineham2l@wordpress.com,6/24/2024,ALLANTOIN,S52382S,$361660.88
+95,Jerald,Wardlow,jwardlow2m@fastcompany.com,4/14/2024,Esomeprazole magnesium,S24142A,$328084.85
+96,Zabrina,Kornilyev,zkornilyev2n@reference.com,8/21/2024,amoxicillin and clavulanate potassium,M80039K,$149018.17
+97,Illa,Feacham,ifeacham2o@paginegialle.it,1/1/2024,triclosan,S91142A,$234493.57
+98,Herby,Pifford,hpifford2p@dion.ne.jp,4/5/2024,Levothyroxine Sodium,V0691,$477.02
+99,Corly,Adshede,cadshede2q@unicef.org,9/20/2024,Gemfibrozil,S90414A,$368776.24
+100,Rose,Heading,rheading2r@prlog.org,3/18/2024,Rat Epithelium,H598,$43748.49
+101,Jerad,Buggs,jbuggs2s@salon.com,5/1/2024,Nitrogen,S12301K,$335668.69
+102,Fabio,Duddan,fduddan2t@bandcamp.com,5/13/2024,Naproxen,Y36010S,$241310.78
+103,Tabatha,Driffe,tdriffe2u@imgur.com,8/2/2024,Albuterol Sulfate,T85733D,$338050.97
+104,Caesar,Halksworth,chalksworth2v@topsy.com,12/7/2024,TERBINAFINE HYDROCHLORIDE,T443,$24141.45
+105,Leena,Aslin,laslin2w@sina.com.cn,1/11/2024,"ZINC OXIDE, TITANIUM DIOXIDE",S52346C,
+106,Kattie,Causley,kcausley2x@issuu.com,1/29/2024,"Silicea, Hydrastis Canadensis, Kali Bichromicum, Calcarea Carbonica",B0222,
+107,Hilliard,Yurkevich,hyurkevich2y@tmall.com,7/18/2024,Hydroquinone,E1040,
+108,Harlin,cornhill,hcornhill2z@theatlantic.com,12/27/2023,Prednisone,M7021,$386595.50
+109,Doll,Barribal,dbarribal30@wisc.edu,7/29/2024,"Butalbital, Aspirin, Caffeine, and Codeine Phosphate",M1123,
+110,Cherye,Menghi,cmenghi31@fema.gov,7/4/2024,Benztropine Mesylate,Q859,$73637.17
+111,Alix,Walter,awalter32@list-manage.com,3/29/2024,Glyburide,F12229,$34394.01
+112,Kameko,Sutty,ksutty33@discovery.com,6/16/2024,Carboxymethylcellulose sodium,T2064XS,$163472.04
+113,Renaud,Jedraszek,rjedraszek34@deviantart.com,7/25/2024,Calcium Carbonate,S96999S,
+114,Dorolisa,Cleaton,dcleaton35@cnbc.com,9/18/2024,BUPIVACAINE HYDROCHLORIDE,B974,$298450.50
+115,Esmeralda,Swindley,eswindley36@bravesites.com,9/3/2024,BUPIVACAINE HYDROCHLORIDE,I071,$130958.86
+116,Esme,Moodie,emoodie37@usgs.gov,9/6/2024,Doxorubicin Hydrochloride,O24410,$162419.91
+117,Kynthia,Tumini,ktumini38@usa.gov,7/22/2024,Metoprolol Tartrate and Hydrochlorothiazide,S21422S,
+118,Kennie,Simonett,ksimonett39@slideshare.net,4/27/2024,Benzalkonium Chloride,S92236P,$368573.82
+119,Damiano,Mazzia,dmazzia3a@flickr.com,9/14/2024,PENICILLIUM CHRYSOGENUM,W5901XA,$274927.12
+120,Yanaton,Loines,yloines3b@phpbb.com,7/31/2024,"dimethicone, octinoxate, octisalate, oxybenzone",O293,
+121,Judd,Symcox,jsymcox3c@aboutads.info,12/29/2023,ALCOHOL,L54,
+122,Wally,Klasen,wklasen3d@pen.io,11/27/2024,Meropenem,S75011,$177031.55
+123,Marley,Dahill,mdahill3e@unesco.org,3/22/2024,Methocarbamol,S62186K,$359661.61
+124,Anne-corinne,McSherry,amcsherry3f@businessinsider.com,4/28/2024,Hydroxyurea,S8011XA,$88600.46
+125,Oswell,Wildman,owildman3g@tripadvisor.com,1/24/2024,Diphenhydramine Hydrochloride,M2126,$12727.90
+126,Case,Blackborow,cblackborow3h@chicagotribune.com,5/8/2024,UNDECYLENIC ACID,S35318S,$376461.54
+127,Tiffanie,Horrell,thorrell3i@npr.org,3/24/2024,Tolnaftate,H9121,$89333.67
+128,Igor,Monro,imonro3j@jalbum.net,11/5/2024,Rocky Mountain Juniper,T25012D,$219575.78
+129,Gunther,Cunliffe,gcunliffe3k@tripod.com,8/25/2024,APOCYNUM CANNABINUM ROOT,I9581,$87849.10
+130,Susan,Tunny,stunny3l@nps.gov,3/28/2024,"Cholesterinum, Histaminum Hydrochloricum, Menadione, Pyrrole, Alpha-Lipoicum Acidum, Ascorbicum Acidum, ATP, Fel Tauri",V6988XS,
+131,Melony,Minors,mminors3m@diigo.com,2/12/2024,ONDANSETRON HYDROCHLORIDE,H401314,$180295.54
+132,Mignon,Caghy,mcaghy3n@jugem.jp,8/8/2024,Glycerin,T81502,$328975.23
+133,Cloris,Vittore,cvittore3o@mediafire.com,10/20/2024,salicylic acid,S66811A,$72912.82
+134,Arlene,Jozefiak,ajozefiak3p@furl.net,6/9/2024,Griseofulvin,F13980,$152935.56
+135,Barrie,Kinnoch,bkinnoch3q@usa.gov,8/12/2024,mycophenilic acid,S08111S,$79072.05
+136,Georgianna,Tossell,gtossell3r@dell.com,11/6/2024,"Ethylhexyl methoxycinnamate, Zinc Oxide, Titanium Dioxide, Bis-Ethylhexyloxyphenol Methoxyphenyl Triazine",I82529,$236899.92
+137,Jannelle,Lawlings,jlawlings3s@skype.com,10/5/2024,Testosterone,Y38891S,$22402.80
+138,Nevsa,Ioselev,nioselev3t@twitpic.com,5/4/2024,hydrocodone bitartrate and acetaminophen,S90934A,$61947.72
+139,Tomaso,Levee,tlevee3u@seattletimes.com,6/8/2024,Epirubicin Hydrochloride,T2062,$342685.52
+140,Filia,Ravenshaw,fravenshaw3v@unesco.org,11/26/2024,ondansetron,O0001,
+141,Peadar,Sprasen,psprasen3w@va.gov,4/9/2024,"mineral oil, petrolatum, phenylephrine HCl",S52309J,$137022.23
+142,Guglielmo,Tetley,gtetley3x@dedecms.com,10/25/2024,Prednisone,V284,$7633.49
+143,Tamarra,Beedle,tbeedle3y@wufoo.com,3/28/2024,Levothyroxine Sodium,T651X4S,$122198.03
+144,Howie,Overall,hoverall3z@comsenz.com,9/15/2024,TRICLOSAN,T653X1S,$141929.08
+145,Gustavus,Bamling,gbamling40@army.mil,7/5/2024,Clomipramine Hydrochloride,S32591K,$284705.34
+146,Anestassia,Brame,abrame41@nationalgeographic.com,1/20/2024,Carvedilol,T491X5A,$374961.13
+147,Bertie,Gallehawk,bgallehawk42@weebly.com,5/24/2024,Fludarabine phosphate,C9422,$299152.86
+148,Laurice,Eadon,leadon43@oakley.com,10/20/2024,"bacitracin zinc, neomycin sulfate, polymyxin b sulfate",S60442,$384481.94
+149,Alvie,Eck,aeck44@naver.com,2/19/2024,CHLOROXYLENOL,T24399A,$168584.73
+150,Kenon,Mussalli,kmussalli45@naver.com,12/21/2023,cetirizine hydrochloride,T383X4,
+151,Neala,Oram,noram46@forbes.com,8/9/2024,Hydroxyzine,R87618,$167435.03
+152,Drusilla,Fri,dfri47@umn.edu,11/22/2024,diltiazem hydrochloride,S93312,$376951.73
+153,Candie,Spofforth,cspofforth48@rediff.com,11/2/2024,"Octinoxate, Oxybenzone, Titanium Dioxide",S32519G,$187469.73
+154,Kelcy,Ferby,kferby49@virginia.edu,5/16/2024,SODIUM MONOFLUOROPHOSPHATE,S62323,$13271.96
+155,Aurilia,Eilles,aeilles4a@zimbio.com,6/29/2024,Promethazine Hydrochloride and Codeine Phosphate,S92021B,$336173.10
+156,Burlie,Whiteway,bwhiteway4b@cnbc.com,12/18/2023,Gemfibrozil,M26621,$133180.31
+157,Pancho,Becom,pbecom4c@redcross.org,6/23/2024,"Fucus vesiculosus, Spongia tosta, Pituitaria glandula, Thyroidinum, Arsenicum iodatum,",M90851,$146765.58
+158,Wylie,Tafani,wtafani4d@amazon.com,8/26/2024,Clam,S35415D,
+159,Everett,Barrus,ebarrus4e@cornell.edu,2/22/2024,DEXTROSE MONOHYDRATE and SODIUM CHLORIDE,V9124XA,$38891.49
+160,Leigh,Meugens,lmeugens4f@fc2.com,12/30/2023,SODIUM FLUORIDE,S27412,$211045.44
+161,Hermine,Wicklin,hwicklin4g@51.la,4/5/2024,"OCTINOXATE, OCTOCRYLENE, and ZINC OXIDE",H7013,$316662.09
+162,Bambi,Milan,bmilan4h@abc.net.au,4/10/2024,Zinc Oxide,T6392XD,$212440.06
+163,Lida,Gonnelly,lgonnelly4i@infoseek.co.jp,2/29/2024,MEGESTROL ACETATE,V357XXA,$354062.87
+164,Franky,Mordey,fmordey4j@yandex.ru,11/6/2024,Benzoyl Peroxide,S66395A,$317083.42
+165,Babb,Neward,bneward4k@imageshack.us,10/28/2024,Oxygen,S058X2A,$364902.73
+166,Elle,Nicklinson,enicklinson4l@nasa.gov,10/2/2024,SULFUR,S62343G,
+167,Chastity,Cahn,ccahn4m@mediafire.com,6/26/2024,Diltiazem Hydrochloride,H15113,$23829.22
+168,Berna,Cuttelar,bcuttelar4n@dion.ne.jp,11/30/2024,Pramipexole Dihydrochloride Tablets,M60211,$315793.50
+169,Berty,Sent,bsent4o@feedburner.com,10/6/2024,"AVOBENZONE, HOMOSALATE, OCTISALATE, OCTOCRYLENE",S14148D,
+170,Edith,Wadesworth,ewadesworth4p@csmonitor.com,7/22/2024,Sulfacetamide Sodium,V593XXA,$233927.82
+171,Moreen,Chaddock,mchaddock4q@shop-pro.jp,9/26/2024,Etodolac,K382,$68690.96
+172,Thorn,Varren,tvarren4r@arstechnica.com,3/29/2024,Pramipexole Dihydrochloride,T84029,
+173,Tudor,Newson,tnewson4s@kickstarter.com,7/22/2024,PREGABALIN,T6343,$31995.61
+174,August,Juares,ajuares4t@fema.gov,5/26/2024,"Acetaminophen, diphenhydramine hydrochloride, phenylephrine hydrochloride",G7081,$338632.80
+175,Aldin,Lutwidge,alutwidge4u@ibm.com,6/24/2024,POLYETHYLENE GLYCOL 3350,H50811,$127314.20
+176,Karel,Veivers,kveivers4v@mapy.cz,6/11/2024,Guaifenesin,E8332,$52184.79
+177,Rosalyn,Burberry,rburberry4w@nature.com,8/12/2024,temazepam,T24639,$77724.47
+178,Robbie,Pridden,rpridden4x@shinystat.com,8/11/2024,Meloxicam,G720,$251154.39
+179,Rockie,Simeoni,rsimeoni4y@netvibes.com,6/14/2024,Octinoxate 7.5%,T7800XD,
+180,Mariana,Faichnie,mfaichnie4z@t-online.de,7/21/2024,pancrelipase,V6920XD,$229014.80
+181,Tobias,Mioni,tmioni50@un.org,9/22/2024,oseltamivir phosphate,N7003,$95984.16
+182,Neale,Kittman,nkittman51@diigo.com,10/11/2024,Salicylic Acid,S60444A,$161502.18
+183,Dillie,Nend,dnend52@123-reg.co.uk,7/20/2024,CARBON DIOXIDE,S72362B,$239199.91
+184,Dame,Frith,dfrith53@marketwatch.com,10/4/2024,Fire Ant,M21751,$115851.90
+185,Marlowe,Kittman,mkittman54@g.co,6/2/2024,Albuterol Sulfate,Y37140A,$85377.18
+186,Torre,Freer,tfreer55@forbes.com,4/30/2024,Buspirone hydrochloride,S62348S,$280838.92
+187,Orin,Cruttenden,ocruttenden56@sourceforge.net,5/11/2024,"Calcium Chloride, Magnesium Chloride, Dextrose monohydrate, Lactic Acid, Sodium Chloride, Sodium Bicarbonate, and Potassium Chloride",S72325B,$52941.90
+188,Aron,Batterbee,abatterbee57@tuttocitta.it,5/28/2024,White Petrolatum,S358X1A,$52390.99
+189,Joachim,Lympany,jlympany58@blogger.com,7/8/2024,"OCTINOXATE, OCTISALATE, and OXYBENZONE",S06334A,
+190,Elaine,Dalgarnowch,edalgarnowch59@taobao.com,6/18/2024,doxycycline hyclate,S82456J,$172126.03
+191,Farrah,Spyvye,fspyvye5a@xing.com,9/5/2024,Ibuprofen,S45191S,$173917.00
+192,Carlin,Olsson,colsson5b@youtu.be,10/13/2024,Zolpidem Tartrate,S99822D,$51923.23
+193,Alyse,Hamm,ahamm5c@cdc.gov,2/9/2024,"Camphor, Menthol",E093319,$19657.67
+194,Brigida,Bagnell,bbagnell5d@mapquest.com,5/11/2024,"Aconitum nap., Arnica, Arsenicum alb., Baptisia, Belladonna, Bryonia, Calendula, Chamomilla, Chelidonium majus, Crotalus horridus, Gelsemium, Hepar sulph. calc., Kreosotum, Merc. viv., Myrrha, Nux vom., Phosphorus, Phytolacca, Plantago, Rhus toxicodendron, Silicea, Staphysag., Echinacea",V9015,$278664.98
+195,Bamby,Greydon,bgreydon5e@github.io,7/25/2024,OCTINOXATE,T573X,$295740.36
+196,Adrianne,Venour,avenour5f@ox.ac.uk,2/12/2024,Anhydrous Citric Acid and Sodium Bicarbonate,T80212D,$180796.40
+197,Jesselyn,Gerritsma,jgerritsma5g@liveinternet.ru,1/5/2024,TRICLOSAN,S06363D,$336147.86
+198,Ebonee,Middler,emiddler5h@disqus.com,8/1/2024,Rosmarinus Argentum,Q6651,$390903.29
+199,Patsy,Skirrow,pskirrow5i@seesaa.net,10/16/2024,clindamycin phosphate,H441,$107881.78
+200,Cariotta,Klugel,cklugel5j@studiopress.com,9/13/2024,Alcohol,H33,$259973.54
+201,Poul,Avieson,pavieson5k@google.pl,10/2/2024,"Acetaminophen, diphenhydramine hydrochloride, phenylephrine hydrochloride",T438X1D,$262440.55
+202,Carmine,Briton,cbriton5l@mozilla.org,7/16/2024,NITROUS OXIDE,R828,$148141.92
+203,Lotty,Di Angelo,ldiangelo5m@netscape.com,5/28/2024,trametinib,M21619,$25631.94
+204,Tildi,Shrimpton,tshrimpton5n@webmd.com,6/4/2024,Oxycodone Hydrochloride,S62339S,$272574.11
+205,Collen,Farrin,cfarrin5o@163.com,6/9/2024,"HOMOSALATE, OCTINOXATE, PADIMATE O, OXYBENZONE",T84122S,$382883.27
+206,Babb,Stroud,bstroud5p@usatoday.com,3/18/2024,TELMISARTAN AND HYDROCHLOROTHIAZIDE,O691XX5,$392960.83
+207,Leigh,Troni,ltroni5q@redcross.org,10/26/2024,Calcium carbonate,T23519A,$384015.44
+208,Riobard,Dearnley,rdearnley5r@yahoo.co.jp,12/11/2024,Titanium Dioxide,M60872,$205145.27
+209,Morlee,Cabedo,mcabedo5s@marriott.com,2/9/2024,Eucalyptol,S92534,$202041.87
+210,Annie,Greatbank,agreatbank5t@reddit.com,6/1/2024,Amitriptyline Hydrochloride,S89309S,
+211,Marylee,Colbourn,mcolbourn5u@archive.org,4/11/2024,amoxicillin and clavulanate potassium,N946,$363597.85
+212,Saw,McKim,smckim5v@comsenz.com,4/20/2024,mefloquine hydrochloride,M707,$32057.31
+213,Gwenneth,Bosse,gbosse5w@spiegel.de,9/3/2024,NIFEDIPINE,T2362,$96882.82
+214,Jarred,Dyshart,jdyshart5x@bing.com,3/23/2024,Sertraline,S93611S,$146685.98
+215,Daffy,Bland,dbland5y@1und1.de,8/16/2024,Metoprolol succinate,N948,$322630.16
+216,Matt,Snowden,msnowden5z@theatlantic.com,3/24/2024,Cilostazol,T534X4S,$225141.13
+217,Feliza,Getsham,fgetsham60@smh.com.au,2/18/2024,acetaminophen and codeine phosphate,K941,$105889.33
+218,Rudd,Stoddard,rstoddard61@patch.com,7/8/2024,Risperidone,F5221,$309822.24
+219,Ingeberg,Moggach,imoggach62@yale.edu,2/21/2024,Interleukin-10,H01144,$250411.27
+220,Mattheus,Bottby,mbottby63@g.co,6/9/2024,Ibuprofen,T23299,$20422.54
+221,Gleda,Barcroft,gbarcroft64@instagram.com,3/2/2024,"SODIUM MONOFLUOROPHOSPHATE, SILICON DIOXIDE, GLYCERIN",S6790,$173880.67
+222,Jannel,Eland,jeland65@slideshare.net,11/25/2024,bupropion hydrochloride,M80069A,$115925.60
+223,Melisandra,Allden,mallden66@flavors.me,6/28/2024,Diphenhydramine HCl,M80029K,$155266.59
+224,Orsa,Gothrup,ogothrup67@epa.gov,12/15/2023,methylprednisolone acetate,H70209,$38391.00
+225,Link,Niland,lniland68@ning.com,12/12/2023,CHLOROPROCAINE HYDROCHLORIDE,S86921S,$393951.00
+226,Samaria,O'Connel,soconnel69@mtv.com,10/2/2024,DIGOXIN,S100XXA,$387317.89
+227,Chase,Nisco,cnisco6a@acquirethisname.com,9/8/2024,SCHOENOCAULON OFFICINALE SEED,V9321XS,$387550.78
+228,Courtenay,Antonias,cantonias6b@prnewswire.com,5/25/2024,Theophylline,H1133,$369121.15
+229,Killie,Quakley,kquakley6c@is.gd,8/22/2024,HYDROCODONE BITARTRATE and ACETAMINOPHEN,H4030X4,$307558.62
+230,Jacqui,Maciocia,jmaciocia6d@wikispaces.com,7/24/2024,GLIPIZIDE,S52515D,$217530.68
+231,Edmund,Beckinsall,ebeckinsall6e@purevolume.com,9/7/2024,"Dextromethorphan hbr, Guaifenesin",S60457S,$388574.36
+232,Marrilee,Laroze,mlaroze6f@infoseek.co.jp,3/8/2024,"Aspirin, Citric Acid Monohydrate, and Sodium Bicarbonate",S72132P,$75601.73
+233,Luci,Folkard,lfolkard6g@vk.com,2/13/2024,Clotrimazole and Betamethasone Dipropionate,S8292XC,$81466.82
+234,Templeton,Jeacop,tjeacop6h@blogtalkradio.com,1/27/2024,"Arnica, Bellis, Chamomilla, Mag phos, Symphytum, Acacia gum, lactose, magnesium stearate, corn starch, sucrose",T83038S,$363380.30
+235,Koenraad,Adriaan,kadriaan6i@tamu.edu,1/12/2024,"Acetaminophen, Dextromethorphan HBr, Doxylamine Succinate, Phenylephrine HCl",M06021,$59858.35
+236,Gibbie,Huggon,ghuggon6j@free.fr,7/11/2024,Cefazolin,S79019D,$118530.85
+237,Fons,Pawelec,fpawelec6k@mit.edu,9/18/2024,Pseudoephedrine Hydrochloride,T34811D,
+238,Gerrie,Peeke,gpeeke6l@examiner.com,8/14/2024,influenza virus vaccine,T22729A,$394857.11
+239,Pebrook,Kelcher,pkelcher6m@list-manage.com,3/27/2024,ALCOHOL,T83428A,$392925.92
+240,Aggi,Bowering,abowering6n@ask.com,8/31/2024,"Octinoxate, Zinc Oxide",V654XXD,$73040.85
+241,Marven,Studeart,mstudeart6o@businesswire.com,11/3/2024,cephalexin,T7806XD,
+242,Ariella,Rodrig,arodrig6p@umich.edu,7/3/2024,"Brompheniramine Maleate, Dextromethorphan Hydrobromide and Phenylephrine Hydrochloride",I6051,$80361.47
+243,Jacquette,Fortoun,jfortoun6q@rakuten.co.jp,7/29/2024,ALUMINUM CHLOROHYDRATE,S56405,$365260.40
+244,Leicester,Godlee,lgodlee6r@ed.gov,5/1/2024,Cetirizine HCl and Pseudoephedrine HCl,S0211BG,$197069.27
+245,Harlene,Landes,hlandes6s@plala.or.jp,1/22/2024,Pantoprazole Sodium,S82864A,$151115.62
+246,Alexis,Crowest,acrowest6t@barnesandnoble.com,4/23/2024,Naproxen Sodium,I072,$218933.08
+247,Kanya,Carbonell,kcarbonell6u@edublogs.org,5/19/2024,Cefotaxime,H02055,$229308.69
+248,Shawn,Northam,snortham6v@scribd.com,5/29/2024,Benzalkonium chloride,S26021S,
+249,Charleen,Lancaster,clancaster6w@so-net.ne.jp,6/18/2024,Glyburide,S43492D,$40026.49
+250,Maddalena,Collet,mcollet6x@cam.ac.uk,5/4/2024,diazepam,O24111,$270597.70
+251,Ashlee,Petzolt,apetzolt6y@tamu.edu,6/3/2024,sodium fluoride,S2692,$343742.25
+252,Clementine,Sailer,csailer6z@mozilla.com,9/16/2024,"Standardized Mite, Dermatophagoides pteronyssinus, Intradermal, 300 AU per mL",S40259S,$214402.59
+253,Adler,Caville,acaville70@hostgator.com,3/3/2024,ALCOHOL,M8907,$171514.01
+254,Paola,Castanie,pcastanie71@blinklist.com,8/31/2024,ethanol,C910,$146571.70
+255,Aubry,Pringle,apringle72@mac.com,11/11/2024,Titanium Dioxide and Octinoxate,T84098,$33625.71
+256,Florenza,de Courcey,fdecourcey73@home.pl,3/9/2024,Tacrolimus,S50329A,$153054.99
+257,Giacinta,Evitts,gevitts74@nymag.com,9/12/2024,Sodium Fluoride and Triclosan,S49122S,$237772.41
+258,Magnum,Camillo,mcamillo75@free.fr,9/17/2024,Amitriptyline Hydrochloride,S59139K,$379590.06
+259,Dru,Currom,dcurrom76@microsoft.com,11/13/2024,Octinoxate and Titanium dioxide,S62607S,$323123.70
+260,Roxi,Brager,rbrager77@feedburner.com,11/25/2024,Ciprofloxacin,S63682,$396554.72
+261,Peta,Gatlin,pgatlin78@jigsy.com,9/9/2024,Naproxen Sodium,N135,$183749.36
+262,Raphaela,Rehn,rrehn79@unblog.fr,8/13/2024,Firebush/Burning Bush,W3183XS,
+263,Rozanna,Larwell,rlarwell7a@ustream.tv,2/25/2024,Simethicone,Y9374,$45584.79
+264,Jefferson,Gibbens,jgibbens7b@whitehouse.gov,3/29/2024,"SPONGIA OFFICINALIS SKELETON, ROASTED and CALCIUM IODIDE and FUCUS VESICULOSUS and SILICON DIOXIDE and",S86219A,$209171.96
+265,Kellina,Grindell,kgrindell7c@wordpress.org,6/26/2024,alcohol,S82433E,$318622.63
+266,Cletus,Bickerdicke,cbickerdicke7d@mayoclinic.com,7/2/2024,Rhubarb,S72063H,$147553.77
+267,Petey,Blown,pblown7e@time.com,11/14/2024,"Aconite, Agnus Castus, Alfalfa, Asafeotida, Calcarea Carb, Chamomilla, Causticum, Dulcamara, Lac Caninum, Lactuca Virosa, Phosphoricum Acidum, Pulsatilla, Ricinus, Rhus Tox, Silicea, Sulphur, Thyroidinum, Urtica Urens, Zinc",B355,$23593.64
+268,Codie,Chaikovski,cchaikovski7f@howstuffworks.com,6/5/2024,Amlodipine Besylate and Benazepril Hydrochloride,S63272D,$372965.35
+269,Padriac,Carville,pcarville7g@cnbc.com,11/13/2024,"Potassium Sulfate, Salicylic Acid, Silicon Dioxide, Calcium Sulfate Anhydrous, Quinine Sulfate, Allylthiourea",T39312D,$114931.87
+270,Loralyn,Breakwell,lbreakwell7h@arizona.edu,11/13/2024,TRICLOSAN,S31613S,$379644.46
+271,Quentin,Frye,qfrye7i@xing.com,3/23/2024,"arnica montana, msm",H21543,$127907.26
+272,Cindie,Brambley,cbrambley7j@mayoclinic.com,1/14/2024,"Titanium Dioxide, Zinc Oxide",S92115G,$292911.38
+273,Courtney,Muttitt,cmuttitt7k@privacy.gov.au,12/3/2024,Levothyroxine Sodium,S2909,$175674.49
+274,Ianthe,Kember,ikember7l@whitehouse.gov,8/24/2024,Glycerin,S62234A,$193434.17
+275,Timothea,Paish,tpaish7m@ca.gov,8/18/2024,Oxygen,S52046P,
+276,Vance,Abell,vabell7n@yelp.com,12/18/2023,"Acetaminophen, Dextromethorphan HBr, Doxylamine Succinate, Phenylephrine HCl",V8643XA,$349510.32
+277,Lucie,Bontein,lbontein7o@sciencedirect.com,5/30/2024,PREGABALIN,V4303XD,$142709.10
+278,Garry,Spores,gspores7p@statcounter.com,12/30/2023,Cetirizine Hydrochloride,S2529XA,$280706.17
+279,Kylie,Hallede,khallede7q@howstuffworks.com,12/21/2023,"Bone, Calcarea Carbonica, Calcarea Fluorica, Causticum, Cocculus Indicus, Ledum Palustre, Phosphoricum Acidum, Rhus Toxicodendron",S55001S,
+280,Sheri,Kitchin,skitchin7r@shop-pro.jp,5/25/2024,Octinoxate,G4731,$118477.31
+281,Zorah,Potteridge,zpotteridge7s@twitter.com,2/11/2024,HUMAN IMMUNEGLOBULIN G and HYALURONIDASE (HUMAN RECOMBINANT),T2071,$249145.03
+282,Kimbra,Muge,kmuge7t@squarespace.com,11/17/2024,"Acetaminophen, Dextromethorphan Hydrobromide, Phenylephrine Hydrochloride",T22552D,
+283,Val,Masham,vmasham7u@spotify.com,6/18/2024,methylphenidate hydrochloride,M6137,$256865.44
+284,Mill,Onslow,monslow7v@washington.edu,6/17/2024,Lovastatin,S63218S,$81351.24
+285,Yanaton,Thal,ythal7w@diigo.com,9/11/2024,dexmethylphenidate hydrochloride,K8037,$57382.82
+286,Rickard,Penhaleurack,rpenhaleurack7x@diigo.com,3/23/2024,Petrolatum,M84541P,$248754.36
+287,Ferrell,Sisneros,fsisneros7y@indiegogo.com,8/25/2024,Curly Dock,Y0752,$149133.58
+288,Dion,Fynes,dfynes7z@addtoany.com,2/22/2024,Gemfibrozil,O6014X9,$153236.71
+289,Raffaello,Padbery,rpadbery80@theglobeandmail.com,4/2/2024,Ribavirin,F30,$208941.99
+290,Ronnica,Hutchens,rhutchens81@issuu.com,11/28/2024,Topiramate,S52246H,$232209.33
+291,Kylila,Juszczak,kjuszczak82@issuu.com,7/13/2024,"Acetaminophen, Diphenhydramine HCL, and Phenylephrine HCL.",S32424,$91639.41
+292,Brunhilde,Popplewell,bpopplewell83@comcast.net,11/23/2024,Naproxen Sodium,V241XXD,$59892.09
+293,Mart,Trude,mtrude84@eventbrite.com,12/1/2024,Menthol,S89049D,$104314.98
+294,Reinhold,McCorkindale,rmccorkindale85@t-online.de,5/12/2024,Titanium Dioxide and Octinoxate,T471X4S,$66375.13
+295,Bryce,Bean,bbean86@netlog.com,5/14/2024,WITCH HAZEL,S42461S,$133939.34
+296,Ninette,Filson,nfilson87@biglobe.ne.jp,6/19/2024,Octinoxate Titanium dioxide,S99109S,$120339.88
+297,Johan,Bellward,jbellward88@mysql.com,6/29/2024,Ibuprofen,S2224XS,$163211.71
+298,Gwenette,Copplestone,gcopplestone89@independent.co.uk,6/13/2024,"OCTINOXATE, OCTISALATE, OCTOCRYLENE, AVOBENZONE",T23211,$366365.20
+299,Tonye,MacPherson,tmacpherson8a@wunderground.com,5/11/2024,AVOBENZONE and OCTINOXATE,S63094A,$34379.21
+300,Don,Hughesdon,dhughesdon8b@unc.edu,3/18/2024,Ibuprofen,S62340B,$123076.97
+301,Tobie,Bazely,tbazely8c@uiuc.edu,3/31/2024,"Antimon. crud., Arsenicum alb., Aur. met., Berber. aqui., Bovista, Carbo veg., Causticum, Chelidonium majus, Dulcamara, Graphites, Hepar sulph. calc., Hydrocotyle, Kali brom., Kali iod., Ledum, Lycopodium, Nux vom., Silicea, Sulphur iod., Zinc. met., Echinacea, Juglans regia, Lappa, Taraxacum",S12001D,$259412.61
+302,Pepillo,Dineen,pdineen8d@lulu.com,5/29/2024,Curly Dock,S61320D,$101886.07
+303,Luise,Grzeszczak,lgrzeszczak8e@wsj.com,4/1/2024,Octinoxate and Oxybenzone,T84296A,$227584.41
+304,Juieta,Trase,jtrase8f@cmu.edu,10/14/2024,"EUCALYPTOL, MENTHOL, METHYL SALICYLATE, THYMOL",T81516,$50135.79
+305,Eliza,Gomez,egomez8g@elegantthemes.com,2/14/2024,ZINC OXIDE,S12491D,$204760.54
+306,Maddy,Boltwood,mboltwood8h@ft.com,3/14/2024,Losartan Potassium,H211X1,$32883.92
+307,Ban,Standley,bstandley8i@desdev.cn,3/29/2024,"Aluminum hydroxide, Magnesium hydroxide, Simethicone",T71121A,$332513.45
+308,Engracia,Gentreau,egentreau8j@mapquest.com,5/13/2024,"AVOBENZONE, OCTOCRYLENE, OXYBENZONE",R710,$40573.53
+309,Dacy,Hampton,dhampton8k@sina.com.cn,6/9/2024,"ARNICA MONTANA, HYPERICUM PERFORATUM",T25119A,$390421.66
+310,Ninnetta,Greave,ngreave8l@merriam-webster.com,9/29/2024,Octinoxate and Titanium Dioxide,H53139,$231604.12
+311,Pietro,Prevett,pprevett8m@nhs.uk,5/19/2024,Zinc Pyrithione,S61255A,
+312,Conchita,Grinnell,cgrinnell8n@blog.com,11/15/2024,"Dextromethorphan Hydrobromide, Guaifenesin, and Pseudoephedrine Hydrochloride",V9012XS,$294150.76
+313,Florida,Chaplain,fchaplain8o@quantcast.com,6/24/2024,"Avobenzone, Octinoxate, and Octisalate",S99129G,$323933.11
+314,Elianora,Klimkin,eklimkin8p@trellian.com,5/20/2024,Indocyanine Green,V301XXD,$94264.59
+315,Luise,Duesberry,lduesberry8q@wufoo.com,1/13/2024,OCTINOXATE and TITANIUM DIOXIDE,T63464D,
+316,Nicola,Skin,nskin8r@hubpages.com,2/9/2024,standardized senna concentrate,S83105S,$160094.83
+317,Anjanette,Janicijevic,ajanicijevic8s@angelfire.com,8/8/2024,"POLYETHYLENE GLYCOL 3350, SODIUM CHLORIDE, POTASSIUM CHLORIDE, SODIUM BICARBONATE, and SODIUM SULFATE ANHYDROUS",S82434R,$236638.85
+318,Erny,Llewellin,ellewellin8t@oaic.gov.au,7/19/2024,calcium carbonate,T84197,$151714.67
+319,Carr,Strode,cstrode8u@tamu.edu,10/6/2024,triclosan,S86011A,$5211.23
+320,Elli,Pilbury,epilbury8v@xinhuanet.com,4/14/2024,Mixture of Standardized and Non-Standardized Coastal Grasses,M86622,$326817.61
+321,Corrine,Cotgrove,ccotgrove8w@washington.edu,3/15/2024,alpha-1-proteinase inhibitor human,S91216D,$114607.65
+322,Trudie,Haller,thaller8x@npr.org,4/1/2024,Epirubicin Hydrochloride,T445X3S,$385273.79
+323,Rosabel,Willimot,rwillimot8y@hatena.ne.jp,3/1/2024,Bacitracin Zinc,T85858,$387797.42
+324,Marjie,Raoult,mraoult8z@mac.com,10/14/2024,Omeprazole,M6228,$143239.75
+325,Buiron,Maywood,bmaywood90@washington.edu,5/18/2024,Omeprazole,S56311S,$213660.02
+326,Janela,Alsford,jalsford91@wordpress.org,4/11/2024,mometasone furoate and formoterol fumarate dihydrate,S56196S,$313590.92
+327,Annecorinne,Lochran,alochran92@google.co.uk,2/13/2024,TOLNAFTATE,I639,$41530.77
+328,Yorgos,Aitkin,yaitkin93@accuweather.com,10/27/2024,CLADOSPORIUM SPHAEROSPERMUM,S00562S,$195498.03
+329,Kile,Yakubowicz,kyakubowicz94@nydailynews.com,10/9/2024,nitroglycerin,S76819S,$164847.18
+330,Rosene,Garrad,rgarrad95@mozilla.com,7/26/2024,Chlorzoxazone,N5201,$202390.17
+331,Alexandr,Ligoe,aligoe96@naver.com,8/10/2024,Influenza Vaccine,S86019S,$327697.35
+332,Ianthe,Hobson,ihobson97@instagram.com,2/9/2024,"Chlorpheniramine maleate, Phenylephrine HCl",S82434N,$81161.04
+333,Kary,Woolmer,kwoolmer98@meetup.com,4/30/2024,Avobenzone and Octinoxate,S8253XA,$353111.85
+334,Edgardo,Lightman,elightman99@upenn.edu,5/13/2024,Ranitidine,S21021S,$233860.31
+335,Binny,Old,bold9a@nhs.uk,1/17/2024,Silver Maple,T63822,$221439.51
+336,Fayth,Leavy,fleavy9b@newsvine.com,11/8/2024,HYDROCODONE BITARTRATE AND ACETAMINOPHEN,Q6412,$341895.02
+337,Geraldine,Piccop,gpiccop9c@loc.gov,6/5/2024,POTASSIUM CHLORIDE,Y0703,$126231.71
+338,Lonni,Leggett,lleggett9d@amazon.co.jp,12/29/2023,triclosan,E133513,$35976.80
+339,Jacobo,Wayland,jwayland9e@w3.org,5/14/2024,"Homosalate, Octisalate, Oxybenzone, Octocrylene, Avobenzone",W890XXS,
+340,Harald,Allaway,hallaway9f@dedecms.com,3/28/2024,"Juglans regia, Myosotis arvensis, Scrophularia nodosa, Teucrium scorodonia, Veronica officinalis, Equisetum hyemale, Fumaria officinalis, Geranium robertianum, Nasturtium aquaticum, Natrum sulphuricum",S32402D,$367839.55
+341,Zena,Whittleton,zwhittleton9g@sakura.ne.jp,7/15/2024,Oxycodone and Acetaminophen,T43015S,$245501.03
+342,Allyn,Treanor,atreanor9h@unesco.org,12/13/2023,Phenytoin Sodium,S90445S,$227915.02
+343,Clywd,Bryceson,cbryceson9i@blogs.com,8/24/2024,romiplostim,M13822,$315965.37
+344,Codi,Crown,ccrown9j@adobe.com,3/8/2024,Betamethasone Dipropionate,S7302,$60426.50
+345,Nat,Rickaby,nrickaby9k@marriott.com,6/21/2024,Pyrethrum,W5641XS,$228583.69
+346,Romona,Vallentin,rvallentin9l@dropbox.com,8/27/2024,Phenylephrine Hydrochloride and Guaifenesin,G40B,$56867.17
+347,Maud,McNaughton,mmcnaughton9m@howstuffworks.com,3/10/2024,"Arsenicum album, Belladonna, Ipecacuanha, Kali carbonicum",M25251,$136998.59
+348,Estevan,Stollwerck,estollwerck9n@amazon.co.uk,11/8/2024,"neomycin sulfate, polymyxin b sulfate and dexamethasone",M889,$206287.30
+349,Rasla,Ottam,rottam9o@jimdo.com,6/5/2024,Hyperbaric Chamber Mix,M84441K,
+350,Royall,Blakey,rblakey9p@gravatar.com,4/14/2024,Levothyroxine Sodium,Q387,$325428.55
+351,Kevyn,Bowller,kbowller9q@foxnews.com,4/24/2024,"Salicylic Acid, Niacinamide, Menthol",S72142E,$146898.02
+352,Costanza,Keeping,ckeeping9r@utexas.edu,4/11/2024,Alcohol Wipe,F12120,
+353,Selinda,Batcock,sbatcock9s@addtoany.com,5/22/2024,MENTHOL and CAMPHOR (SYNTHETIC),S2313,$364712.69
+354,Edgar,Sharville,esharville9t@google.nl,7/28/2024,Triclosan,B66,$127376.04
+355,Evan,Luddy,eluddy9u@tumblr.com,8/6/2024,topiramate,S349,$316706.79
+356,Iolande,Phizacklea,iphizacklea9v@odnoklassniki.ru,8/18/2024,diltiazem hydrochloride,T63073A,
+357,Gannon,Perse,gperse9w@about.com,4/5/2024,cefuroxime axetil,S52346K,$280423.81
+358,Kiah,Shinn,kshinn9x@elegantthemes.com,7/20/2024,CAPTORPIL,S92035S,$50288.44
+359,Keene,Cotta,kcotta9y@pcworld.com,10/10/2024,"Hydrastis Canadensis, Taraxacum Officinale, Dopamine (Hydrochloride), L-Dopa, Melatonin, Serotonin",I70638,
+360,Mirelle,Tomkinson,mtomkinson9z@ameblo.jp,3/4/2024,Triclosan,T17298A,$194319.18
+361,Ellen,Haking,ehakinga0@google.com.hk,4/2/2024,POLYETHYLENE GLYCOL 3350,M926,$321404.39
+362,Marleah,Curtain,mcurtaina1@google.nl,6/10/2024,Sodium Fluoride,V0309XS,$276331.89
+363,Bentlee,Balnave,bbalnavea2@github.io,12/20/2023,dolasetron mesylate,T22522A,$64949.55
+364,Ruprecht,Alldre,ralldrea3@aol.com,7/10/2024,"Antihemophilic Factor, Recombinant",P0516,$231254.83
+365,Victoir,Deex,vdeexa4@ifeng.com,9/24/2024,"Acetaminophen, Dextromethorphan HBr, Doxylamine succinate",S62033G,$372663.83
+366,Janette,Lippi,jlippia5@vistaprint.com,2/28/2024,"OCTINOXATE, TITANIUM DIOXIDE",P0821,$398163.85
+367,Penny,Wickey,pwickeya6@usnews.com,6/22/2024,"Aralia quinquefolia, Arnica montana, Avena sativa, Carduus marianus, DHEA, Glandula suprarenalis suis, L-arginine, Natrum muriaticum, Phosphoricum acidum, Thuja occidentalis, Vitamin E,",T373X1S,$256102.93
+368,Sig,Foresight,sforesighta7@ezinearticles.com,11/11/2024,"Acetaminophen, Diphenhydramine Hydrochloride, and Phenylephrine Hydrochloride",G4000,$67728.65
+369,Pierson,Alexander,palexandera8@fda.gov,6/3/2024,Octinoxate,T403,$120614.29
+370,Talya,Wilton,twiltona9@w3.org,3/21/2024,Trace Elements 4,T477X4S,$380392.48
+371,Fletch,Caush,fcaushaa@va.gov,10/15/2024,PROGESTERONE,S72416,$213569.08
+372,Nathaniel,Ellor,nellorab@unc.edu,1/3/2024,Menthol and Methyl Salicylate,S1191,$307723.67
+373,Tara,Grube,tgrubeac@devhub.com,5/23/2024,Doxepin Hydrochloride,P5690,$352587.06
+374,Deeanne,Bustard,dbustardad@shareasale.com,5/12/2024,PREGABALIN,T451X1D,$46581.97
+375,Dorene,Coxhead,dcoxheadae@list-manage.com,11/22/2024,Ethambutol Hydrochloride,T448,$214023.02
+376,Alfons,Murty,amurtyaf@slate.com,4/12/2024,Morphine Sulfate,S89032,$240514.17
+377,Dulcinea,Aspinwall,daspinwallag@com.com,12/28/2023,Menthol,S61217A,$165492.71
+378,Marshall,Hamlen,mhamlenah@usda.gov,3/10/2024,Raloxifene hydrochloride,S02400G,$308444.37
+379,Rosalie,Dayborne,rdayborneai@foxnews.com,5/19/2024,Rhubarb,T40904S,$92579.83
+380,Izabel,O'Doherty,iodohertyaj@angelfire.com,7/22/2024,clonidine hydrochloride,F1026,$119916.17
+381,Maia,Prott,mprottak@umn.edu,1/5/2024,TITANIUM DIOXIDE,J95850,$137847.49
+382,Miner,Pendle,mpendleal@noaa.gov,2/5/2024,diltiazem hydrochloride,S39022D,$34196.71
+383,Brandyn,Huot,bhuotam@discuz.net,4/20/2024,"Acetaminophen, Dextromethorphan Hydrobromide, Phenylephrine Hydrochloride",S52571G,$148499.39
+384,Moina,Azemar,mazemaran@utexas.edu,12/14/2023,diclofenac sodium and misoprostol,M05811,$136448.36
+385,Isidore,Alban,ialbanao@multiply.com,2/3/2024,Panthenol,S31121S,$249588.73
+386,Lilias,Phillput,lphillputap@linkedin.com,12/30/2023,"mineral oil, petrolatum, phenylephrine HCl",T22539D,$237383.74
+387,Hastie,Sugarman,hsugarmanaq@webnode.com,12/2/2024,Lorazepam,V370XXS,$61633.11
+388,Timmie,Bernakiewicz,tbernakiewiczar@github.io,9/7/2024,nicotine polacrilex,S14111A,$116426.36
+389,Constantina,Genese,cgeneseas@youtu.be,12/25/2023,Naproxen sodium,S82832H,$98456.83
+390,Melva,Balding,mbaldingat@scientificamerican.com,4/5/2024,Simethicone,S92016A,$273494.73
+391,Nesta,Sloy,nsloyau@xrea.com,1/20/2024,"Dextromethorphan Hydrobromide, Guaifenesin, Phenylephrine Hydrochloride",Q399,$132524.71
+392,Camila,Highman,chighmanav@oaic.gov.au,3/24/2024,Hyoscyamine Sulfate Extended-Release,S62653A,
+393,Karoline,Abade,kabadeaw@ihg.com,12/4/2024,Plumbum 5,I82220,$267774.32
+394,Jemmy,McColley,jmccolleyax@weebly.com,2/23/2024,"Menthol, zinc oxide",T33522,
+395,Lemmy,Priditt,lpridittay@java.com,11/1/2024,"OCTINOXATE, OXYBENZONE",S72144N,$72056.52
+396,Zachariah,Dornan,zdornanaz@nyu.edu,6/30/2024,Sodium Fluoride,R29713,$195887.99
+397,Lisbeth,Barlow,lbarlowb0@globo.com,5/14/2024,Guaifenesin,S72024E,$172089.41
+398,Mariquilla,Casotti,mcasottib1@blogtalkradio.com,7/31/2024,Enoxaparin Sodium,Q619,$108871.39
+399,Freddie,Whitty,fwhittyb2@usgs.gov,8/12/2024,Lorazepam,N5311,$282509.46
+400,Alisun,Vasyushkhin,avasyushkhinb3@arstechnica.com,8/11/2024,Levetiracetam,T25091A,$248993.93
+401,Irvin,Prater,ipraterb4@godaddy.com,10/19/2024,CLOVE,S52502S,
+402,Lyndsay,Daughtrey,ldaughtreyb5@stanford.edu,4/5/2024,Fusarium spp,H02239,$349606.34
+403,Jdavie,Ebbutt,jebbuttb6@geocities.jp,8/20/2024,HYDROCHLOROTHIAZIDE,S31114S,$330588.56
+404,Junette,Arkle,jarkleb7@chronoengine.com,7/21/2024,Aluminum zirconium tetrachlorohydrex gly,S40261,$345444.80
+405,Leo,Lawrenz,llawrenzb8@indiegogo.com,8/18/2024,"Aluminum Hydroxide, Magnesium Hydroxide, Simethicone",M5187,$369205.62
+406,Stacey,Carragher,scarragherb9@123-reg.co.uk,9/16/2024,Octinoxate and Oxybenzone,H5303,$171116.57
+407,Gottfried,Lowrance,glowranceba@photobucket.com,12/18/2023,"bacitracin, neomycin, polymyxin B",M1A3321,
+408,Charmane,Cheasman,ccheasmanbb@army.mil,2/27/2024,Clomipramine Hydrochloride,S23160,$145007.45
+409,Bee,O'Gaven,bogavenbc@about.me,11/24/2024,Naproxen Sodium,S56109A,$271119.51
+410,Kara-lynn,Clarey,kclareybd@howstuffworks.com,2/10/2024,SIMETHICONE,S42012,$219419.27
+411,Peyton,Granleese,pgranleesebe@ycombinator.com,11/6/2024,Coast Maple,M1A171,$320963.88
+412,Farica,Glanfield,fglanfieldbf@blogspot.com,10/22/2024,CLOTRIMAZOLE,T700XXD,$137511.74
+413,Honoria,Blomefield,hblomefieldbg@wix.com,9/30/2024,Ofloxaxin,S82844E,$42940.72
+414,Francisco,Tims,ftimsbh@ft.com,6/22/2024,"CALENDULA OFFICINALIS FLOWERING TOP, HYPERICUM PERFORATUM, and SODIUM CHLORIDE",S41129S,$160089.80
+415,Sheffield,Crickmoor,scrickmoorbi@so-net.ne.jp,2/29/2024,Acetaminophen,T61771S,$267007.46
+416,Kandy,Galtone,kgaltonebj@wufoo.com,6/27/2024,"Avobenzone, Homosalate, Octocrylene",S72335M,$300214.84
+417,Marietta,Swanborrow,mswanborrowbk@github.io,4/1/2024,Levetiracetam,O88813,
+418,Darrell,Foddy,dfoddybl@omniture.com,8/10/2024,Haloperidol Decanoate,M84376S,$59928.26
+419,Cinderella,Shieber,cshieberbm@msn.com,6/21/2024,levetiracetam,T591X4D,$88580.83
+420,Sheena,McKeaney,smckeaneybn@sciencedirect.com,12/12/2023,Alcohol,T511X,$235256.49
+421,Wrennie,Snowden,wsnowdenbo@vistaprint.com,1/7/2024,SULFACETAMIDE SODIUM,M90852,$139868.32
+422,Rodrick,Vaggers,rvaggersbp@uiuc.edu,2/28/2024,Dock Yellow,M6581,$151535.41
+423,Marcia,MacAndreis,mmacandreisbq@sitemeter.com,12/15/2023,Octinoxate and Titanium Dioxide,T20711A,
+424,Loutitia,Jiles,ljilesbr@t.co,2/18/2024,Phenylephrine Hydrochloride,A1803,$353426.95
+425,Glenden,Macknish,gmacknishbs@t.co,5/9/2024,TECHNETIUM TC-99M SODIUM PERTECHNETATE,F988,$236154.67
+426,Berkley,Wedgwood,bwedgwoodbt@so-net.ne.jp,1/10/2024,nicotine,S3629,$308685.73
+427,Dyna,Mabley,dmableybu@gizmodo.com,1/3/2024,"Avobenzone, Homosalate, Octinoxate, Octocrylene",G43109,$300728.71
+428,Janela,MacCartney,jmaccartneybv@yellowpages.com,12/16/2023,"Octinoxate, Octisalate",S839,$205197.67
+429,Georgy,Di Francecshi,gdifrancecshibw@cnet.com,9/14/2024,Hydralazine Hydrochloride,M8927,$309978.92
+430,Jack,Foreman,jforemanbx@narod.ru,9/9/2024,Mitoxantrone Hydrochloride,S43121,$370036.43
+431,Celie,Brook,cbrookby@sourceforge.net,7/11/2024,Benzocaine,Y01,$15142.56
+432,Gwendolin,Noraway,gnorawaybz@sohu.com,8/13/2024,Salicylic Acid,T85625A,$186252.23
+433,Debee,Parkhouse,dparkhousec0@npr.org,3/21/2024,Lorazepam,S92156A,$397190.44
+434,Glenine,Cobbold,gcobboldc1@bing.com,4/10/2024,TRICLOSAN,V80918D,$10695.02
+435,Ralf,Gaunter,rgaunterc2@squidoo.com,3/18/2024,Atovaquone and Proguanil Hydrochloride,K7589,$346234.22
+436,Latisha,Sivorn,lsivornc3@mac.com,3/22/2024,CHLOROXYLENOL,T84113A,$7184.47
+437,Henry,Van Salzberger,hvansalzbergerc4@reddit.com,4/4/2024,Hydrocodone Bitartrate And Acetaminophen,W67XXXA,$354193.55
+438,Bronson,Pohlak,bpohlakc5@cafepress.com,8/22/2024,Tetracycline Hydrochloride,T65894,$384071.51
+439,Kally,Hefferan,khefferanc6@mayoclinic.com,8/23/2024,"DL-Camphor, L-Menthol, Methylsalicylate",N9971,$44522.58
+440,Carlota,Falkous,cfalkousc7@columbia.edu,2/21/2024,DIETHYLPROPION HYDROCHLORIDE,W3410,$133299.57
+441,Gaylord,Yerbury,gyerburyc8@acquirethisname.com,6/12/2024,Vancomycin HCl,S24102D,$344452.32
+442,Erinn,Lumsdale,elumsdalec9@ning.com,11/29/2024,Valacyclovir Hydrochloride,S12291,$378558.22
+443,Guglielma,Baldini,gbaldinica@ca.gov,2/13/2024,KETOROLAC TROMETHAMINE,E113552,$372202.98
+444,Tessy,Abarough,tabaroughcb@illinois.edu,10/28/2024,Propranolol Hydrochloride,S42432D,$233037.95
+445,Yankee,Bernardotte,ybernardottecc@comcast.net,8/7/2024,Lovastatin,S82829G,
+446,John,Soigoux,jsoigouxcd@nature.com,8/21/2024,Aspirin,S93141D,$288961.68
+447,Darlene,Ridder,dridderce@ed.gov,7/6/2024,"Acetaminophen,Phenylephrine HCl, Chlorpheniramine maleate",Q759,$281098.59
+448,Anabal,Douglass,adouglasscf@spiegel.de,9/1/2024,Ampicillin sodium,M90541,$318364.89
+449,Suzie,Bickersteth,sbickerstethcg@cloudflare.com,9/17/2024,thiothixene,N5231,$249616.97
+450,Kimberly,Glastonbury,kglastonburych@csmonitor.com,8/19/2024,Paricalcitol,D72819,$325193.84
+451,Hal,M'Quharge,hmquhargeci@gizmodo.com,3/20/2024,"Dextroamphetamine Saccharate, Amphetamine Aspartate, Dextroamphetamine Sulfate and Amphetamine Sulfate",D041,$300234.17
+452,Lock,Criple,lcriplecj@adobe.com,4/30/2024,flecainide acetate,T23601D,
+453,Carlotta,Bertholin,cbertholinck@yahoo.co.jp,3/22/2024,OCTINOXATE and TITANIUM DIOXIDE,S52611S,$379771.29
+454,Patin,Fryers,pfryerscl@multiply.com,8/18/2024,Furosemide,S96111A,$246306.20
+455,Kyle,Jindracek,kjindracekcm@bravesites.com,10/19/2024,"Beta carotene, cholecalciferol, dl-alpha tocopheryl acetate, ascorbic acid, folic acid, thiamin mononitrate, riboflavin, niacinamide, pyridoxine hydrochloride, cyanocobalamin, calcium carbonate, potas",S21309A,
+456,Katie,Rickcord,krickcordcn@shop-pro.jp,11/8/2024,Octinoxate and Titanium Dioxide,E806,$8663.99
+457,Tony,Garfit,tgarfitco@unblog.fr,12/11/2024,"ANTIMONY TRISULFIDE, DIEFFENBACHIA SEGUINE,CADMIUM SULFATE,STRYCHNOS IGNATII SEED,LOBELIA INFLATA,STRYCHNOS NUX-VOMICA SEED, TOBACCO LEAF.",S06316A,$312732.50
+458,Izaak,Bayfield,ibayfieldcp@google.com.br,4/25/2024,Diazepam,S88121,
+459,Zulema,Beilby,zbeilbycq@harvard.edu,4/3/2024,ATRACTYLODES JAPONICA ROOT OIL,S62313P,$114138.97
+460,Freddy,Drakeley,fdrakeleycr@woothemes.com,4/29/2024,tesamorelin,S62608D,$308756.40
+461,Kial,Brahmer,kbrahmercs@aboutads.info,5/18/2024,Diethylpropion hydrochloride,S8326,$137340.36
+462,Emelia,Lownds,elowndsct@ucsd.edu,1/19/2024,Quercus rubra,Z208,$51819.24
+463,Meara,Atlee,matleecu@multiply.com,2/29/2024,"ARNICA MONTANA, BLACK COHOSH, GUAIACUM OFFICINALE RESIN, BRYONIA ALBA ROOT, and TOXICODENDRON PUBESCENS LEAF",S82829S,$380912.54
+464,Dede,Sikorski,dsikorskicv@artisteer.com,2/5/2024,Acetaminophen,S0550,$360503.74
+465,Orsola,Chomley,ochomleycw@dropbox.com,4/7/2024,mineral oil,S06324A,$158404.29
+466,Orelia,Urpeth,ourpethcx@histats.com,8/8/2024,Ephedrine Sulfate,F12950,$281016.69
+467,Armstrong,Matuszyk,amatuszykcy@berkeley.edu,10/6/2024,Lisinopril,M4314,$76371.74
+468,Leonid,Seignior,lseigniorcz@businessweek.com,9/11/2024,Lamivudine and Zidovudine,D740,$25888.29
+469,Andre,Banner,abannerd0@wufoo.com,11/1/2024,sulindac,H10529,$49450.84
+470,Pebrook,Cadagan,pcadagand1@psu.edu,3/8/2024,Diphenhydramine Hydrochloride,M94359,
+471,Larissa,Grindlay,lgrindlayd2@prweb.com,7/20/2024,Ibuprofen,S82201J,$65955.31
+472,Fay,Lorent,florentd3@tiny.cc,11/12/2024,TIZANIDINE,G510,$120481.89
+473,Melinde,Bruneton,mbrunetond4@nature.com,8/20/2024,Cetirizine Hydrochloride,S66507D,$131261.86
+474,Eada,Baldock,ebaldockd5@nature.com,9/30/2024,ENSULIZOLE,X028XXA,$198359.33
+475,Rudyard,Peete,rpeeted6@mapquest.com,4/14/2024,"Abelmoschus, Aconitum napellus, Argentum nitricum, Arsenicum album, Calcarea carbonica, Cinchona officinalis, Cocculus indicus, Gelsemium sempervirens, Kali arsenicosum, Lilium tigrinum, Lycopodium clavatum, Phosphorus, Pulsatilla and Stramonium",S52379G,$98107.90
+476,Idelle,Dace,idaced7@nydailynews.com,8/17/2024,Oxcarbazepine,M089,$140381.78
+477,Cassius,Cottisford,ccottisfordd8@yahoo.com,6/9/2024,TITANIUM DIOXIDE,V773,$124439.34
+478,Godiva,Mazonowicz,gmazonowiczd9@miitbeian.gov.cn,9/1/2024,Octinoxate and Oxybenzone,H44631,
+479,Stevie,Elington,selingtonda@hp.com,8/30/2024,diltiazem hydrochloride,S98112A,$206029.05
+480,Alfreda,Trengrove,atrengrovedb@rambler.ru,11/21/2024,Bambusa Viscum Stannum,T454X3A,$10685.47
+481,Von,Santello,vsantellodc@instagram.com,9/28/2024,glipizide,T363X6S,
+482,Cissy,Gosling,cgoslingdd@blogger.com,10/3/2024,Multi Electrolyte Concentrate,Y389X1D,$221269.12
+483,Arley,Froschauer,afroschauerde@si.edu,6/6/2024,Fosinopril Sodium,Y37191S,$328217.02
+484,Octavius,Shenley,oshenleydf@nba.com,10/18/2024,Naproxen Sodium,S36291D,$346542.95
+485,Tessie,Kleinstern,tkleinsterndg@hao123.com,11/6/2024,"Avobenzone, Homosalate, Octisalate, Octocrylene, and Oxybenzone",S92331S,$42536.90
+486,Jana,Pamplin,jpamplindh@opera.com,10/27/2024,Sulfur,K081,$310694.77
+487,Kippie,Atterbury,katterburydi@virginia.edu,12/6/2024,Hydrocodone Bitartrate and Acetaminophen,V9525XS,$229786.40
+488,Ferdie,MacLleese,fmaclleesedj@wired.com,5/27/2024,"Avobenzone, Octisalate and Octocrylene",V00152S,$243463.33
+489,Morry,Stackbridge,mstackbridgedk@sciencedirect.com,4/8/2024,Scotch Pine,T2175XD,
+490,Dynah,Micco,dmiccodl@timesonline.co.uk,3/6/2024,"Acetaminophen, Dextromethorphan HBr, Guaifenesin, Phenylephrine HCl",S92122S,$147716.49
+491,Hamlin,Gioani,hgioanidm@mac.com,6/9/2024,Candida albicans,S62625D,$236964.07
+492,Cullen,Whinray,cwhinraydn@wufoo.com,11/3/2024,ALCOHOL,T23062D,$292018.73
+493,Vladamir,Spelling,vspellingdo@addthis.com,6/21/2024,risperidone,L89153,$337960.95
+494,Ty,Grigorian,tgrigoriandp@dmoz.org,6/3/2024,cinacalcet hydrochloride,T7116,$101252.01
+495,Erwin,Najara,enajaradq@ucsd.edu,9/10/2024,METHADONE HYDROCHLORIDE,M6201,$124497.02
+496,Enid,Conway,econwaydr@ustream.tv,12/13/2023,Bupropion Hydrochloride,H02731,$2049.23
+497,Viviana,Lowthorpe,vlowthorpeds@dion.ne.jp,1/21/2024,Hydrocortisone Acetate,V891XXS,$291999.19
+498,Fonzie,Rawes,frawesdt@flavors.me,9/4/2024,Doxazosin Mesylate,T578,$104237.39
+499,Ozzy,Vidineev,ovidineevdu@biblegateway.com,3/20/2024,Ibuprofen,S38221S,$171923.58
+500,Alayne,Rickcord,arickcorddv@sohu.com,10/19/2024,"Octinoxate, Octisalate, Avobenzone",M05259,$154778.92
+501,Nalani,Cauderlie,ncauderliedw@forbes.com,12/6/2024,Undecylenic Acid,P0718,$29812.22
+502,Dorothee,Russo,drussodx@ibm.com,6/2/2024,oxycodone hydrochloride,S31521D,
+503,Martino,Ohrtmann,mohrtmanndy@over-blog.com,7/26/2024,Fluocinonide,S20429S,$199587.33
+504,Heidi,Letten,hlettendz@ifeng.com,10/1/2024,Doxylamine succinate,O998,$16971.48
+505,Jere,Dransfield,jdransfielde0@surveymonkey.com,7/14/2024,Titanium Dioxide,S66198S,$90957.61
+506,Rory,Dodgshon,rdodgshone1@icq.com,7/6/2024,Lisinopril and Hydrochlorothiazide,S40921A,$382068.83
+507,Elysee,Tummasutti,etummasuttie2@nhs.uk,8/14/2024,Selenium Sulfide,M1A0290,$76942.76
+508,Dyana,Vreiberg,dvreiberge3@photobucket.com,7/18/2024,Regular Strength,S32466D,$133291.56
+509,Emalia,Stinson,estinsone4@omniture.com,10/1/2024,"Ammonium Carbonicum, Antimonim Arsenicosum, Antimonium Tartaricum, Arsenicum Album, Bromium, Carbo Vegetabilis, Chlorinum, Kali Carbonicum, Lobelia Inflata, Stannum Metallicum, Sulphuricum Acidum",N39490,$69332.59
+510,Guntar,Bes,gbese5@netlog.com,8/22/2024,"OCTINOXATE, TITANIUM DIOXIDE, ZINC OXIDE",S75029S,
+511,Keven,Fantini,kfantinie6@123-reg.co.uk,1/17/2024,Aluminum Zirconium Tetrachlorohydrex GLY,H3550,$253116.37
+512,Lela,Kupper,lkuppere7@bigcartel.com,6/16/2024,Black Birch,S42239B,$58582.95
+513,Osborne,Sedgefield,osedgefielde8@paginegialle.it,6/3/2024,"Acetaminophen, Dextromethorphan HBr, Guaifenesin, Phenylephrine HCl",O82,$398330.39
+514,Rana,Junes,rjunese9@cafepress.com,8/26/2024,Cephalexin,S61337S,$381519.62
+515,Gordon,Orpin,gorpinea@washington.edu,5/26/2024,Elm Mixture,S0034XA,$262349.78
+516,Gwen,Pedlingham,gpedlinghameb@last.fm,4/25/2024,"Dextromethorphan Hydrobromide, Guaifenesin, Phenylephrine Hydrochloride",H35711,$397835.94
+517,Cassaundra,Darte,cdarteec@census.gov,4/25/2024,granisetron hydrochloride,H17,$228842.35
+518,Carrol,Morrow,cmorrowed@friendfeed.com,8/18/2024,Aluminum Zirconium Trichlorohydrex GLY,I82541,$16172.58
+519,Ddene,Gymlett,dgymlettee@buzzfeed.com,5/15/2024,Phenytoin Sodium,Y35213,$176354.23
+520,Killian,Rogliero,kroglieroef@time.com,5/9/2024,Loratadine,T407X2D,$129991.97
+521,Nahum,MacCosto,nmaccostoeg@gmpg.org,5/5/2024,"Acetaminophen, Dextromethorphan HBr, Guaifenesin, Phenylephrine HCl",Z4828,$226114.66
+522,Pavia,Ivell,pivelleh@addtoany.com,7/22/2024,OCTINOXATE and TITANIUM DIOXIDE,S82123N,$300284.82
+523,Kenn,Potzold,kpotzoldei@discovery.com,2/21/2024,PREGABALIN,T542X1D,$155838.67
+524,Viola,Gallandre,vgallandreej@wisc.edu,2/6/2024,Anticoagulant Citrate Dextrose Solution Formula A,T83714A,
+525,Jasper,Pennoni,jpennoniek@yellowbook.com,9/16/2024,"Acetaminophen, Doxylamine succinate and Phenylephrine Hydrochloride",Z3001,$262063.41
+526,Teodorico,Hedderly,thedderlyel@blogspot.com,7/9/2024,Sulindac,S62664K,$176468.25
+527,Ellsworth,Savell,esavellem@ucoz.ru,6/7/2024,Erythromycin Ethylsuccinate,S72451J,
+528,Sheeree,Locard,slocarden@meetup.com,10/21/2024,isotretinoin,V150XXA,
+529,Dorthea,Rennox,drennoxeo@dedecms.com,6/18/2024,SALICYLIC ACID,M84533S,
+530,Flora,Daulton,fdaultonep@desdev.cn,2/17/2024,"bacitracin zinc, neomycin, polymyxin B",V9789XA,$54485.62
+531,Bent,Aspenlon,baspenloneq@phoca.cz,6/4/2024,hydrogen peroxide,X0819XA,$216933.79
+532,Clarabelle,Snasdell,csnasdeller@deliciousdays.com,6/18/2024,salicylic acid,S41041S,$215149.10
+533,Rosmunda,Laughton,rlaughtones@auda.org.au,11/20/2024,TRIAMCINOLONE ACETONIDE,V9026XA,$361322.48
+534,Mehetabel,Leng,mlenget@who.int,11/21/2024,Almond,I69393,$361112.22
+535,Toby,Jeffery,tjefferyeu@joomla.org,5/23/2024,Ragweed. Western Ambrosia psilostachya,S4412XA,$104276.16
+536,Hannis,Stirgess,hstirgessev@washingtonpost.com,12/13/2023,TITANIUM DIOXIDE and ZINC OXIDE,T420X4A,$171740.41
+537,Guendolen,Bellord,gbellordew@ow.ly,9/14/2024,Cefadroxil,O99810,$184366.37
+538,Phyllys,Podbury,ppodburyex@upenn.edu,5/6/2024,Titanium Dioxide,T85628S,$327335.25
+539,Bibby,Robathon,brobathoney@springer.com,12/20/2023,Isopropyl Alcohol,O360911,$45924.93
+540,Cheri,Hairyes,chairyesez@odnoklassniki.ru,12/3/2024,Bacitracin,S42461A,$393733.60
+541,Benton,Cudd,bcuddf0@bloglines.com,7/16/2024,hydrocodone bitartrate and acetaminophen,M87174,$2409.96
+542,Herman,Borrows,hborrowsf1@nyu.edu,9/16/2024,Sildenafil,A398,$248788.34
+543,Bronnie,De Carteret,bdecarteretf2@cpanel.net,2/23/2024,Sodium Polystyrene Sulfonate,T22012A,$249934.93
+544,Andras,Laherty,alahertyf3@msn.com,5/6/2024,Octreotide Acetate,S42343,$12873.91
+545,Morie,Hayland,mhaylandf4@sourceforge.net,3/23/2024,Hard (Sugar) Maple,K8036,$157935.13
+546,Brenden,Bloss,bblossf5@jalbum.net,6/26/2024,"Acetaminophen, Dextromethorphan HBr, Doxylamine succinate",S7639,$46809.66
+547,Ram,Stoffer,rstofferf6@jigsy.com,7/9/2024,DIPHENHYDRAMINE HCL,S0889,$118313.48
+548,Bord,Olivazzi,bolivazzif7@pbs.org,5/18/2024,Entecavir,R6521,
+549,Donella,Kinlock,dkinlockf8@weather.com,7/21/2024,nystatin,S12090K,$318054.44
+550,Lina,Rixon,lrixonf9@ca.gov,9/8/2024,Stemphylium sarciniforms,S82453A,$353024.34
+551,Victoria,Sawood,vsawoodfa@lulu.com,5/17/2024,Bethanechol Chloride,M84612A,$177545.39
+552,Pippy,Wolsey,pwolseyfb@stumbleupon.com,2/20/2024,Lidocaine Hydrochloride,M84676D,$277830.30
+553,Mellisent,Alchin,malchinfc@princeton.edu,6/1/2024,ZINC OXIDE,V675XXD,$272975.35
+554,Lidia,Claworth,lclaworthfd@craigslist.org,2/18/2024,Metoclopramide,L497,$165736.19
+555,Tabor,McArdle,tmcardlefe@reuters.com,7/7/2024,Hydrocodone Bitartrate and Acetaminophen,T7582,$213089.75
+556,Dre,Ollarenshaw,dollarenshawff@berkeley.edu,4/24/2024,Cefdinir,S42123P,$89963.94
+557,Ashien,Cribbin,acribbinfg@umich.edu,4/29/2024,Nifedipine,T3302XA,
+558,Olwen,Taylo,otaylofh@printfriendly.com,10/26/2024,OCTINOXATE and TITANIUM DIOXIDE,S42109P,$340597.44
+559,Candace,Valentinetti,cvalentinettifi@census.gov,6/12/2024,Fentanyl,T25439A,$138751.71
+560,Yance,Tomsu,ytomsufj@dell.com,12/26/2023,benzyl alcohol,S02600A,$226084.49
+561,Emmanuel,Younger,eyoungerfk@shop-pro.jp,12/6/2024,Geotrichum candidum,K601,
+562,Imojean,Kwiek,ikwiekfl@apple.com,12/20/2023,Promethazinehydrochloride and phenylephrine hydrochloride,T8459XA,$60069.54
+563,Ynes,Duesbury,yduesburyfm@elegantthemes.com,9/4/2024,Ranitidine,Y35092A,
+564,Javier,Aronowicz,jaronowiczfn@indiatimes.com,9/7/2024,Bacitracin zinc and Polymyxin B sulfate,S52515R,$69934.45
+565,Nevile,Bruckman,nbruckmanfo@vinaora.com,1/13/2024,Chlordiazepoxide Hydrochloride,A198,$254307.11
+566,Wallache,Diment,wdimentfp@pcworld.com,11/13/2024,Trandolapril,M8450XD,$352767.22
+567,Terrill,Pawsey,tpawseyfq@shop-pro.jp,10/18/2024,Octinoxate and Oxybenzone,Y93J1,$34582.37
+568,Monah,Mawman,mmawmanfr@disqus.com,8/26/2024,Sycamore American,S92512,
+569,Briano,Rewcastle,brewcastlefs@weibo.com,11/28/2024,BUPIVACAINE HYDROCHLORIDE,S52399F,$85362.65
+570,Agnesse,Theobalds,atheobaldsft@squarespace.com,12/28/2023,simvastatin,M25249,$294640.69
+571,Penelopa,Goodrick,pgoodrickfu@flavors.me,5/23/2024,Risperidone,V4333XS,$154531.05
+572,Cthrine,Walcar,cwalcarfv@taobao.com,9/11/2024,Petrolatum,T794XXS,$65979.41
+573,Kandy,Hildred,khildredfw@hostgator.com,5/13/2024,"Butalbital, Acetaminophen, Caffeine, and Codeine Phosphate",S62334G,
+574,Patty,Vowden,pvowdenfx@unicef.org,7/25/2024,Saline,S27409,$175042.54
+575,Farlie,Fernao,ffernaofy@google.pl,9/2/2024,"TITANIUM DIOXIDE, ZINC OXIDE",O3101X5,$107223.78
+576,Ernie,Aykroyd,eaykroydfz@indiatimes.com,2/17/2024,norethindrone and ethinyl estradiol and ferrous fumarate,E7141,$106339.81
+577,Almeta,Rawnsley,arawnsleyg0@thetimes.co.uk,1/31/2024,Magnesium Citrate,O318X39,$358769.76
+578,Hew,Pennycord,hpennycordg1@boston.com,2/7/2024,Hydrochlorothiazide,S32021G,$108856.67
+579,Dion,Parkhouse,dparkhouseg2@marriott.com,7/20/2024,Olanzapine,T413X3A,$97062.70
+580,Armand,Adriano,aadrianog3@ted.com,1/26/2024,clindamycin phosphate,K588,$395700.22
+581,Bianca,Althorpe,balthorpeg4@webmd.com,4/1/2024,simvastatin,H9503,$200291.47
+582,Say,Mishaw,smishawg5@rambler.ru,5/6/2024,Pyrithione Zinc,I70341,$268836.36
+583,Carrie,Althorp,calthorpg6@dailymail.co.uk,12/10/2024,Rescue,T2030XS,$72450.47
+584,Xenia,Fuxman,xfuxmang7@soundcloud.com,10/26/2024,ONDANSETRON HYDROCHLORIDE,S42145A,
+585,Mariejeanne,Barkus,mbarkusg8@so-net.ne.jp,6/21/2024,adapalene,T382X2D,$159213.40
+586,Kasey,Spring,kspringg9@csmonitor.com,5/20/2024,doxycycline,Z9881,
+587,Georgena,Musprat,gmuspratga@nhs.uk,6/6/2024,Minoxidil,S52283A,$124168.36
+588,Augustin,Baroch,abarochgb@printfriendly.com,5/7/2024,Aurum 17 Special Order,S52509A,$269335.29
+589,Wayland,Gealy,wgealygc@feedburner.com,9/11/2024,ONDANSETRON HYDROCHLORIDE,S50811S,
+590,Wendi,Francescone,wfrancesconegd@tamu.edu,2/2/2024,Lidocaine Hydrochloride,S40919S,$355598.44
+591,Anneliese,Gravenell,agravenellge@t-online.de,12/4/2024,PIOGLITAZONEHYDROCHLORIDE,S75199D,$292060.03
+592,Tonnie,Mannooch,tmannoochgf@arizona.edu,1/29/2024,Warfarin Sodium,T38892,$122258.58
+593,Dru,Chesman,dchesmangg@columbia.edu,2/6/2024,Allergenic Extracts Alum Precipitated,T24022,
+594,Kalila,Ahmed,kahmedgh@state.gov,3/4/2024,ETHANOL,S72032G,$122231.25
+595,Jeniffer,Fullerton,jfullertongi@cargocollective.com,8/29/2024,Salicylic Acid,S52324A,$90118.31
+596,Walton,Zettoi,wzettoigj@devhub.com,12/31/2023,Benzoyl Peroxide,S92034G,$29670.30
+597,Jorry,Aizikovich,jaizikovichgk@tinypic.com,9/7/2024,Glimepiride,S52392N,$301491.55
+598,Celina,Janson,cjansongl@angelfire.com,11/11/2024,varenicline tartrate,T34832D,$262582.82
+599,Mina,Hiseman,mhisemangm@wordpress.org,11/8/2024,Aluminum Zirconium Tetrachlorohydrex GLY,Y35302A,$94751.71
+600,Christoper,Loudyan,cloudyangn@livejournal.com,4/23/2024,lorazepam,Y36241S,$224815.42
+601,Becky,Stileman,bstilemango@umn.edu,10/20/2024,ropinirole hydrochloride,S52512F,$142316.98
+602,Friedrick,Whittock,fwhittockgp@mayoclinic.com,7/19/2024,"Dextroamphetamine Saccharate, Amphetamine Aspartate, Dextroamphetamine Sulfate and Amphetamine Sulfate",S52033P,$16114.75
+603,Shem,Ravenhills,sravenhillsgq@webeden.co.uk,3/14/2024,retapamulin,S59042D,$140247.61
+604,Lexine,Elderton,leldertongr@ed.gov,8/9/2024,lamotrigine extended release,T503X3D,$292032.00
+605,Johannah,Hexter,jhextergs@jalbum.net,5/25/2024,Triclosan,S22068S,$171822.16
+606,Albertina,Latham,alathamgt@histats.com,12/8/2024,Benzalkonium Chloride,S52379S,$51608.16
+607,Juanita,Eringey,jeringeygu@google.co.jp,4/6/2024,Pyridostigmine Bromide,S52042B,$320046.05
+608,Cassaundra,McKearnen,cmckearnengv@baidu.com,1/26/2024,"Ensulizole, Octinoxate, Octocrylene, Zinc Oxide",M85631,
+609,Geordie,Ordemann,gordemanngw@slate.com,7/10/2024,Lisinopril,S95109A,$134844.76
+610,Othella,Rounce,orouncegx@netvibes.com,6/11/2024,GLYCERIN,M84345D,$375087.27
+611,Candis,Gallimore,cgallimoregy@amazon.co.uk,2/22/2024,Italian Rye Grass,N419,$109834.15
+612,Orelee,Kear,okeargz@guardian.co.uk,2/4/2024,TETRACYCLINE HYDROCHLORIDE,S82299B,
+613,Sid,Dunge,sdungeh0@hp.com,2/13/2024,Promethazine Hydrochloride,C794,
+614,Brandise,Dabourne,bdabourneh1@sourceforge.net,3/13/2024,Ibutilide Fumarate,S72333F,$109249.85
+615,Reiko,Tartt,rtartth2@freewebs.com,4/21/2024,Metoprolol Succinate,T448X2S,
+616,Maxy,Poytress,mpoytressh3@angelfire.com,4/10/2024,nicotine polacrilex,M84322D,
+617,Cicily,Draayer,cdraayerh4@theatlantic.com,4/22/2024,Ibuprofen,T8743,$211061.51
+618,Luise,Kirvell,lkirvellh5@mlb.com,1/12/2024,Nicotine Polacrilex,M6087,$129081.61
+619,Haydon,Polin,hpolinh6@fastcompany.com,7/24/2024,Fluocinolone Acetonide,M9910,$106896.68
+620,Elane,Kittman,ekittmanh7@reddit.com,7/10/2024,Paroxetine Hydrochloride,Y0750,$282321.61
+621,Samantha,Bulloch,sbullochh8@cloudflare.com,10/20/2024,Turkey,M10379,$234808.29
+622,Coop,Christin,cchristinh9@ow.ly,7/11/2024,Bacitracin Zinc,O368120,$362083.97
+623,Vicky,Lambshine,vlambshineha@walmart.com,3/24/2024,meloxicam,S4501,$327434.69
+624,Danila,Brandon,dbrandonhb@ask.com,1/23/2024,Fluconazole,M9901,$329458.40
+625,Harlene,Hacaud,hhacaudhc@merriam-webster.com,2/18/2024,"Avobenzone, Homosalate, Octisalate, Octocrylene, and Oxybenzone",D2921,$56721.83
+626,Raven,Murie,rmuriehd@newyorker.com,5/17/2024,Triclosan,L906,$84701.54
+627,Elliott,Shillaber,eshillaberhe@hp.com,5/8/2024,Candida albicans,C040,$70989.98
+628,Stafani,Dufton,sduftonhf@miibeian.gov.cn,10/7/2024,Acetaminophen and Phenylephrine Hydrochloride,S31653,$119202.64
+629,Rafi,Brettelle,rbrettellehg@amazon.de,7/11/2024,Mesalamine,Z8776,$352195.38
+630,Bellanca,Windle,bwindlehh@wikia.com,6/29/2024,Medicated Corn Removers,K8021,$305000.36
+631,Harriet,Cormode,hcormodehi@nsw.gov.au,9/5/2024,POVIDONE-IODINE,S42202P,$16123.73
+632,Wilmer,Athowe,wathowehj@nba.com,4/30/2024,Desonide,P0502,
+633,Domenico,Sibly,dsiblyhk@theatlantic.com,8/21/2024,zinc acetate and zinc gluconate,H11422,$277485.95
+634,Wheeler,Fronek,wfronekhl@1688.com,10/12/2024,Warfarin Sodium,S82453R,$99889.08
+635,Colly,Punton,cpuntonhm@weebly.com,11/9/2024,BARIUM SULFATE,T654X3S,
+636,Grethel,Rookes,grookeshn@wisc.edu,3/7/2024,clindamycin phosphate,S36490A,$295771.35
+637,Raviv,Charlet,rcharletho@skype.com,3/13/2024,calcium carbonate,C8392,$155490.00
+638,Jonis,Gumbley,jgumbleyhp@ucla.edu,3/2/2024,calcium carbonate,S66112D,$113180.31
+639,Mattie,Gunner,mgunnerhq@nih.gov,3/25/2024,Ioversol,Y36810,$198038.45
+640,Rickey,Duckhouse,rduckhousehr@comsenz.com,8/31/2024,Chloroxylenol / Pramoxine HCl,T63024,$21808.04
+641,Patrice,Franey,pfraneyhs@ocn.ne.jp,4/11/2024,Promethazine Hydrochloride,T22069D,$322338.40
+642,Vivyan,Antonietti,vantoniettiht@constantcontact.com,9/18/2024,Sodium Fluoride,S65511A,$373800.55
+643,Juliane,Farry,jfarryhu@1und1.de,2/7/2024,Acetaminophen,S46101D,$203675.94
+644,Francisca,McCurdy,fmccurdyhv@bluehost.com,1/11/2024,"CITALOPRAM HYDROBROMIDE, CHOLINE",T38996D,$364042.36
+645,Reeba,Markie,rmarkiehw@merriam-webster.com,8/17/2024,CALCIUM SULFIDE,S66303D,$179388.25
+646,Kinna,Bortol,kbortolhx@netvibes.com,6/15/2024,"OCTINOXATE, OXYBENZONE, TITANIUM DIOXIDE, OCTOCRYLENE",Z79810,$280261.06
+647,Belvia,Blewitt,bblewitthy@google.ru,1/22/2024,"OCTINOXATE, OXYBENZONE",G0430,$110744.60
+648,Vivia,Tompion,vtompionhz@feedburner.com,5/3/2024,STANNOUS FLUORIDE,S91239A,$26564.99
+649,Berny,Brik,bbriki0@deliciousdays.com,11/19/2024,Benazepril Hydrochloride,O873,$131886.41
+650,Haley,Hentzeler,hhentzeleri1@examiner.com,7/12/2024,Ciprofloxacin,S79912,$104851.27
+651,Warden,Jonk,wjonki2@usnews.com,12/7/2024,clobetasol propionate,W1843XA,$86411.59
+652,Ari,Roberds,aroberdsi3@free.fr,11/16/2024,Phentermine Hydrochloride,S63632A,$315446.60
+653,Lane,Wilkennson,lwilkennsoni4@google.com.hk,9/26/2024,Russian Thistle,S06319D,
+654,Vic,Fowley,vfowleyi5@businessinsider.com,9/8/2024,Hydralazine Hydrochloride,W9423,$92169.54
+655,Frederica,Colvin,fcolvini6@zimbio.com,6/15/2024,"OCTINOXATE, OCTOCRYLENE, and TITANIUM DIOXIDE",S62011P,$12103.36
+656,Aurelia,Wapples,awapplesi7@surveymonkey.com,6/27/2024,Atenolol,T653X2A,$293288.61
+657,Kelci,Waters,kwatersi8@nba.com,4/21/2024,Tolnaftate,S020XXG,$313818.78
+658,Kenon,Cleve,kclevei9@deviantart.com,1/7/2024,"ESTRONE, SODIUM CHLORIDE, SEPIA OFFICINALIS JUICE",M71111,$327254.78
+659,Janine,Stowte,jstowteia@arizona.edu,12/10/2024,"Eucalyptol, Menthol, Methyl Salicylate, and Thymol",W6143XA,$83399.51
+660,Gwendolyn,Apdell,gapdellib@bravesites.com,7/18/2024,"calendula officinalis, nux vomica, silicea",V0100,$373693.78
+661,Gale,Di Baudi,gdibaudiic@wunderground.com,8/7/2024,Naproxen,D310,$229116.39
+662,Stanford,Purches,spurchesid@pcworld.com,7/14/2024,Metformin Hydrochloride,T82523,$35967.27
+663,Filia,Castleton,fcastletonie@ox.ac.uk,12/26/2023,"Capsicum annuum L , Kali phosphoricum , Phosphorus",S66402S,$154839.98
+664,Thedrick,Dodd,tdoddif@shop-pro.jp,10/3/2024,Dexamethasone,S3096XA,$159836.50
+665,Anetta,Leivesley,aleivesleyig@netscape.com,6/28/2024,Carbidopa and levodopa,M89631,$390020.94
+666,Darrelle,Folonin,dfoloninih@zimbio.com,8/25/2024,Ampicillin Sodium,S064X7D,
+667,Shea,Dounbare,sdounbareii@spiegel.de,9/11/2024,TITANIUM DIOXIDE,N6011,$90755.58
+668,Gaynor,Hinnerk,ghinnerkij@sina.com.cn,12/17/2023,Gabapentin,S93123S,$90942.36
+669,Vinson,Camell,vcamellik@blogtalkradio.com,1/6/2024,buspirone hydrochloride,S95812,$327747.85
+670,Carmencita,Penning,cpenningil@washingtonpost.com,1/28/2024,HYPERICUM PERFORATUM,S99111D,$312243.46
+671,Melesa,Amoss,mamossim@wp.com,11/9/2024,BENZALKONIUM CHLORIDE,S82443,$165215.24
+672,Aggi,MacHarg,amachargin@rambler.ru,2/17/2024,Amoxicillin and Clavulanate Potassium,Y9262,
+673,Ax,Ayliffe,aayliffeio@cdc.gov,1/25/2024,Olanzapine,S3217XD,$59397.62
+674,Cyndy,Scarlan,cscarlanip@cnet.com,12/19/2023,"Ethyl Alcohol, Menthol",T595X4D,$167498.82
+675,Sherri,Ruppel,sruppeliq@independent.co.uk,11/15/2024,Lithium Carbonate,S06300S,$178551.06
+676,Holli,Ghirigori,hghirigoriir@mac.com,6/7/2024,Doxycycline Hyclate,C400,$142520.83
+677,Bjorn,Franzoli,bfranzoliis@spiegel.de,8/20/2024,Ibuprofen,S26021A,$216887.20
+678,Zachery,Luetchford,zluetchfordit@berkeley.edu,3/31/2024,Polyethylene Glycol 3350,T484X4S,$272906.53
+679,Courtney,Esbrook,cesbrookiu@vistaprint.com,12/14/2023,gadopentetate dimeglumine,S82111N,$35587.03
+680,Emyle,Capeling,ecapelingiv@delicious.com,10/23/2024,Olanzapine,H18892,$137716.37
+681,Caz,Remmers,cremmersiw@hc360.com,12/6/2024,ONION - ANTHOXANTHUM ODORATUM - SCHOENOCAULON OFFICINALE SEED,S0192XA,
+682,Lenee,Marval,lmarvalix@ocn.ne.jp,3/19/2024,Nicotine Polacrilex,Z7952,$107130.56
+683,Teador,Chmiel,tchmieliy@sphinn.com,6/21/2024,Oxygen,V720XXD,
+684,Franzen,Giacomelli,fgiacomelliiz@phoca.cz,3/4/2024,Alcohol,S66310S,
+685,Thomasin,Shirland,tshirlandj0@washingtonpost.com,12/3/2024,"OCTINOXATE, TITANIUM DIOXIDE, ZINC OXIDE",H04523,$381382.32
+686,Eleonore,Duligal,eduligalj1@phpbb.com,9/13/2024,"bacitracin zinc, polymyxin B sulfate",S82154R,$12071.26
+687,Konstantine,Flemmich,kflemmichj2@woothemes.com,5/29/2024,"Gentian,",S82899Q,
+688,Zondra,Mulvihill,zmulvihillj3@blogs.com,3/1/2024,Dyclonine Hydrochloride and Menthol,S72142E,$73807.35
+689,Karyl,Rebeiro,krebeiroj4@archive.org,6/14/2024,"Aralia quinquefolia, Glycyrrhiza, Sarsaparilla, Avena sativa, Glandula suprarenalis bovinum, Adrenalinum,",M3215,$21615.98
+690,Eleonore,Hrihorovich,ehrihorovichj5@google.com.hk,5/25/2024,Hog Epithelium,T8452,$97784.03
+691,Saw,Braemer,sbraemerj6@domainmarket.com,12/22/2023,griseofulvin,S06811D,$133744.57
+692,Padraic,Davy,pdavyj7@omniture.com,7/18/2024,"Ensulizole, Octinoxate, and Oxybenzone",T20611S,$92187.59
+693,Krystalle,Broodes,kbroodesj8@mysql.com,7/18/2024,Black Locust,T344,$139640.28
+694,Terese,Steptowe,tsteptowej9@parallels.com,6/14/2024,Ruta graveolens,S52244H,$228614.44
+695,Shurlocke,Mabson,smabsonja@w3.org,4/3/2024,Indomethacin,S12690K,$316502.30
+696,Andrea,Seamark,aseamarkjb@amazon.com,12/17/2023,Octinoxate,S42012,$72224.81
+697,Ezri,Chennells,echennellsjc@squarespace.com,9/19/2024,Thymol,F1925,$371613.16
+698,Wynn,Tyas,wtyasjd@sakura.ne.jp,3/28/2024,Aluminum Zirconium Trichlorohydrex Gly,W65,$213137.53
+699,Curran,Birchett,cbirchettje@flavors.me,6/27/2024,penciclovir,S32002K,$185260.78
+700,Erl,Filler,efillerjf@fastcompany.com,2/18/2024,Salicylic Acid,O88,
+701,Florina,Coombes,fcoombesjg@live.com,5/21/2024,Salicylic Acid,M87273,$135161.45
+702,Corey,Luxen,cluxenjh@simplemachines.org,4/17/2024,Atenolol,S00429S,$96746.72
+703,Joyan,Caselli,jcaselliji@gravatar.com,3/18/2024,Amoxicillin,S72325B,$170146.78
+704,Breena,Kuhnel,bkuhneljj@kickstarter.com,5/5/2024,"Berberis Vulgaris, Nux Vomica",L564,$268413.41
+705,Cristen,Leeves,cleevesjk@washingtonpost.com,11/20/2024,nicardipine hydrochloride,S82191C,$5111.93
+706,Linnea,Hartshorn,lhartshornjl@twitpic.com,8/1/2024,Oxymetazoline Hydrochloride,S42325,
+707,Krystle,Shingfield,kshingfieldjm@vk.com,8/8/2024,Hydrochlorothiazide,M21251,$80365.84
+708,Minta,Bothie,mbothiejn@bing.com,8/7/2024,ANTIPYRINE AND BENZOCAINE,T27,$369980.48
+709,Hilary,Pettinger,hpettingerjo@dell.com,8/27/2024,Lidocaine,E221,$380598.39
+710,Melessa,Goodsell,mgoodselljp@go.com,3/29/2024,Terbinafine Hydrochloride,S60039,$222064.14
+711,Libbie,Gerge,lgergejq@blogs.com,12/21/2023,LEVOTHYROXINE SODIUM,Y35401,$96209.27
+712,Elisabet,Buss,ebussjr@reddit.com,7/2/2024,"Acetaminophen, Diphenhydramine Citrate",S72061E,$194004.75
+713,Malissa,Rubinovici,mrubinovicijs@mit.edu,2/29/2024,"Apis mel., Arsenicum alb., Asterias rubens, Cantharis, Cistus canadensis, Croton, Dolichos, Dulcamara, Graphites, Grindelia, Hypericum, Iris versicolor, Lycopodium, Mezereum, Ranunc. bulb., Rhus toxicodendron, Staphysag., Sulphur, Thuja occ., Zinc. met., Chamomilla, Echinacea",E213,
+714,Sigfrid,Spadaro,sspadarojt@stumbleupon.com,2/13/2024,timolol maleate,S82113N,$186269.10
+715,Arleen,Pettie,apettieju@google.com,5/19/2024,Pimecrolimus,Y0802,$314725.51
+716,Krystal,Chaplain,kchaplainjv@slate.com,7/13/2024,Metformin Hydrochloride,S72045S,$179523.96
+717,Ralph,Huxstep,rhuxstepjw@paginegialle.it,9/10/2024,levothyroxine sodium,S1191,$211565.74
+718,Laverna,Sephton,lsephtonjx@sogou.com,5/15/2024,"Dextromethorphan Hydrobromide, Guaifenesin",S83209S,$102109.10
+719,Darya,Batten,dbattenjy@squarespace.com,12/29/2023,Guaifenesin,T2131XS,
+720,Dennison,Bartosiak,dbartosiakjz@ask.com,4/24/2024,"Acetylcholine Chloride, Histaminum Hydrochloricum, Serotonin (Hydrochloride)",F12222,$112483.54
+721,Rudd,Tremain,rtremaink0@networkadvertising.org,2/26/2024,RISPERIDONE,S98022D,$391685.78
+722,Melisse,Mattusevich,mmattusevichk1@goodreads.com,9/20/2024,Isopropyl Alcohol,M71359,$347964.81
+723,Sebastiano,Conti,scontik2@unblog.fr,7/1/2024,cyclosporine,W501XXA,$205443.06
+724,Alexina,Nicholas,anicholask3@shareasale.com,11/15/2024,flurandrenolide,S96901S,$252128.64
+725,Banky,Lightbowne,blightbownek4@jiathis.com,3/21/2024,hydromorphone hydrochloride,Y375,
+726,Ryley,Langdon,rlangdonk5@moonfruit.com,7/24/2024,TITANIUM DIOXIDE,Y3721,$399555.67
+727,Arluene,Vannet,avannetk6@cargocollective.com,11/24/2024,Sodium Iodide I 123,S98149,$12543.75
+728,Kaitlynn,Weymont,kweymontk7@chronoengine.com,4/15/2024,ACETAMINOPHEN and DIPHENHYDRAMINE HYDROCHLORIDE,S56126A,$24223.11
+729,Mia,Braim,mbraimk8@ycombinator.com,2/10/2024,Ketotifen Fumarate,S60861,$343970.21
+730,Kattie,Fussell,kfussellk9@marketwatch.com,12/11/2024,"Sodium Chloride, Calcium Chloride, and Potassium Chloride",S21252,$336415.35
+731,Nanny,Wordsworth,nwordsworthka@tinyurl.com,5/28/2024,Melatonin,S41019A,$56390.54
+732,Bennie,Meys,bmeyskb@google.com.au,4/12/2024,"Acetaminophen, Chlorpehniramine HCl, Dextromethorphan HBr, Phenylephrine HCl",D2211,
+733,Nertie,Welds,nweldskc@huffingtonpost.com,4/15/2024,"Avobenzone, Homosalate, Octisalate, Octocrylene, Oxybenzone",Z550,$381017.70
+734,Fania,Worman,fwormankd@examiner.com,2/14/2024,fexofenadine hydrochloride,F15150,$91553.85
+735,Nickolai,Craythorne,ncraythorneke@hubpages.com,7/11/2024,Lamotrigine,S82392N,$203699.21
+736,Sheree,Bene,sbenekf@bizjournals.com,1/3/2024,BuPROPion Hydrochloride,S89291S,$107833.29
+737,Jayne,Duncanson,jduncansonkg@sohu.com,11/16/2024,Diphenhydramine HCl,S82025D,$129875.15
+738,Darrell,Arpino,darpinokh@furl.net,4/26/2024,glyburide,S52244P,$280085.38
+739,Cornelius,Josefsson,cjosefssonki@fastcompany.com,6/16/2024,propolis,R825,$273025.93
+740,Ardelis,Raveau,araveaukj@imdb.com,10/26/2024,Anticoagulant Citrate Phosphate Dextrose Adenine,S82123N,
+741,Rickie,Gilhooly,rgilhoolykk@xinhuanet.com,7/4/2024,Citalopram,M80831P,$323500.80
+742,Sven,Dillistone,sdillistonekl@marriott.com,11/20/2024,"OCTINOXATE, OCTISALATE, OXYBENZONE, and TITANIUM DIOXIDE",X31XXXD,
+743,Bernadina,Sandland,bsandlandkm@homestead.com,10/3/2024,IRBESARTAN AND HYDROCHLOROTHIAZIDE,H0411,$85218.15
+744,Willie,Arnli,warnlikn@nifty.com,8/12/2024,Sodium Chloride,S76902A,$299505.85
+745,Meriel,Gilhouley,mgilhouleyko@macromedia.com,2/18/2024,Hydrocortisone,M24831,$19557.19
+746,Glen,Vondrach,gvondrachkp@mac.com,8/16/2024,"Angelica sinensis radix, Aralia quinquefolia, Arg. nit., Arsenicum alb., Berber. aqui., Capsicum , Cinchona, Digitalis, Gelsemium, Hypericum, Ignatia, Iodium, Kali brom., Kali carb., Mag. phos., Nat. carb., Nat. mur., Phosphorus, Salix nigra, Sanguinaria, Sepia, Stramonium, Echinacea, Ginkgo",V456,$132790.94
+747,Nerissa,Geraldo,ngeraldokq@cafepress.com,8/5/2024,lamotrigine,S92302K,$634.41
+748,Maxie,Eade,meadekr@pen.io,2/24/2024,Naproxen Sodium,S43152A,$154962.51
+749,Lula,Valero,lvaleroks@feedburner.com,10/17/2024,Water,T71113D,$138751.86
+750,Bord,Burgott,bburgottkt@jigsy.com,8/30/2024,Lansoprazole,T401X1D,$127308.76
+751,Kristo,Radoux,kradouxku@deliciousdays.com,5/8/2024,Levonorgestrel and Ethinyl Estradiol,S79812A,$202070.61
+752,Yoshiko,St Ledger,ystledgerkv@t.co,10/3/2024,Clonidine Hydrochloride,K9049,$163442.84
+753,Minor,Barreau,mbarreaukw@yale.edu,5/22/2024,Natural Medicine,S43159A,$393647.11
+754,Thom,Pyrke,tpyrkekx@nature.com,7/6/2024,METFORMIN HYDROCHLORIDE,T421X5D,$238581.34
+755,Dewey,Aronowitz,daronowitzky@mediafire.com,8/26/2024,HUMAN RHO(D) IMMUNE GLOBULIN,S06892S,$98061.81
+756,Hamish,Teissier,hteissierkz@g.co,5/25/2024,LIDOCAINE HYDROCHLORIDE ANHYDROUS,H93091,$23899.57
+757,Laureen,Willowby,lwillowbyl0@cyberchimps.com,10/30/2024,Doxercalciferol,M90629,
+758,Flint,Hurren,fhurrenl1@examiner.com,12/11/2024,TOXICODENDRON PUBESCENS LEAF,S06389,$293818.85
+759,Charley,Leftbridge,cleftbridgel2@a8.net,6/2/2024,Enoxaparin Sodium,S42434B,
+760,Raychel,Adami,radamil3@networkadvertising.org,10/18/2024,Stannum 17 Special Order,S82844E,$369805.43
+761,Brigitta,Tomaszewski,btomaszewskil4@nationalgeographic.com,1/29/2024,Salicylic Acid,S3550XA,$320768.85
+762,Marnia,Worstall,mworstalll5@marketwatch.com,9/23/2024,Hepataplex,S2551,$94472.57
+763,Arlana,Faires,afairesl6@pen.io,2/14/2024,Ibuprofen,I82719,$24738.20
+764,Gui,Longega,glongegal7@examiner.com,6/10/2024,Trazodone Hydrochloride,T8549XD,$213465.66
+765,Dru,Shieber,dshieberl8@geocities.jp,2/17/2024,Lamotrigine,S3216XS,$228787.79
+766,Helenka,Fearney,hfearneyl9@over-blog.com,2/17/2024,"INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A VIRUS A/TEXAS/50/2012 X-223A (H3N2) ANTIGEN (FORMALDEHYDE INACTIVATED), and INFLUENZA B VIRUS B/MASSACHUSETTS/2/2012 BX-51B ANTIGEN (FORMALDEHYDE INACTIVATED)",Z96691,$247460.06
+767,Raychel,Fonte,rfontela@prlog.org,9/28/2024,oxycodone hydrochloride,M12419,$120490.34
+768,Nicolette,Huddlestone,nhuddlestonelb@adobe.com,5/18/2024,"Loratadine, Pseudoephedrine Sulfate",V980XXD,
+769,Karry,Aksell,kakselllc@vistaprint.com,3/15/2024,NITROGLYCERIN,M80011A,$372082.25
+770,Binnie,Josskowitz,bjosskowitzld@exblog.jp,10/29/2024,Articaine hydrochloride and Epinephrine Bitartrate,T394,$144119.56
+771,Waite,Astlet,wastletle@google.cn,1/28/2024,OXYGEN,S63230,$205764.50
+772,Thibaud,Shapcote,tshapcotelf@tinyurl.com,10/9/2024,meclizine hydrochloride,S52235E,$176149.25
+773,Perri,Quinnelly,pquinnellylg@nba.com,12/12/2023,GLYCERIN,V131,$70521.19
+774,Aurthur,Bauser,abauserlh@hugedomains.com,8/24/2024,famotidine,M0007,$133411.60
+775,Neala,Bernardini,nbernardinili@aboutads.info,3/17/2024,Alprazolam,S58019S,$74551.53
+776,Errol,Leathem,eleathemlj@google.com,7/11/2024,Loperamide HCl,H6193,$149785.24
+777,Tillie,Pincott,tpincottlk@telegraph.co.uk,12/10/2024,Salicylic Acid,T81523S,$211202.86
+778,Jarrad,Matusiak,jmatusiakll@google.pl,5/25/2024,Clobetasol Propionate,S24139D,$289123.52
+779,Garnette,Duignan,gduignanlm@networkadvertising.org,9/24/2024,acetaminophen and codeine phosphate,T17308,$141123.81
+780,Fionnula,Fortun,ffortunln@joomla.org,2/12/2024,SENNOSIDES A AND B,S46891,$298964.73
+781,Dorotea,Ingledew,dingledewlo@bing.com,11/11/2024,Aspergillus repens,H73892,$52118.32
+782,Annis,Witherow,awitherowlp@sohu.com,1/1/2024,Clonidine,T24609S,$34767.87
+783,Marcia,Cowup,mcowuplq@freewebs.com,9/17/2024,Eucalyptus,S82899F,$361822.19
+784,Dalis,Haslum,dhaslumlr@lycos.com,11/7/2024,Pravastatin Sodium,S90475D,$104785.05
+785,Duffy,Belverstone,dbelverstonels@home.pl,6/11/2024,Divalproex Sodium,D110,$343640.95
+786,Evan,Inman,einmanlt@hud.gov,3/23/2024,Montelukast Sodium,S25422,$171470.52
+787,Lura,Harlett,lharlettlu@miitbeian.gov.cn,7/14/2024,Thuja Occidentalis Leafy Twig and Calendula Officinalis Whole,S7402XD,$251479.57
+788,Charita,McCarry,cmccarrylv@whitehouse.gov,3/5/2024,Folic Acid,W16722S,$173993.29
+789,Valentine,Algie,valgielw@typepad.com,6/30/2024,Aspergillus niger,M4852XG,$356471.59
+790,Cary,Giddings,cgiddingslx@dot.gov,2/25/2024,Pecan Pollen,S5291XJ,$324046.63
+791,Adrian,Dwelley,adwelleyly@patch.com,8/16/2024,"Dextroamphetamine Saccharate, Amphetamine Aspartate, Dextroamphetamine Sulfate, and Amphetamine Sulfate",T677XXD,$87461.47
+792,Betteanne,Snellman,bsnellmanlz@latimes.com,1/8/2024,Prasterone,S70279S,$73606.79
+793,Aaren,Wyldish,awyldishm0@quantcast.com,5/8/2024,"ZINC OXIDE, TITANIUM DIOXIDE",S82819D,
+794,Devland,Chatburn,dchatburnm1@google.fr,5/8/2024,trimethobenzamide hydrochloride,S27819D,$255456.01
+795,Ketty,Mar,kmarm2@house.gov,7/27/2024,Aspirin,M1A2120,$3806.85
+796,Aldin,Exton,aextonm3@admin.ch,5/12/2024,Aluminum zirconium tetrachlorohydrex gly,K05329,$171029.07
+797,Letti,Barzen,lbarzenm4@ovh.net,12/31/2023,pitavastatin calcium,M9923,$216408.89
+798,Roland,Thewys,rthewysm5@nbcnews.com,8/9/2024,quinapril hydrochloride,S15012A,$275007.85
+799,Mirna,Gainsbury,mgainsburym6@domainmarket.com,10/8/2024,calcipotriene and betamethasone dipropionate,M6721,$282226.71
+800,Hallie,Spain-Gower,hspaingowerm7@hostgator.com,5/23/2024,Lubricant eye drops,S92403K,$160283.06
+801,Kaylee,Aughtie,kaughtiem8@sfgate.com,8/6/2024,Amlodipine Besylate,S00402S,$194797.43
+802,Dex,Luckie,dluckiem9@reddit.com,5/11/2024,Chlorpheniramine Maleate and Phenylephrine Hydrochloride,Z965,$38247.02
+803,Raynor,Cadagan,rcadaganma@clickbank.net,12/11/2024,paroxetine hydrochloride,S52325A,$47066.57
+804,Swen,Esh,seshmb@fda.gov,12/5/2024,"avobenzone, octocrylene, and oxybenzone",S14141A,$63153.52
+805,Lesly,Doncaster,ldoncastermc@oaic.gov.au,9/15/2024,Simvastatin,T84059,$212516.61
+806,Bren,Bayliss,bbaylissmd@dion.ne.jp,5/6/2024,Hydromorphone HCl,V131XXS,$207806.32
+807,Kevon,Meddemmen,kmeddemmenme@un.org,9/4/2024,"CALENDULA OFFICINALIS FLOWERING TOP, SODIUM CHLORIDE, and Thuja occidentalis leafy twig",T45614D,$146069.50
+808,Vidovik,Stainton,vstaintonmf@seesaa.net,8/30/2024,Ibuprofen,H47032,$50751.59
+809,Leilah,Heyburn,lheyburnmg@tmall.com,10/4/2024,Immune System Booster,L89519,$68810.23
+810,Terese,Heisman,theismanmh@histats.com,7/25/2024,Dulcamara comp.,F1194,$60806.18
+811,Ezekiel,Anger,eangermi@lycos.com,6/15/2024,"Brompheniramine maleate, Dextromethorphan HBr, Phenylephrine HCl",T2631XA,$263479.62
+812,Daffie,Bunner,dbunnermj@nbcnews.com,9/29/2024,Clotrimazole,E1159,$109844.01
+813,Kathie,Haw,khawmk@mysql.com,1/5/2024,captopril,W2101XD,$200217.65
+814,Otes,Abys,oabysml@seattletimes.com,10/11/2024,Hydrocortisone Acetate Pramoxine Hcl,M10129,$342599.76
+815,Prisca,Goligly,pgoliglymm@youku.com,3/11/2024,Salicylic Acid,V2959XD,$103637.81
+816,Rahel,Leatham,rleathammn@amazon.co.jp,9/27/2024,"Isometheptene Mucate, DICHLORALPHENAZONE, and ACETAMINOPHEN",M87178,$3643.94
+817,Coral,Hindenburg,chindenburgmo@elpais.com,2/20/2024,metoprolol succinate and hydrochlorothiazide,S56529D,$299694.13
+818,Jesse,Simmonite,jsimmonitemp@yahoo.com,12/12/2023,Oxygen,C7B09,
+819,Lynnette,Maulin,lmaulinmq@bbc.co.uk,12/28/2023,Triamterene and Hydrochlorothiazide,Y249XXA,$321197.58
+820,Anica,Screaton,ascreatonmr@desdev.cn,3/10/2024,Sodium Fluoride,T17518S,$201081.28
+821,Albina,Reneke,arenekems@dmoz.org,5/17/2024,risperidone,X811XXD,$220946.96
+822,Yuri,Sisley,ysisleymt@phoca.cz,9/1/2024,alendronate sodium,T22251,$27795.31
+823,Vinny,Megroff,vmegroffmu@oracle.com,11/6/2024,Levetiracetam,B258,$140385.23
+824,Jeramie,Kenshole,jkensholemv@springer.com,10/20/2024,Zolpidem Tartrate,S02400B,$309975.74
+825,Kasey,Feavers,kfeaversmw@harvard.edu,9/12/2024,"Pseudoephedrine sulfate, Loratadine",T380X3S,$240379.85
+826,Letizia,Haldane,lhaldanemx@moonfruit.com,7/11/2024,"Loratadine, Pseudoephedrine",H60553,$203601.75
+827,Kayne,Garrioch,kgarriochmy@hc360.com,12/21/2023,WARFARIN SODIUM,W60XXXA,
+828,Bab,Mewett,bmewettmz@marriott.com,8/5/2024,"MENTHOL, CAPSAICIN",T48294,$272115.70
+829,Woodrow,Templar,wtemplarn0@shutterfly.com,9/13/2024,"Wild rose,",S82424M,$295132.29
+830,Esta,Troubridge,etroubridgen1@usatoday.com,6/21/2024,PHENTERMINE HYDROCHLORIDE,A300,$160993.82
+831,Olivia,Pennetti,opennettin2@goo.gl,2/15/2024,Avobenzone and Octinoxate,S27808S,$51046.70
+832,Babs,Ebi,bebin3@google.nl,1/25/2024,methylphenidate hydrochloride,O4401,$328431.11
+833,Grant,Huccaby,ghuccabyn4@sfgate.com,7/18/2024,Calcipotriene,T84629,$262554.02
+834,Seymour,Haggath,shaggathn5@ebay.co.uk,5/8/2024,Propranolol Hydrochloride,T23131S,$167943.42
+835,Antonin,Espinoza,aespinozan6@aol.com,10/11/2024,CAPSAICIN,S42443S,$381618.66
+836,Mignonne,Tart,mtartn7@quantcast.com,5/12/2024,Carvedilol,T582X1A,
+837,Alyssa,Meldrum,ameldrumn8@aol.com,7/4/2024,calcipotriene and betamethasone dipropionate,H35383,$153812.91
+838,Artus,Ovize,aovizen9@bravesites.com,5/14/2024,Alcohol,S60467S,$260859.28
+839,Dagmar,Delgado,ddelgadona@yahoo.com,3/30/2024,amlodipine besylate,S92522G,$258831.52
+840,Obie,Lympany,olympanynb@google.cn,3/3/2024,POTASSIUM BICARBONATE,H35443,$395436.21
+841,Corene,Torr,ctorrnc@yahoo.com,4/16/2024,Technetium Tc 99m Oxidronate,S36201,$283595.30
+842,Clive,Nanni,cnannind@cocolog-nifty.com,4/15/2024,palonosetron hydrochloride,M85831,$132276.68
+843,Rona,Mayoh,rmayohne@loc.gov,1/4/2024,Alprazolam,S32031S,$128960.53
+844,Heinrik,Anscott,hanscottnf@cbsnews.com,11/8/2024,benzalkonium chloride,S52522P,$253201.03
+845,Toma,Seery,tseeryng@list-manage.com,2/18/2024,METHYL SALICYLATE MENTHOL CAPSAICIN LIDOCAINE,R866,
+846,Richmound,Punshon,rpunshonnh@sciencedaily.com,11/20/2024,Allspice,V9389,
+847,Derron,Lanston,dlanstonni@nih.gov,3/17/2024,"Apis mellifica, Arsenicum album, Borax, Capsicum annuum, Graphites, Mentha piperita, Mezereum, Natrum muriaticum, Nux vomica, Petroleum, Ranunculus bulbosus, Rhus toxicodendron",S82854C,$2783.90
+848,Simona,Romain,sromainnj@liveinternet.ru,8/3/2024,BOS TAURUS THYMUS,T2611XA,$211024.13
+849,Tresa,Corless,tcorlessnk@macromedia.com,8/8/2024,Octinoxate and Titanium Dioxide,Z00111,$16338.57
+850,Jarret,Eddoes,jeddoesnl@ameblo.jp,11/16/2024,Sunitinib malate,M84379G,$399230.47
+851,Marty,Tarbard,mtarbardnm@un.org,2/23/2024,Aspirin,V9300XS,$277148.95
+852,Hector,Knagges,hknaggesnn@youtu.be,5/29/2024,"Acetaminophen, dextromethorphan HBr, guaifenesin, Phenylephrine HCl",S63413D,$300172.47
+853,Doralyn,Stoop,dstoopno@google.cn,1/22/2024,phenobarbital,T83191S,$102891.14
+854,Jeddy,Knotton,jknottonnp@guardian.co.uk,11/30/2024,levonorgestrel and ethinyl estradiol,X713,$294662.49
+855,Micki,Pickthall,mpickthallnq@home.pl,10/8/2024,Pseudoephedrine HCl,G8333,$1279.27
+856,Christophorus,Cowderoy,ccowderoynr@opensource.org,10/11/2024,Ibuprofen and Pseudoephedrine Hydrochloride,S90921S,$208989.08
+857,Pier,Mullenger,pmullengerns@pcworld.com,6/21/2024,SALICYLIC ACID,J9801,$322089.15
+858,Shanta,Michelle,smichellent@ow.ly,7/12/2024,"Rock Water,",R29710,$395014.97
+859,Pavel,Zaniolini,pzaniolininu@jalbum.net,2/12/2024,OCTINOXATE,S15019A,$276439.17
+860,Waverly,Rawcliffe,wrawcliffenv@privacy.gov.au,9/12/2024,CIDOFOVIR DIHYDRATE,S72113P,$83623.24
+861,Polly,Holtham,pholthamnw@jigsy.com,3/25/2024,Sheep Sorrel,S79102K,$331026.57
+862,Levin,Sleeny,lsleenynx@histats.com,5/16/2024,"Acetaminophen, Dextromethorphan, Phenylephrine",H47233,
+863,Harlene,Forsey,hforseyny@prweb.com,6/20/2024,"ASAFOETIDA, IGNATIA AMARA, VALERIANA OFFICINALIS, AVENA SATIVA, ARGENTUM NITRICUM, HYOSCYAMUS NIGER, PAEONIA OFFICINALIS, STRAMONIUM, COCCULUS INDICUS",S52022B,$280534.78
+864,Welsh,Wrankmore,wwrankmorenz@t-online.de,10/4/2024,TITANIUM DIOXIDE,M84629K,$242222.85
+865,Audrie,Placide,aplacideo0@cafepress.com,5/2/2024,doxorubicin hydrochloride,V9024XS,$79832.25
+866,Melli,Feldfisher,mfeldfishero1@statcounter.com,5/6/2024,Queen Palm,S63112D,
+867,Marysa,Butrimovich,mbutrimovicho2@dropbox.com,9/13/2024,Ziprasidone Hydrochloride,S22060S,$97513.90
+868,Willamina,Farra,wfarrao3@etsy.com,3/22/2024,"Hamamelis Virginiana Root Bark/Stem Bark, Echinacea purpurea, Centella asiatica, and Sambucus Nigra Flowering Top",S62022A,$354347.55
+869,Agnella,Stolze,astolzeo4@wordpress.org,2/4/2024,Metoprolol Succinate,S49102K,$21130.67
+870,Anny,Jukes,ajukeso5@umich.edu,3/28/2024,Dimethicone,T450X2S,$10381.66
+871,Paddy,Artharg,parthargo6@imageshack.us,8/16/2024,"Acetaminophen, Dextromethorphan HBr",G3182,$391372.59
+872,Gert,Colquete,gcolqueteo7@blogger.com,10/27/2024,Indomethacin,T632X3A,$13336.52
+873,Hadrian,Charteris,hcharteriso8@globo.com,4/2/2024,"OCTINOXATE, TITANIUM DIOXIDE, DIMETHICONE, ALUMINUM HYDROXIDE, STEARIC ACID, HYDROXYPROLINE,",S0211ED,$67260.61
+874,Kattie,Faulconbridge,kfaulconbridgeo9@google.ca,7/3/2024,"Aluminum Hydroxide, Magnesium Hydroxide, Dimethicone",M87052,$58719.73
+875,Rosalind,Challender,rchallenderoa@a8.net,11/16/2024,Fludarabine Phosphate,S62366S,$399799.88
+876,Lita,Ackermann,lackermannob@dedecms.com,5/17/2024,Fluconazole,I1310,$21579.26
+877,Bertha,Turbayne,bturbayneoc@dmoz.org,12/21/2023,ALCOHOL,E10354,
+878,Shana,Paszak,spaszakod@illinois.edu,4/13/2024,Desmopressin Acetate,S35348D,$54204.21
+879,Marian,Skryne,mskryneoe@issuu.com,7/22/2024,skin protectant/topical analgesic,S72136A,$47476.16
+880,Kissiah,Kitteman,kkittemanof@youtu.be,2/16/2024,Rye Grain,S32039A,
+881,Abe,Canedo,acanedoog@skype.com,5/28/2024,"Aconitum napellus, Arsenicum album, Baryta carbonica, Cantharis, Gelsemium sempervirens, Graphites, Hydrastis canadensis, Kali iodatum, Lachesis mutus, Lycopodium clavatum, Mercurius vivus, Natrum muriaticum, Nux vomica, Phosphorus, Phytolacca decandra, Pulsatilla, Rhus toxicodendron, Sepia, Silicea and Sulphur",V0110XS,
+882,Felic,Bonnick,fbonnickoh@google.ca,12/13/2023,Losartan Potassium,S46892,$273874.75
+883,Corly,MacCleay,cmaccleayoi@blogspot.com,5/24/2024,"Magnesium Chloride, Dextrose monohydrate, Lactic Acid, Sodium Chloride, Sodium Bicarbonate, and Potassium Chloride",V9629,$568.11
+884,Holden,McPeck,hmcpeckoj@flavors.me,3/9/2024,Chlorhexidine Gluconate,T22339D,$149544.06
+885,Tate,Dobbson,tdobbsonok@lulu.com,8/29/2024,Salicylic Acid,S66190S,$39827.56
+886,Marjy,Gayne,mgayneol@ask.com,11/16/2024,Octinoxate Titanium Dioxide,S409,$293734.72
+887,Meredith,Lisimore,mlisimoreom@sphinn.com,7/3/2024,"CANDIDA ALBICANS, SEPIA OFFICINALIS JUICE, ECHINACEA, UNSPECIFIED, LYCOPODIUM CLAVATUM SPORE, PULSATILLA VULGARIS, THUJA OCCIDENTALIS LEAFY TWIG, OYSTER SHELL CALCIUM CARBONATE, CRUDE, ASTRAGALUS PROPINQUUS ROOT, MERCURIUS SOLUBILIS, GOLDENSEAL, PHYTOLACCA AMERICANA ROOT, BERBERIS VULGARIS ROOT BARK, GENTIANA LUTEA ROOT, APIS MELLIFERA",V9081XA,$35548.83
+888,Lev,Paulson,lpaulsonon@weather.com,9/28/2024,Bethanechol Chloride 50 mg,S52692D,$60514.68
+889,Susy,Arrandale,sarrandaleoo@columbia.edu,7/20/2024,Nicotine Polacrilex,M87265,$167464.77
+890,Norbie,Orteu,norteuop@vimeo.com,10/11/2024,Benazepril Hydrochloride,M87022,$12365.36
+891,Kerwinn,Heindle,kheindleoq@loc.gov,1/8/2024,Hazelnut,S97109S,$94252.65
+892,Julissa,Caughte,jcaughteor@is.gd,3/3/2024,TERCONAZOLE,S01431D,$284549.11
+893,Bethena,Patterfield,bpatterfieldos@pbs.org,12/18/2023,sertraline hydrochloride,S86199,$11205.74
+894,Mariya,Di Carlo,mdicarloot@patch.com,11/17/2024,Grapefruit,T23161D,$83904.61
+895,Terencio,Joye,tjoyeou@craigslist.org,10/11/2024,Quetiapine Fumarate,S99009S,$88672.01
+896,Nealy,Langstone,nlangstoneov@paypal.com,1/22/2024,"Cetirizine HCl, Pseudoephedrine HCl",S56129D,$309641.78
+897,Fancie,Dallin,fdallinow@shinystat.com,12/17/2023,Amlodipine and Benazepril Hydrochloride,M6223,$217713.47
+898,Agatha,Desporte,adesporteox@google.co.uk,2/11/2024,Loperamide HCl,T470X6A,$61744.66
+899,Bel,Mcwhinney,bmcwhinneyoy@usda.gov,9/29/2024,"OCTINOXATE, OXYBENZONE, PADIMATE O",S61422S,$216092.67
+900,Easter,Ennals,eennalsoz@imageshack.us,2/24/2024,Titanium Dioxide,S32426B,$227788.97
+901,Greer,Pisco,gpiscop0@4shared.com,12/11/2024,THUJA OCCIDENTALIS,T8069XA,$155239.65
+902,Wash,Goudard,wgoudardp1@kickstarter.com,5/2/2024,Olanzapine,V8673XS,$266700.62
+903,Shalna,Nesfield,snesfieldp2@answers.com,4/8/2024,Tetracycline Hydrochloride,T8521XA,$164949.20
+904,Desmund,Woolf,dwoolfp3@1688.com,11/22/2024,Tadalafil,H331,$306260.16
+905,Elysia,Le Marquand,elemarquandp4@naver.com,4/2/2024,Pyrithione Zinc,S63639A,$40839.96
+906,Leisha,Champion,lchampionp5@google.nl,12/14/2023,OCTINOXATE and TITANIUM DIOXIDE,G9059,$305174.68
+907,Fin,Deyes,fdeyesp6@patch.com,2/4/2024,ETHYL ALCOHOL,S55119D,$226806.37
+908,Dyanna,Glanders,dglandersp7@blog.com,5/23/2024,famotidine,M1A3,$336263.87
+909,Walliw,Goodyear,wgoodyearp8@apache.org,11/10/2024,Divalproex Sodium,D55,
+910,Mallorie,Edgeworth,medgeworthp9@examiner.com,1/29/2024,risperidone,T507X4D,$216996.51
+911,Pren,Fidgett,pfidgettpa@walmart.com,7/14/2024,"Folliculinum, Oophorinum,",C8174,$11369.86
+912,Vinni,Mollin,vmollinpb@latimes.com,4/14/2024,Diphenhydramine HCl,P141,$49445.07
+913,Cathleen,Beese,cbeesepc@blogtalkradio.com,12/30/2023,quinapril hydrochloride,T24402,$280419.10
+914,Britt,Piletic,bpileticpd@washington.edu,12/17/2023,Carbamazepine,S92521P,
+915,Ingram,Cello,icellope@youtu.be,8/31/2024,Sodium Bicarbonate,M7110,$299801.71
+916,Emera,Hiscoe,ehiscoepf@t.co,4/18/2024,NICOTINE,T63122D,$75344.71
+917,Terese,Clawe,tclawepg@google.com,8/19/2024,"Avobenzone, Homosalate, Octinoxate, Octocrylene, Oxybenzone",S56301D,
+918,Lorettalorna,Grise,lgriseph@domainmarket.com,2/6/2024,"acetaminophen, dextromethorphan Hbr, Phenylephrine HCl",F13150,
+919,Dugald,Clackson,dclacksonpi@simplemachines.org,8/17/2024,"AVOBENZONE, OCTOCRYLENE, OXYBENZONE",A448,$78055.71
+920,Calv,Gringley,cgringleypj@sohu.com,12/5/2024,Indomethacin,E1162,$214059.17
+921,Elfie,Benediktovich,ebenediktovichpk@japanpost.jp,10/11/2024,bacitracin zinc neomycin sulfate polymyxin b sulfate,T5292XS,$272544.95
+922,Mikaela,Gisburn,mgisburnpl@rakuten.co.jp,11/24/2024,Triamcinolone Acetonide,V514XXS,$337076.74
+923,Tremain,Coop,tcooppm@abc.net.au,4/27/2024,diltiazem hydrochloride,S72356K,$243253.07
+924,Hendrick,Pringell,hpringellpn@nhs.uk,8/1/2024,Lamotrigine,T81539A,$328890.01
+925,Emmy,Pionter,epionterpo@ycombinator.com,9/1/2024,Guaifenesin and Codeine Phosphate,S90922D,$7456.47
+926,Sioux,Ogglebie,sogglebiepp@edublogs.org,6/4/2024,Clobetasol propionate,M86551,$99287.17
+927,Dede,MacClenan,dmacclenanpq@trellian.com,10/2/2024,Ketotifen Fumarate,S62318G,
+928,Nathalia,Winscomb,nwinscombpr@digg.com,4/17/2024,Hydrochlorothiazide,T50Z92D,$233982.02
+929,Kippie,Bear,kbearps@t.co,1/1/2024,Salicylic Acid,S62357S,
+930,Lynnet,Rampling,lramplingpt@tinyurl.com,1/31/2024,SODIUM FLUORIDE F-18,S76309A,$376786.60
+931,Carny,Springall,cspringallpu@opensource.org,4/20/2024,AGARICUS MUSCARIUS,S83269,$201521.55
+932,Sumner,Pyser,spyserpv@quantcast.com,5/9/2024,"Avobenzone, Octinoxate, and Octisalate",T23672D,$87876.82
+933,Roxane,Claffey,rclaffeypw@netvibes.com,7/28/2024,"Lanolin, Petrolatum",S82499K,$31409.86
+934,Ines,Frobisher,ifrobisherpx@free.fr,8/16/2024,Naltrexone Hydrochloride,S51042D,$8465.16
+935,Nance,Schoffler,nschofflerpy@mysql.com,6/17/2024,Acetaminophen,T7521XD,$48737.57
+936,Bartolomeo,Navarro,bnavarropz@clickbank.net,1/25/2024,Digoxin,S06318S,$366220.66
+937,Willamina,Foxhall,wfoxhallq0@soundcloud.com,2/20/2024,PYRIDOSTIGMINE BROMIDE,T50903S,$31064.74
+938,Eva,Tuting,etutingq1@linkedin.com,10/20/2024,Clotrimazole,T22322D,
+939,Winthrop,Grimsdell,wgrimsdellq2@quantcast.com,3/19/2024,indomethacin,V7929XA,$110753.90
+940,Fredelia,Pavlitschek,fpavlitschekq3@fema.gov,5/8/2024,granisetron hydrochloride,T85591D,$233348.23
+941,Maxine,Fibbit,mfibbitq4@edublogs.org,6/29/2024,ISOPROPYL ALCOHOL,S92592P,$49000.39
+942,Waldemar,Grieveson,wgrievesonq5@discovery.com,1/3/2024,Loratadine,W16021S,$39398.05
+943,Enos,Hillburn,ehillburnq6@ibm.com,10/21/2024,"Titanium Dioxide, OCTINOXATE, Zinc Oxide, OCTISALATE",S86101A,$223527.97
+944,Brook,McClintock,bmcclintockq7@apple.com,12/11/2024,Promethazine Hydrochloride,S75292,$89857.20
+945,Mendel,Chmarny,mchmarnyq8@buzzfeed.com,7/10/2024,hydrocodone bitartrate and acetaminophen,T56814D,$122256.45
+946,Dannie,Grossier,dgrossierq9@bing.com,8/25/2024,"HYDROCORTISONE ACETATE, IODOQUINOL",S72455M,$386866.43
+947,Tyne,Goldstein,tgoldsteinqa@storify.com,12/10/2024,Metronidazole,S43012A,$111056.35
+948,Teador,Lumsdaine,tlumsdaineqb@cnn.com,11/13/2024,Losartan Potassium,V582,$392849.50
+949,Yoko,Zecchii,yzecchiiqc@elpais.com,3/6/2024,Homeopathic Liquid,S00572S,$394490.07
+950,Rufus,Pretorius,rpretoriusqd@gizmodo.com,2/6/2024,meclizine hydrochloride,T536X4S,$205428.54
+951,Kalina,Jiru,kjiruqe@qq.com,7/1/2024,SODIUM CHLORIDE,M62419,$221013.65
+952,Ric,Kinnerk,rkinnerkqf@gizmodo.com,2/4/2024,interferon alfa-2b,S61339A,$49187.63
+953,Adrien,Snap,asnapqg@canalblog.com,12/1/2024,Trolamine Salicylate,T1731,$87342.22
+954,Dorri,Rosenzwig,drosenzwigqh@admin.ch,2/14/2024,Gemfibrozil,V542XXS,$41089.06
+955,Michail,Kubista,mkubistaqi@imgur.com,6/2/2024,Glycerin,A1816,$49559.90
+956,Lucilia,Assaf,lassafqj@timesonline.co.uk,2/28/2024,TOPIRAMATE,R27,$99600.41
+957,Ase,Kingerby,akingerbyqk@oakley.com,2/17/2024,BUPIVACAINE HYDROCHLORIDE AND EPINEPHRINE BITARTRATE,T420,
+958,Arlen,Hucquart,ahucquartql@aboutads.info,5/3/2024,OCTINOXATE,S49001G,$166732.74
+959,Granger,Hambright,ghambrightqm@deliciousdays.com,2/24/2024,Acetaminophen,V485XXD,$325816.39
+960,Klemens,Coleman,kcolemanqn@engadget.com,7/1/2024,OCTINOXATE,S52615Q,$14054.78
+961,Ketty,Arr,karrqo@sciencedaily.com,6/23/2024,"OYSTER SHELL CALCIUM CARBONATE, CRUDE",E13641,
+962,Lebbie,Paeckmeyer,lpaeckmeyerqp@opensource.org,1/21/2024,Cephalexin,S73191S,$222564.25
+963,Doretta,Phateplace,dphateplaceqq@posterous.com,6/20/2024,Fluorescein Sodium,T43611D,$316839.98
+964,Salvatore,Di Gregorio,sdigregorioqr@google.com.br,5/24/2024,tolnaftate,S46999,$51980.19
+965,Donielle,Cescon,dcesconqs@deviantart.com,5/6/2024,Zinc Oxide,S62122K,
+966,Elisha,Benardette,ebenardetteqt@1688.com,10/5/2024,telithromycin,T63071,$380588.08
+967,Lovell,Cable,lcablequ@wunderground.com,4/24/2024,ALOE,N8110,$190097.78
+968,Darice,Agronski,dagronskiqv@cornell.edu,3/20/2024,Immune Globulin,O34512,$35284.12
+969,Hazel,Bratley,hbratleyqw@soup.io,3/28/2024,Guanfacine Hydrochloride,T782XXA,$81815.85
+970,Irv,Hanes,ihanesqx@flavors.me,6/6/2024,Oxacillin,S63642S,$370540.32
+971,Ibrahim,Lemmers,ilemmersqy@cnet.com,12/7/2024,sildenafil citrate,H7101,$167298.17
+972,Harlie,Kale,hkaleqz@instagram.com,10/15/2024,VALERIAN,H04311,
+973,Shelton,Camoletto,scamolettor0@is.gd,1/2/2024,"HYDROQUINONE, OCTINOXATE AND ZINC OXIDE",S89001P,$324308.44
+974,Marilee,Capin,mcapinr1@mysql.com,10/15/2024,"Chlorpheniramine maleate, Pseudoephedrine",S52572S,$314466.40
+975,Alli,Iacovo,aiacovor2@amazon.co.uk,1/18/2024,MENTHOL,S92331B,$113964.88
+976,Kerry,Melluish,kmelluishr3@xrea.com,4/1/2024,Cetirizine Hydrochloride,R296,$304411.40
+977,Derk,Charette,dcharetter4@yelp.com,10/11/2024,Metoprolol Tartrate,T2109,$228040.06
+978,Errol,Cleverly,ecleverlyr5@sohu.com,7/30/2024,OCTINOXATE,S63592D,
+979,Loraine,Laxtonne,llaxtonner6@creativecommons.org,10/26/2024,Promethazine Hydrochloride,S63255D,$191374.37
+980,Lexie,Rottger,lrottgerr7@hostgator.com,6/5/2024,"Adrenalinum, Agaricus muscarius, Aloe socotrina, Bovista, Calcarea carbonica, Carpinus betulus, flos, Chelidonium majus, Cocculus indicus, Helonias dioica, Hydrofluoricum acidum, Kali phosphoricum, Mimosa pudica, Rosmarinus officinalis, Sulphur, Tanacetum vulgare, Taraxacum officinale, Tropaeolum majus",K061,$261832.84
+981,Glenda,Buttwell,gbuttwellr8@google.ru,11/18/2024,"Colchicum autumnale, Propolis, Kalmia latifolia, Bryonia, Causticum, Kali carbonicum, Ledum palustre, Rhododendron chrysanthum, Rhus toxicodendron, Thuja occidentalis,",M24039,$186411.06
+982,Sam,Setterthwait,ssetterthwaitr9@smugmug.com,9/27/2024,nicotine,S82116G,$169294.54
+983,Louisa,Libbie,llibbiera@studiopress.com,7/30/2024,Mirtazapine,L602,
+984,Jessi,Brasener,jbrasenerrb@blinklist.com,11/24/2024,Bacitracin Zinc and Polymyxin B Sulfate,R402324,$150678.56
+985,Hamlen,McGooch,hmcgoochrc@biblegateway.com,7/5/2024,Sulfamethoxazole and Trimethoprim,C632,$153383.94
+986,Rosaline,Kubal,rkubalrd@yolasite.com,8/28/2024,Betamethasone Valerate,S82145A,$17094.09
+987,Lonny,Crane,lcranere@google.fr,2/9/2024,Octinoxate,S02611B,$370895.17
+988,Jessamine,Takis,jtakisrf@is.gd,12/2/2024,Clotrimazole,S82044D,$140214.86
+989,Carmela,Cullinane,ccullinanerg@trellian.com,6/28/2024,Lidocaine,L024,$301888.25
+990,Riordan,Ericsson,rericssonrh@bravesites.com,6/3/2024,"avobenzone, homosalate, octisalate, octocrylene",S86201A,$36187.29
+991,Meta,Regorz,mregorzri@alexa.com,4/14/2024,Ranitidine,V382,$238921.97
+992,Boycey,McComish,bmccomishrj@tinyurl.com,5/11/2024,Maximum Strength Medicated Foot Powder,T362X3,$79733.81
+993,Lizzy,Stobbs,lstobbsrk@1und1.de,12/1/2024,Phenylephrine hydrochloride,O336XX2,$141875.42
+994,Mose,Causnett,mcausnettrl@latimes.com,5/4/2024,telmisartan,T84328,$97152.59
+995,Roi,Curryer,rcurryerrm@state.gov,3/25/2024,"Angelica Archangelica, Cimicifuga Racemosa, Zincum Gluconicum, Funiculus Umbilicalis Suis, Lymph Node, Oophorinum",V345XXD,$77767.55
+996,Jackelyn,Coult,jcoultrn@ezinearticles.com,5/24/2024,HELIUM,S72366K,$245255.50
+997,Judas,Hanaby,jhanabyro@gmpg.org,9/2/2024,Piperacillin and Tazobactam,K2920,$98677.86
+998,Sela,Jendrassik,sjendrassikrp@topsy.com,5/12/2024,"acetaminophen, chlorpheniramine maleate, and phenylephrine HCl",S98111,$286213.47
+999,Saw,Littlejohn,slittlejohnrq@hhs.gov,5/5/2024,Valacyclovir Hydrochloride,S56495D,$40470.63
+1000,Chicky,Babbidge,cbabbidgerr@google.co.jp,3/9/2024,"Octinoxate, Oxybenzone",S52135F,$33569.37

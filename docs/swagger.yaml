@@ -1,0 +1,239 @@
+basePath: /api/v1
+definitions:
+  api.CSVError:
+    properties:
+      code:
+        type: string
+      details:
+        $ref: '#/definitions/api.CSVErrorDetail'
+      message:
+        type: string
+    type: object
+  api.CSVErrorDetail:
+    properties:
+      column:
+        type: string
+      expectedType:
+        type: string
+      foundValue:
+        type: string
+      line:
+        type: integer
+      suggestion:
+        type: string
+    type: object
+  api.CSVErrorResponse:
+    properties:
+      errors:
+        items:
+          $ref: '#/definitions/api.CSVError'
+        type: array
+    type: object
+  api.CSVUploadResponse:
+    properties:
+      columns:
+        items:
+          additionalProperties: true
+          type: object
+        type: array
+      import:
+        additionalProperties: true
+        type: object
+      row_count:
+        type: integer
+      table:
+        type: string
+    type: object
+  api.ErrorResponse:
+    properties:
+      message:
+        type: string
+      status:
+        type: string
+    type: object
+  api.QueryRequest:
+    properties:
+      limit:
+        type: integer
+      query:
+        type: string
+    required:
+    - query
+    type: object
+  api.TableColumn:
+    properties:
+      name:
+        type: string
+      nullable:
+        type: boolean
+      type:
+        type: string
+    type: object
+  api.TableInfo:
+    properties:
+      columns:
+        items:
+          $ref: '#/definitions/api.TableColumn'
+        type: array
+      name:
+        type: string
+    type: object
+  api.TablesResponse:
+    properties:
+      tables:
+        items:
+          $ref: '#/definitions/api.TableInfo'
+        type: array
+    type: object
+externalDocs:
+  description: OpenAPI
+  url: https://swagger.io/resources/open-api/
+host: localhost:8080
+info:
+  contact:
+    email: support@swagger.io
+    name: API Support
+    url: http://www.swagger.io/support
+  description: A lightweight Docker container that runs DuckDB with a Go API for socket
+    connections and CSV uploads. Provides HTTP endpoints for CSV file uploads, SQL
+    queries, and table management.
+  termsOfService: http://swagger.io/terms/
+  title: Swagger Example API
+  version: "1.0"
+paths:
+  /health:
+    get:
+      consumes:
+      - text/plain
+      description: Check if the service is up and running
+      produces:
+      - text/plain
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: Health check endpoint
+      tags:
+      - health
+  /query:
+    post:
+      consumes:
+      - application/json
+      description: Run a SQL query against the database
+      parameters:
+      - description: Include benchmark metrics in response
+        in: query
+        name: benchmark
+        type: boolean
+      - description: SQL query to execute
+        in: body
+        name: query
+        required: true
+        schema:
+          $ref: '#/definitions/api.QueryRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Query results
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: Bad request (invalid query)
+          schema:
+            $ref: '#/definitions/api.ErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/api.ErrorResponse'
+      summary: Execute SQL query
+      tags:
+      - query
+  /tables:
+    get:
+      consumes:
+      - application/json
+      description: Get a list of all tables in the database with their column schemas
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: List of tables with schema
+          schema:
+            $ref: '#/definitions/api.TablesResponse'
+        "500":
+          description: Failed to list tables
+          schema:
+            $ref: '#/definitions/api.ErrorResponse'
+      summary: List database tables with schema
+      tags:
+      - tables
+  /upload:
+    post:
+      consumes:
+      - multipart/form-data
+      description: Upload a CSV file and import it into the database
+      parameters:
+      - default: utf-8
+        in: formData
+        name: csv_file_encoding
+        type: string
+      - default: false
+        in: formData
+        name: has_header
+        type: boolean
+      - default: false
+        in: formData
+        name: override
+        type: boolean
+      - default: true
+        in: formData
+        name: smart
+        type: boolean
+      - in: formData
+        name: table_name
+        required: true
+        type: string
+      - description: CSV file to upload
+        in: formData
+        name: csv_file
+        required: true
+        type: file
+      - description: 'Encoding of the CSV file (default: utf-8, supported: utf-8,
+          utf-16)'
+        in: formData
+        name: csv_file_encoding
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Upload successful
+          schema:
+            $ref: '#/definitions/api.CSVUploadResponse'
+        "400":
+          description: 'Bad request with possible error codes: INVALID_REQUEST_PARAMETERS,
+            FILE_OPEN_ERROR, MIME_TYPE_DETECTION_ERROR, CSV_FORMAT_CHECK_ERROR, INVALID_FILE_FORMAT,
+            CSV_VALIDATION_ERROR, INVALID_CSV_STRUCTURE, INVALID_ENCODING, UNSUPPORTED_ENCODING'
+          schema:
+            $ref: '#/definitions/api.CSVErrorResponse'
+        "413":
+          description: 'File too large with error code: FILE_SIZE_EXCEEDED'
+          schema:
+            $ref: '#/definitions/api.CSVErrorResponse'
+        "422":
+          description: 'Unprocessable entity with possible error codes: SECURITY_VALIDATION_FAILED,
+            FILE_COPY_ERROR, TEMP_FILE_CREATION_ERROR, SMART_IMPORT_FAILED, DIRECT_IMPORT_FAILED,
+            TABLE_INFO_ERROR, ROW_COUNT_ERROR'
+          schema:
+            $ref: '#/definitions/api.CSVErrorResponse'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/api.CSVErrorResponse'
+      summary: Upload CSV file
+      tags:
+      - upload
+swagger: "2.0"

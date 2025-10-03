@@ -1,0 +1,5 @@
+Timestamp,User,Action,Details
+2025-04-16T12:00:01,admin,Login,Success
+2025-04-16T12:05:22,system,ErrorReport,"=cmd|'/C calc'!A3"
+2025-04-16T12:06:15,user102,UpdateProfile,Success
+2025-04-16T12:08:00,attacker01,SubmitData,"Payload submitted, requires check"

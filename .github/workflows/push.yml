@@ -1,0 +1,125 @@
+name: Test and Build
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-go@v6
+        with:
+          go-version: "1.25.1"
+      - name: golangci-lint
+        uses: golangci/golangci-lint-action@v8
+  test:
+    name: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-go@v6
+        with:
+          go-version: "1.25.1"
+      - run: mkdir -p test_results/
+      - name: Test
+        run: go test -coverprofile=test_results/coverage.out -json ./... > test_results/test-report.json
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-artifact
+          path: test_results/
+
+  build:
+    runs-on: ubuntu-latest
+    needs: [lint, test]
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Set up Go
+        uses: actions/setup-go@v6
+        with:
+          go-version: "1.25.1"
+
+      - name: Build
+        run: go build -v ./...
+
+  sonarqube:
+    name: sonarqube
+    runs-on: ubuntu-latest
+    needs: [lint, test]
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/download-artifact@v5
+        with:
+          name: test-artifact
+          path: test_results/
+      - name: SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@v6
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+  postman:
+    name: postman
+    runs-on: ubuntu-latest
+    needs: [lint, test]
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Set up Go
+        uses: actions/setup-go@v6
+        with:
+          go-version: "1.25.1"
+
+      - name: Install dependencies
+        run: go mod download
+
+      - name: Start server
+        run: |
+          # Start the server and save its PID
+          export ENV_SERVER_MODE=test
+          go run main.go > server.log 2>&1 &
+          echo $! > server.pid
+
+          # Wait for the server to be ready
+          echo "Waiting for server to be ready..."
+          timeout=30
+          while [ $timeout -gt 0 ]; do
+            if curl -s http://localhost:8080/health > /dev/null; then
+              echo "Server is up and running"
+              break
+            fi
+            echo "Still waiting... ($timeout seconds left)"
+            sleep 1
+            timeout=$((timeout - 1))
+          done
+
+          if [ $timeout -eq 0 ]; then
+            echo "Server failed to start within the timeout period"
+            cat server.log
+            exit 1
+          fi
+
+      - uses: matt-ball/newman-action@v2.0.0
+        with:
+          collection: "postman/a10e.postman_collection.json"
+          environment: "postman/a10e.postman_environment.json"
+
+      - name: Server logs on failure
+        if: ${{ failure() }}
+        run: cat server.log
+
+      - name: Stop server
+        if: ${{ always() }}
+        run: |
+          if [ -f server.pid ]; then
+            kill $(cat server.pid) || true
+            echo "Server stopped"
+          fi

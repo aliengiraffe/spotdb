@@ -1,0 +1,15 @@
+meta {
+  name: Status
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseURL}}/healthcheck
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

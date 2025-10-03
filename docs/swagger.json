@@ -1,0 +1,352 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "A lightweight Docker container that runs DuckDB with a Go API for socket connections and CSV uploads. Provides HTTP endpoints for CSV file uploads, SQL queries, and table management.",
+        "title": "Swagger Example API",
+        "termsOfService": "http://swagger.io/terms/",
+        "contact": {
+            "name": "API Support",
+            "url": "http://www.swagger.io/support",
+            "email": "support@swagger.io"
+        },
+        "version": "1.0"
+    },
+    "host": "localhost:8080",
+    "basePath": "/api/v1",
+    "paths": {
+        "/health": {
+            "get": {
+                "description": "Check if the service is up and running",
+                "consumes": [
+                    "text/plain"
+                ],
+                "produces": [
+                    "text/plain"
+                ],
+                "tags": [
+                    "health"
+                ],
+                "summary": "Health check endpoint",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/query": {
+            "post": {
+                "description": "Run a SQL query against the database",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "query"
+                ],
+                "summary": "Execute SQL query",
+                "parameters": [
+                    {
+                        "type": "boolean",
+                        "description": "Include benchmark metrics in response",
+                        "name": "benchmark",
+                        "in": "query"
+                    },
+                    {
+                        "description": "SQL query to execute",
+                        "name": "query",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/api.QueryRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Query results",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": true
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request (invalid query)",
+                        "schema": {
+                            "$ref": "#/definitions/api.ErrorResponse"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal server error",
+                        "schema": {
+                            "$ref": "#/definitions/api.ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/tables": {
+            "get": {
+                "description": "Get a list of all tables in the database with their column schemas",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "tables"
+                ],
+                "summary": "List database tables with schema",
+                "responses": {
+                    "200": {
+                        "description": "List of tables with schema",
+                        "schema": {
+                            "$ref": "#/definitions/api.TablesResponse"
+                        }
+                    },
+                    "500": {
+                        "description": "Failed to list tables",
+                        "schema": {
+                            "$ref": "#/definitions/api.ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/upload": {
+            "post": {
+                "description": "Upload a CSV file and import it into the database",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "upload"
+                ],
+                "summary": "Upload CSV file",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "default": "utf-8",
+                        "name": "csv_file_encoding",
+                        "in": "formData"
+                    },
+                    {
+                        "type": "boolean",
+                        "default": false,
+                        "name": "has_header",
+                        "in": "formData"
+                    },
+                    {
+                        "type": "boolean",
+                        "default": false,
+                        "name": "override",
+                        "in": "formData"
+                    },
+                    {
+                        "type": "boolean",
+                        "default": true,
+                        "name": "smart",
+                        "in": "formData"
+                    },
+                    {
+                        "type": "string",
+                        "name": "table_name",
+                        "in": "formData",
+                        "required": true
+                    },
+                    {
+                        "type": "file",
+                        "description": "CSV file to upload",
+                        "name": "csv_file",
+                        "in": "formData",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "Encoding of the CSV file (default: utf-8, supported: utf-8, utf-16)",
+                        "name": "csv_file_encoding",
+                        "in": "formData"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Upload successful",
+                        "schema": {
+                            "$ref": "#/definitions/api.CSVUploadResponse"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request with possible error codes: INVALID_REQUEST_PARAMETERS, FILE_OPEN_ERROR, MIME_TYPE_DETECTION_ERROR, CSV_FORMAT_CHECK_ERROR, INVALID_FILE_FORMAT, CSV_VALIDATION_ERROR, INVALID_CSV_STRUCTURE, INVALID_ENCODING, UNSUPPORTED_ENCODING",
+                        "schema": {
+                            "$ref": "#/definitions/api.CSVErrorResponse"
+                        }
+                    },
+                    "413": {
+                        "description": "File too large with error code: FILE_SIZE_EXCEEDED",
+                        "schema": {
+                            "$ref": "#/definitions/api.CSVErrorResponse"
+                        }
+                    },
+                    "422": {
+                        "description": "Unprocessable entity with possible error codes: SECURITY_VALIDATION_FAILED, FILE_COPY_ERROR, TEMP_FILE_CREATION_ERROR, SMART_IMPORT_FAILED, DIRECT_IMPORT_FAILED, TABLE_INFO_ERROR, ROW_COUNT_ERROR",
+                        "schema": {
+                            "$ref": "#/definitions/api.CSVErrorResponse"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal server error",
+                        "schema": {
+                            "$ref": "#/definitions/api.CSVErrorResponse"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "api.CSVError": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "details": {
+                    "$ref": "#/definitions/api.CSVErrorDetail"
+                },
+                "message": {
+                    "type": "string"
+                }
+            }
+        },
+        "api.CSVErrorDetail": {
+            "type": "object",
+            "properties": {
+                "column": {
+                    "type": "string"
+                },
+                "expectedType": {
+                    "type": "string"
+                },
+                "foundValue": {
+                    "type": "string"
+                },
+                "line": {
+                    "type": "integer"
+                },
+                "suggestion": {
+                    "type": "string"
+                }
+            }
+        },
+        "api.CSVErrorResponse": {
+            "type": "object",
+            "properties": {
+                "errors": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/api.CSVError"
+                    }
+                }
+            }
+        },
+        "api.CSVUploadResponse": {
+            "type": "object",
+            "properties": {
+                "columns": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "additionalProperties": true
+                    }
+                },
+                "import": {
+                    "type": "object",
+                    "additionalProperties": true
+                },
+                "row_count": {
+                    "type": "integer"
+                },
+                "table": {
+                    "type": "string"
+                }
+            }
+        },
+        "api.ErrorResponse": {
+            "type": "object",
+            "properties": {
+                "message": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                }
+            }
+        },
+        "api.QueryRequest": {
+            "type": "object",
+            "required": [
+                "query"
+            ],
+            "properties": {
+                "limit": {
+                    "type": "integer"
+                },
+                "query": {
+                    "type": "string"
+                }
+            }
+        },
+        "api.TableColumn": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "nullable": {
+                    "type": "boolean"
+                },
+                "type": {
+                    "type": "string"
+                }
+            }
+        },
+        "api.TableInfo": {
+            "type": "object",
+            "properties": {
+                "columns": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/api.TableColumn"
+                    }
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        "api.TablesResponse": {
+            "type": "object",
+            "properties": {
+                "tables": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/api.TableInfo"
+                    }
+                }
+            }
+        }
+    },
+    "externalDocs": {
+        "description": "OpenAPI",
+        "url": "https://swagger.io/resources/open-api/"
+    }
+}
