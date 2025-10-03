@@ -635,6 +635,11 @@ The API has built-in rate limiting to protect against excessive requests:
 Rate limiting is automatically disabled in test mode or when
 `ENV_RATE_LIMIT_RPS` is set to "0".
 
+## Key Contributors
+
+- [@aotarola](https://github.com/aotarola) - Core development and architecture
+- [@nicobistolfi](https://github.com/nicobistolfi) - Core development and architecture
+
 ## Socket Connection
 
 The container exposes a Unix socket at `/tmp/duckdb.sock` that can be used for
