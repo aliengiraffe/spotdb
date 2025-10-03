@@ -228,78 +228,6 @@ func TestCreateTableFromCSV(t *testing.T) {
 	}
 }
 
-func TestSmartCreateTableFromCSV(t *testing.T) {
-	// Skip this test if running in CI or short mode
-	// Use a unique directory for each test
-	tempDir := t.TempDir()
-	// Save the old value to restore it later
-	oldTempDir := os.TempDir()
-	// Set the temporary directory for this test
-	if err := os.Setenv("TMPDIR", tempDir); err != nil {
-		t.Fatalf("Failed to set TMPDIR: %v", err)
-	}
-	defer func() {
-		if err := os.Setenv("TMPDIR", oldTempDir); err != nil {
-			t.Logf("Failed to restore TMPDIR: %v", err)
-		}
-	}()
-	if testing.Short() {
-		t.Skip("Skipping smart import test in short mode")
-	}
-
-	ctx := context.Background()
-	db, err := NewDuckDB(ctx)
-	if err != nil {
-		t.Fatalf("Failed to create database: %v", err)
-	}
-	defer helpers.CloseResources(db, "database")
-
-	// Create a temporary CSV file
-	csvContent := `id,name,value
-1,test1,10.5
-2,test2,20.75
-3,test3,30.0
-`
-	tmpDir := t.TempDir()
-	csvPath := filepath.Join(tmpDir, "test.csv")
-	if err := os.WriteFile(csvPath, []byte(csvContent), 0644); err != nil {
-		t.Fatalf("Failed to create test CSV file: %v", err)
-	}
-
-	// Test smart create table from CSV
-	result, err := db.SmartCreateTableFromCSV(ctx, "test_smart_table", csvPath, true, false)
-	if err != nil {
-		t.Fatalf("Failed to smart create table from CSV: %v", err)
-	}
-
-	// Check the result
-	if result.TableName != "test_smart_table" {
-		t.Errorf("Expected table name 'test_smart_table', got '%s'", result.TableName)
-	}
-	if result.RowCount != 3 {
-		t.Errorf("Expected 3 rows, got %d", result.RowCount)
-	}
-	if result.ImportID == "" {
-		t.Error("Expected non-empty import ID")
-	}
-	if result.ImportMethod == "" {
-		t.Error("Expected non-empty import method")
-	}
-	if result.Duration <= 0 {
-		t.Error("Expected positive duration")
-	}
-
-	// Verify the table was created with correct data
-	queryResult, err := db.ExecuteQuery(ctx, "SELECT * FROM test_smart_table ORDER BY id")
-	if err != nil {
-		t.Fatalf("Failed to query created table: %v", err)
-	}
-
-	if len(queryResult.Results) != 3 {
-		t.Errorf("Expected 3 rows in created table, got %d", len(queryResult.Results))
-	}
-}
-
 func TestCleanupWorker(t *testing.T) {
 	// Use a unique directory for each test
 	tempDir := t.TempDir()
@@ -1041,37 +969,6 @@ func TestCreateTableFromCSV_Errors(t *testing.T) {
 	})
 }
 
-func TestSmartCreateTableFromCSV_Errors(t *testing.T) {
-	if testing.Short() {
-		t.Skip("Skipping smart import test in short mode")
-	}
-
-	tempDir := t.TempDir()
-	oldTempDir := os.TempDir()
-	if err := os.Setenv("TMPDIR", tempDir); err != nil {
-		t.Fatalf("Failed to set TMPDIR: %v", err)
-	}
-	defer func() {
-		if err := os.Setenv("TMPDIR", oldTempDir); err != nil {
-			t.Logf("Failed to restore TMPDIR: %v", err)
-		}
-	}()
-
-	ctx := context.Background()
-	db, err := NewDuckDB(ctx)
-	if err != nil {
-		t.Fatalf("Failed to create database: %v", err)
-	}
-	defer helpers.CloseResources(db, "database")
-
-	t.Run("non-existent file", func(t *testing.T) {
-		_, err := db.SmartCreateTableFromCSV(ctx, "test_table", "/nonexistent/file.csv", true, false)
-		if err == nil {
-			t.Error("Expected error for non-existent CSV file")
-		}
-	})
-}
-
 func TestExecuteQuery_EmptyResults(t *testing.T) {
 	tempDir := t.TempDir()
 	oldTempDir := os.TempDir()
@@ -1294,41 +1191,5 @@ func TestStartCleanupWorker_TimeBased(t *testing.T) {
 
 	if len(result.Results) == 0 {
 		t.Error("Table should still exist (not expired)")
-	}
-}
-
-func TestSmartCreateTableFromCSV_EmptyFile(t *testing.T) {
-	tempDir := t.TempDir()
-	oldTempDir := os.TempDir()
-	if err := os.Setenv("TMPDIR", tempDir); err != nil {
-		t.Fatalf("Failed to set TMPDIR: %v", err)
-	}
-	defer func() {
-		if err := os.Setenv("TMPDIR", oldTempDir); err != nil {
-			t.Logf("Failed to restore TMPDIR: %v", err)
-		}
-	}()
-
-	ctx := context.Background()
-	db, err := NewDuckDB(ctx)
-	if err != nil {
-		t.Fatalf("Failed to create database: %v", err)
-	}
-	defer helpers.CloseResources(db, "database")
-
-	// Create an empty CSV file
-	emptyFile := filepath.Join(tempDir, "empty.csv")
-	err = os.WriteFile(emptyFile, []byte{}, 0644)
-	if err != nil {
-		t.Fatalf("Failed to create empty file: %v", err)
-	}
-
-	// Try to import empty file - should error
-	_, err = db.SmartCreateTableFromCSV(ctx, "empty_table", emptyFile, true, false)
-	if err == nil {
-		t.Error("Expected error for empty CSV file")
-	}
-	if !strings.Contains(err.Error(), "csv file is empty") {
-		t.Errorf("Expected 'csv file is empty' error, got: %v", err)
 	}
 }

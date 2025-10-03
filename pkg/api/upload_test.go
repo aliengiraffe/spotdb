@@ -744,7 +744,7 @@ func TestImportCsvDataFallbackDuplicateDetection(t *testing.T) {
 
 	// Call importCsvData - this should trigger the fallback duplicate detection
 	// because the import will fail with "already exists" error
-	_, _, _, err2 := s.importCsvData(ctx, c, tableName, csvPath, true, false, false)
+	_, _, _, err2 := s.importCsvData(ctx, c, tableName, csvPath, true, false)
 	if err2 == nil {
 		t.Fatal("expected error, got nil")
 	}
@@ -854,7 +854,7 @@ func TestImportCsvDataDirectError(t *testing.T) {
 	c, _ := gin.CreateTestContext(w)
 	c.Request = httptest.NewRequest("POST", "/dummy", nil)
 	// Call importCsvData on nonexistent file
-	_, _, _, err2 := s.importCsvData(ctx, c, "no_table", "/no/such/file.csv", true, false, false)
+	_, _, _, err2 := s.importCsvData(ctx, c, "no_table", "/no/such/file.csv", true, false)
 	if err2 == nil {
 		t.Fatal("expected directImport error, got nil")
 	}
@@ -870,33 +870,6 @@ func TestImportCsvDataDirectError(t *testing.T) {
 	}
 }
 
-// TestImportCsvDataSmartError tests importCsvData smartImport error path
-func TestImportCsvDataSmartError(t *testing.T) {
-	ctx := context.Background()
-	db, err := database.NewDuckDB(ctx)
-	if err != nil {
-		t.Fatalf("NewDuckDB failed: %v", err)
-	}
-	s := &Server{db: db}
-	w := httptest.NewRecorder()
-	c, _ := gin.CreateTestContext(w)
-	c.Request = httptest.NewRequest("POST", "/dummy", nil)
-	// Call importCsvData on nonexistent file with smart=true
-	_, _, _, err2 := s.importCsvData(ctx, c, "no_table", "/no/such/file.csv", true, false, true)
-	if err2 == nil {
-		t.Fatal("expected smartImport error, got nil")
-	}
-	if w.Code != http.StatusUnprocessableEntity {
-		t.Errorf("expected status 422, got %d", w.Code)
-	}
-	var resp CSVErrorResponse
-	if err := json.Unmarshal(w.Body.Bytes(), &resp); err != nil {
-		t.Fatalf("failed to unmarshal response: %v", err)
-	}
-	if len(resp.Errors) == 0 || resp.Errors[0].Code != "SMART_IMPORT_FAILED" {
-		t.Errorf("expected SMART_IMPORT_FAILED error, got %v", resp.Errors)
-	}
-}
 
 // TestCheckTableExists tests the checkTableExists function
 func TestCheckTableExists(t *testing.T) {
@@ -1025,7 +998,7 @@ func TestImportCsvDataDuplicateTable(t *testing.T) {
 	c.Request = httptest.NewRequest("POST", "/dummy", nil)
 
 	// Try to import with override=false (should fail)
-	_, _, _, err2 := s.importCsvData(ctx, c, tableName, csvPath, true, false, false)
+	_, _, _, err2 := s.importCsvData(ctx, c, tableName, csvPath, true, false)
 	if err2 == nil {
 		t.Fatal("expected duplicate table error, got nil")
 	}
@@ -1086,7 +1059,7 @@ func TestImportCsvDataDuplicateTableWithOverride(t *testing.T) {
 	c.Request = httptest.NewRequest("POST", "/dummy", nil)
 
 	// Import with override=true (should succeed)
-	result, rowCount, _, err2 := s.importCsvData(ctx, c, tableName, csvPath, true, true, false)
+	result, rowCount, _, err2 := s.importCsvData(ctx, c, tableName, csvPath, true, true)
 	if err2 != nil {
 		t.Fatalf("importCsvData with override failed: %v", err2)
 	}
@@ -1148,7 +1121,7 @@ func TestImportCsvDataDuplicateErrorFallback(t *testing.T) {
 
 	// Try to import which should trigger the fallback error handling
 	// when directImport fails with "already exists" error
-	_, _, _, err2 := s.importCsvData(ctx, c, tableName, csvPath, true, false, false)
+	_, _, _, err2 := s.importCsvData(ctx, c, tableName, csvPath, true, false)
 	if err2 == nil {
 		t.Fatal("expected duplicate table error, got nil")
 	}
@@ -1188,7 +1161,7 @@ func TestImportCsvDataCheckTableExistsError(t *testing.T) {
 	c.Request = httptest.NewRequest("POST", "/dummy", nil)
 
 	// Try to import - checkTableExists will fail, so it should proceed to try the import
-	_, _, _, err := s.importCsvData(ctx, c, "check_error_test", csvPath, true, false, false)
+	_, _, _, err := s.importCsvData(ctx, c, "check_error_test", csvPath, true, false)
 	if err == nil {
 		t.Fatal("expected error, got nil")
 	}
@@ -1198,8 +1171,8 @@ func TestImportCsvDataCheckTableExistsError(t *testing.T) {
 	}
 }
 
-// TestImportCsvDataWithSmartMode tests duplicate detection in smart mode
-func TestImportCsvDataWithSmartMode(t *testing.T) {
+// TestImportCsvDataDuplicateDetection tests duplicate detection
+func TestImportCsvDataDuplicateDetection(t *testing.T) {
 	ctx := context.Background()
 	db, err := database.NewDuckDB(ctx)
 	if err != nil {
@@ -1231,8 +1204,8 @@ func TestImportCsvDataWithSmartMode(t *testing.T) {
 	c, _ := gin.CreateTestContext(w)
 	c.Request = httptest.NewRequest("POST", "/dummy", nil)
 
-	// Try to import with smart=true and override=false (should fail with duplicate)
-	_, _, _, err2 := s.importCsvData(ctx, c, tableName, csvPath, true, false, true)
+	// Try to import with override=false (should fail with duplicate)
+	_, _, _, err2 := s.importCsvData(ctx, c, tableName, csvPath, true, false)
 	if err2 == nil {
 		t.Fatal("expected duplicate table error, got nil")
 	}
@@ -1331,7 +1304,7 @@ func TestImportCsvDataCatalogErrorNotDuplicate(t *testing.T) {
 	c.Request = httptest.NewRequest("POST", "/dummy", nil)
 
 	// Try to import non-existent file - should fail but not with duplicate error
-	_, _, _, err2 := s.importCsvData(ctx, c, tableName, csvPath, true, false, false)
+	_, _, _, err2 := s.importCsvData(ctx, c, tableName, csvPath, true, false)
 	if err2 == nil {
 		t.Fatal("expected error for non-existent CSV file, got nil")
 	}
