@@ -383,24 +383,10 @@ func validateQuery(ctx context.Context, query string) error {
 		"(?i)\\bUNION\\b.*\\bSELECT\\b",     // UNION-based injection
 		"(?i)\\bOR\\b\\s+\\d+\\s*=\\s*\\d+", // OR 1=1 type injection
 		"(?i)\\bDELETE\\b.*\\bFROM\\b",      // DELETE FROM without WHERE
-		"(?i)\\bALTER\\b.*\\bTABLE\\b",      // ALTER TABLE
 		"(?i)--",                            // SQL comment
 		"(?i)/\\*.*\\*/",                    // SQL block comment
 		"(?i)\\bEXEC\\b",                    // EXEC for executing stored procedures
 		"(?i)\\bXP_\\w+\\b",                 // SQL Server extended stored procedures
-	}
-
-	// Special case: Allow DROP TABLE when followed by CREATE TABLE
-	dropCreatePattern := "(?i)\\bDROP\\b.*\\bTABLE\\b.*\\bCREATE\\b.*\\bTABLE\\b"
-	dropCreateMatch, _ := regexp.MatchString(dropCreatePattern, query)
-
-	// Check for DROP TABLE that is not followed by CREATE TABLE
-	dropTablePattern := "(?i)\\bDROP\\b.*\\bTABLE\\b"
-	dropTableMatch, _ := regexp.MatchString(dropTablePattern, query)
-
-	// Add DROP TABLE pattern to suspicious patterns only if it's not a DROP+CREATE pattern
-	if dropTableMatch && !dropCreateMatch {
-		suspiciousPatterns = append(suspiciousPatterns, dropTablePattern)
 	}
 
 	for _, pattern := range suspiciousPatterns {
