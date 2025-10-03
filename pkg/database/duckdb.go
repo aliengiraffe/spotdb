@@ -382,7 +382,6 @@ func validateQuery(ctx context.Context, query string) error {
 	suspiciousPatterns := []string{
 		"(?i)\\bUNION\\b.*\\bSELECT\\b",     // UNION-based injection
 		"(?i)\\bOR\\b\\s+\\d+\\s*=\\s*\\d+", // OR 1=1 type injection
-		"(?i)\\bDELETE\\b.*\\bFROM\\b",      // DELETE FROM without WHERE
 		"(?i)--",                            // SQL comment
 		"(?i)/\\*.*\\*/",                    // SQL block comment
 		"(?i)\\bEXEC\\b",                    // EXEC for executing stored procedures
