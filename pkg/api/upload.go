@@ -155,7 +155,7 @@ func (s *Server) handleCSVUpload() gin.HandlerFunc {
 
 		// Import the CSV data and prepare response
 		// Pass the context here
-		columnsResult, rowCount, importInfo, err := s.importCsvData(ctx, c, tableName, tempFilePath, hasHeader, override, smart)
+		columnsResult, rowCount, importInfo, err := s.importCsvData(ctx, c, tableName, tempFilePath, hasHeader, override)
 		if err != nil {
 			// Error has already been written to response by importCsvData
 			return
@@ -849,7 +849,7 @@ func (s *Server) importCsvData(
 	ctx context.Context,
 	c *gin.Context, // Keep gin context if needed for other purposes
 	tableName, tempFilePath string,
-	hasHeader, override, smart bool,
+	hasHeader, override bool,
 ) (*database.QueryResult, int64, map[string]any, error) {
 
 	// Check if table already exists and handle duplicate table scenario
@@ -878,14 +878,8 @@ func (s *Server) importCsvData(
 	var err error
 	var importErrors []CSVError
 
-	// Choose import method based on smart parameter
-	if smart {
-		// Pass context
-		columnsResult, rowCount, importInfo, importErrors, err = s.smartImport(ctx, c, tableName, tempFilePath, hasHeader, override)
-	} else {
-		// Pass context
-		columnsResult, rowCount, importInfo, importErrors, err = s.directImport(ctx, c, tableName, tempFilePath, hasHeader, override)
-	}
+	// Pass context
+	columnsResult, rowCount, importInfo, importErrors, err = s.directImport(ctx, c, tableName, tempFilePath, hasHeader, override)
 
 	if err != nil {
 		// Check if this is a duplicate table error that slipped through
@@ -914,68 +908,6 @@ func (s *Server) importCsvData(
 	}
 
 	return columnsResult, rowCount, importInfo, nil
-}
-
-// smartImport handles importing using the smart method
-// Already takes ctx context.Context, retrieve logger inside
-func (s *Server) smartImport(
-	ctx context.Context,
-	c *gin.Context, // Keep gin context if needed
-	tableName, tempFilePath string,
-	hasHeader, override bool,
-) (*database.QueryResult, int64, map[string]any, []CSVError, error) {
-	log := helpers.GetLoggerFromContext(ctx) // Retrieve logger
-
-	// Use the logger from context
-	log.Info("Using smart import",
-		slog.String("table", tableName),
-		slog.String("file", tempFilePath),
-	)
-	importResult, err := s.db.SmartCreateTableFromCSV(ctx, tableName, tempFilePath, hasHeader, override) // Assuming SmartCreateTableFromCSV takes context
-	if err != nil {
-		// Use the logger from context
-		log.Info("Error creating table from CSV with smart import", slog.Any("error", err))
-		// Create structured error information
-		importError := CSVError{
-			Code:    "SMART_IMPORT_FAILED",
-			Message: fmt.Sprintf("Failed to create table from CSV: %v", err),
-			Details: CSVErrorDetail{
-				Line:       0,
-				Suggestion: suggestionMap["SMART_IMPORT_FAILED"],
-			},
-		}
-		return nil, 0, nil, []CSVError{importError}, err
-	}
-	// Use the logger from context
-	log.Info("Successfully created table from CSV file using smart import",
-		slog.String("table", tableName),
-		slog.String("import_method", importResult.ImportMethod),
-	)
-
-	// Get column information
-	// Pass context
-	columnsResult, columnErrors, err := s.getColumnInfo(ctx, c, tableName)
-	if err != nil {
-		return nil, 0, nil, columnErrors, err
-	}
-
-	// Use the row count from the import result
-	rowCount := importResult.RowCount
-
-	// Add import info to response
-	importInfo := map[string]any{
-		"import_id":     importResult.ImportID,
-		"import_method": importResult.ImportMethod,
-		"duration_ms":   importResult.Duration.Milliseconds(),
-	}
-
-	// Only include schema analysis if requested
-	includeSchemaAnalysis := c.Request.FormValue("include_schema_analysis") == "true"
-	if includeSchemaAnalysis {
-		importInfo["schema_analysis"] = importResult.SchemaAnalysis
-	}
-
-	return columnsResult, rowCount, importInfo, nil, nil
 }
 
 // directImport handles importing using the direct method
@@ -1119,11 +1051,3 @@ func (s *Server) countRows(ctx context.Context, c *gin.Context, tableName string
 	}
 	return rowCount, nil, nil
 }
-
-// Assume getLoggerFromContext(c *gin.Context) *slog.Logger exists elsewhere and provides
-// the initial logger potentially configured with request-specific attributes.
-// Assume ValidateCSVFileFromData([]byte) (*CSVValidationResult, error) exists and doesn't need context.
-// Assume helpers.CloseResources(io.Closer, string) exists and might need context if it logs.
-// Assume helpers.CSVRowCheckDetailed([]byte, int, map[int]string) (bool, *helpers.ValidationIssue, error) exists and doesn't need context.
-// Assume helpers.CopyWithMaxSize(dst io.Writer, src io.Reader, bufferSize, maxSize int64, validateFunc func([]byte, int, map[int]string) (bool, *helpers.ValidationIssue, error)) (int64, *helpers.ValidationIssue, error) exists and uses the validateFunc callback which will have context.
-// Assume s.db.SmartCreateTableFromCSV(ctx context.Context, ...) and s.db.CreateTableFromCSV(...) and s.db.ExecuteQuery(...) handle their own logging or take context.

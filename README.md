@@ -33,8 +33,6 @@ SpotDB bridges the gap between AI assistants and data analysis by providing a **
 
 - **Automated CSV Parsing and Table Creation**: Simply upload a CSV file, and the API will automatically parse it, infer data types, and create a corresponding table in the DuckDB instance. This eliminates the need for manual schema definition.
 
-- **Smart Import with LLM Assistance**: Employs a tiered import strategy that progressively applies more sophisticated techniques to handle complex CSV files, including LLM-powered schema detection for challenging data formats.
-
 - **Database Snapshots with S3 Integration**: Create and restore complete database snapshots to/from Amazon S3. Load an initial database state at startup from S3, or create snapshots on-demand via the API for backup, versioning, or sharing database states across environments.
 
 ### Security & Performance
@@ -450,60 +448,6 @@ Response:
   }
 }
 ```
-
-#### Smart CSV Import with LLM-Assisted Schema Detection
-
-The system supports a smart CSV import mode that employs a tiered approach to
-handle complex CSV files:
-
-1. **Direct Import**: Attempts standard DuckDB import first
-2. **Schema Detection**: If direct import fails, analyzes data patterns for
-   optimal schema
-3. **LLM-Assisted Import**: For challenging files, uses LLM to
-   suggest best import configuration
-
-To enable smart import:
-
-```bash
-curl -X POST \
-  http://localhost:8080/api/v1/upload \
-  -F "table_name=mytable" \
-  -F "has_header=true" \
-  -F "smart=true" \
-  -F "csv_file=@/path/to/data.csv"
-```
-
-Response:
-
-```json
-{
-  "status": "success",
-  "table": "mytable",
-  "columns": [...],
-  "row_count": 1000,
-  "import": {
-    "import_id": "68db4e8f-0d13-4b5d-8a7c-e21dfd98019e",
-    "import_method": "schema_detection",
-    "duration_ms": 350
-  }
-}
-```
-
-To include detailed schema analysis in the response:
-
-```bash
-curl -X POST \
-  http://localhost:8080/api/v1/upload \
-  -F "table_name=mytable" \
-  -F "has_header=true" \
-  -F "smart=true" \
-  -F "include_schema_analysis=true" \
-  -F "csv_file=@/path/to/data.csv"
-```
-
-The smart import feature is thread-safe, allowing multiple concurrent imports
-without interference between operations. This is particularly useful in
-multi-user environments.
 
 #### CSV Security Validation Modes
 

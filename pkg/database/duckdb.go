@@ -48,32 +48,6 @@ type BenchmarkMetrics struct {
 	} `json:"cache"`
 }
 
-// AnthropicMessage represents a message in the Anthropic API format
-type AnthropicMessage struct {
-	Role    string `json:"role"`
-	Content string `json:"content"`
-}
-
-// AnthropicAPIRequest represents a request to the Anthropic API
-type AnthropicAPIRequest struct {
-	Model       string             `json:"model"`
-	Messages    []AnthropicMessage `json:"messages"`
-	MaxTokens   int                `json:"max_tokens"`
-	Temperature float64            `json:"temperature"`
-}
-
-// AnthropicAPIResponse represents a response from the Anthropic API
-type AnthropicAPIResponse struct {
-	Content []struct {
-		Text string `json:"text"`
-		Type string `json:"type"`
-	} `json:"content"`
-	Model      string `json:"model"`
-	ID         string `json:"id"`
-	Type       string `json:"type"`
-	StopReason string `json:"stop_reason"`
-}
-
 // DuckDB represents a database instance
 type DuckDB struct {
 	db         *sql.DB
@@ -249,66 +223,6 @@ type ImportResult struct {
 	SchemaAnalysis map[string]any
 }
 
-// SmartCreateTableFromCSV creates a table from a CSV file using a tiered approach
-func (db *DuckDB) SmartCreateTableFromCSV(ctx context.Context, tableName, csvPath string, hasHeader bool, override bool) (*ImportResult, error) {
-	// Generate a unique import ID for tracking this operation
-	importID := uuid.New().String()
-	log := helpers.GetLoggerFromContext(ctx)
-
-	log.Info("SmartCreateTableFromCSV: Starting import",
-		slog.String("importID", importID),
-		slog.String("table", tableName),
-		slog.String("path", csvPath))
-
-	startTime := time.Now()
-
-	// Create the import result with default values
-	result := &ImportResult{
-		TableName:      tableName,
-		ImportID:       importID,
-		SchemaAnalysis: make(map[string]any),
-	}
-
-	// Check basic file validity
-	fileInfo, err := os.Stat(csvPath)
-	if os.IsNotExist(err) {
-		log.Info("SmartCreateTableFromCSV: Error - CSV file does not exist",
-			slog.String("path", csvPath))
-		return nil, fmt.Errorf("csv file does not exist: %s", csvPath)
-	}
-
-	if fileInfo.Size() == 0 {
-		log.Info("SmartCreateTableFromCSV: Error - CSV file is empty",
-			slog.String("path", csvPath))
-		return nil, fmt.Errorf("csv file is empty: %s", csvPath)
-	}
-
-	// First, try the direct import (Tier 1)
-	err = db.createTableFromCSVDirectly(ctx, tableName, csvPath, hasHeader, override)
-	if err == nil {
-		// Direct import succeeded
-		// db.mu.RLock()
-		// Use the safer method for executing queries with table names
-		countResult, queryErr := db.ExecuteQueryWithTableName(ctx, "SELECT COUNT(*) as row_count FROM %s", tableName)
-		// db.mu.RUnlock()
-
-		if queryErr == nil && len(countResult.Results) > 0 {
-			if count, ok := countResult.Results[0]["row_count"].(int64); ok {
-				result.RowCount = count
-			}
-		}
-
-		result.Duration = time.Since(startTime)
-		result.ImportMethod = "direct_import"
-		log.Info("SmartCreateTableFromCSV: Direct import successful",
-			slog.String("importID", importID),
-			slog.Duration("duration", result.Duration))
-		return result, nil
-	}
-
-	return nil, fmt.Errorf("failed to import CSV file: %w", err)
-}
-
 // createTableFromCSVDirectly creates a table directly from a CSV file using DuckDB's native functionality
 func (db *DuckDB) createTableFromCSVDirectly(ctx context.Context, tableName, csvPath string, hasHeader bool, override bool) error {
 	db.mu.Lock()
@@ -382,25 +296,10 @@ func validateQuery(ctx context.Context, query string) error {
 	suspiciousPatterns := []string{
 		"(?i)\\bUNION\\b.*\\bSELECT\\b",     // UNION-based injection
 		"(?i)\\bOR\\b\\s+\\d+\\s*=\\s*\\d+", // OR 1=1 type injection
-		"(?i)\\bDELETE\\b.*\\bFROM\\b",      // DELETE FROM without WHERE
-		"(?i)\\bALTER\\b.*\\bTABLE\\b",      // ALTER TABLE
 		"(?i)--",                            // SQL comment
 		"(?i)/\\*.*\\*/",                    // SQL block comment
 		"(?i)\\bEXEC\\b",                    // EXEC for executing stored procedures
 		"(?i)\\bXP_\\w+\\b",                 // SQL Server extended stored procedures
-	}
-
-	// Special case: Allow DROP TABLE when followed by CREATE TABLE
-	dropCreatePattern := "(?i)\\bDROP\\b.*\\bTABLE\\b.*\\bCREATE\\b.*\\bTABLE\\b"
-	dropCreateMatch, _ := regexp.MatchString(dropCreatePattern, query)
-
-	// Check for DROP TABLE that is not followed by CREATE TABLE
-	dropTablePattern := "(?i)\\bDROP\\b.*\\bTABLE\\b"
-	dropTableMatch, _ := regexp.MatchString(dropTablePattern, query)
-
-	// Add DROP TABLE pattern to suspicious patterns only if it's not a DROP+CREATE pattern
-	if dropTableMatch && !dropCreateMatch {
-		suspiciousPatterns = append(suspiciousPatterns, dropTablePattern)
 	}
 
 	for _, pattern := range suspiciousPatterns {
