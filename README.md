@@ -322,6 +322,67 @@ Available tasks:
 > (2GB) and buffer size (64KB). See the [Configuration](#configuration)
 > section for more information.
 
+## Web Interface
+
+SpotDB includes a built-in web interface accessible at `/explorer` that provides a user-friendly way to interact with your data without writing code.
+
+### Accessing the Explorer UI
+
+Once SpotDB is running, open your browser and navigate to:
+
+```
+http://localhost:8080/explorer
+```
+
+### Features
+
+The Explorer UI provides the following capabilities:
+
+#### 1. CSV File Upload
+- **Drag-and-drop interface**: Simply drag your CSV file onto the upload area or click to browse
+- **Auto-generated table names**: The UI automatically suggests table names based on your filename
+- **File validation**: Validates file size (up to 2GB) and format before upload
+- **Smart import**: Uses intelligent schema detection to handle complex CSV files
+- **Real-time feedback**: Shows upload progress and displays success/error messages with detailed information
+
+#### 2. Table Management
+- **Live table listing**: View all available tables in your database
+- **Schema inspection**: Click on any table to expand and view its complete schema, including:
+  - Column names
+  - Data types
+  - Nullable constraints
+- **Quick refresh**: Refresh the table list to see newly uploaded data
+- **Responsive design**: Works seamlessly on desktop and mobile devices
+
+#### 3. SQL Query Editor
+- **Interactive query box**: Write and execute SQL queries directly in the browser
+- **Keyboard shortcuts**: Use `Cmd+Enter` (Mac) or `Ctrl+Enter` (Windows/Linux) to execute queries
+- **One-click query generation**: Click the "Query" button next to any table to auto-populate a sample SELECT query
+- **Result visualization**: Query results are displayed in a clean, sortable table format
+- **Performance metrics**: Shows row count and query execution time
+
+#### 4. User Experience
+- **Auto-complete**: Table names are automatically populated from uploaded filenames
+- **Error handling**: Clear error messages with suggestions for resolution
+- **Loading indicators**: Visual feedback during uploads and queries
+- **Clean interface**: Modern, gradient-styled UI with smooth transitions and animations
+
+### Example Workflow
+
+1. Start SpotDB: `spotdb`
+2. Open browser to `http://localhost:8080/explorer`
+3. Drag a CSV file onto the upload area
+4. Click "Upload CSV" to import the data
+5. Click the expand icon (▶) next to your table to view its schema
+6. Click the "Query" button to auto-populate a sample query, or write your own
+7. Press `Cmd+Enter` to execute the query and view results
+
+The Explorer UI is particularly useful for:
+- Quick data exploration without writing API calls
+- Validating CSV imports before integrating with AI workflows
+- Prototyping SQL queries before using them in production
+- Sharing data analysis capabilities with non-technical team members
+
 ## Usage
 
 ### Using Docker
