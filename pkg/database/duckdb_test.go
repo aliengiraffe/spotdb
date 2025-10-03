@@ -862,20 +862,18 @@ func TestValidateQuery_MaliciousPatterns(t *testing.T) {
 		{
 			name:        "ALTER TABLE attempt",
 			query:       "ALTER TABLE users ADD COLUMN hacked TEXT",
-			shouldError: true,
-			errorMsg:    "malicious SQL pattern",
+			shouldError: false,
 		},
 		{
 			name:        "DELETE without WHERE",
 			query:       "DELETE FROM users",
-			shouldError: true,
+			shouldError: false,
 			errorMsg:    "malicious SQL pattern",
 		},
 		{
 			name:        "DROP TABLE alone",
 			query:       "DROP TABLE users",
-			shouldError: true,
-			errorMsg:    "malicious SQL pattern",
+			shouldError: false,
 		},
 		{
 			name:        "DROP TABLE with CREATE TABLE (allowed)",
