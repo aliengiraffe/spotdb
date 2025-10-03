@@ -83,7 +83,6 @@ jobs:
           fi
 
   build:
-    if: false # Enable this to build the binary
     environment:
       name: main
     runs-on: ubuntu-latest
@@ -95,13 +94,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
-
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v5
-        with:
-          aws-region: ${{ env.AWS_REGION }}
-          role-to-assume: ${{ vars.AWS_ROLE_ARN }}
-          output-credentials: true
 
       - name: Setup Go with Private Modules
         uses: actions/setup-go@v6
@@ -133,7 +125,6 @@ jobs:
           HOMEBREW_GITHUB_API_TOKEN: ${{ steps.app_token.outputs.token }}
 
   docker:
-    if: false # Enable this to push docker image
     name: build docker image
     runs-on: ubuntu-latest
     needs: [test, postman]
