@@ -73,6 +73,8 @@ SpotDB bridges the gap between AI assistants and data analysis by providing a **
 
 ### Basic Setup
 
+> ⚠️ **Note**: The brew package will be available by mid-October. In the meantime, you can build from source using Go (see [Development Setup](#development-setup)).
+
 1. Tap the repository:
 
 ```bash
