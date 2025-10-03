@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  spotdb:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+      - "6033:6033"
+    restart: unless-stopped
+    environment:
+      - TZ=UTC
+      - ENABLE_QUERY_BENCHMARKS=false

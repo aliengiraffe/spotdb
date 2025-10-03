@@ -1,0 +1,4 @@
+OrderID,CustomerID,Status,UpdateLink
+ORD-901,CUST-101,Shipped,http://shipping-tracker.com/real/901
+ORD-902,CUST-103,"=HYPERLINK(""http://fake-shipping-login.com/track?id=ORD-902"",""Click to Track Package"")",Pending Shipment
+ORD-903,CUST-104,Delivered,http://shipping-tracker.com/real/903

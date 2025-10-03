@@ -1,0 +1,51 @@
+# Go specific
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Go workspace file
+go.work
+
+# Output of the go coverage tool
+*.coverprofile
+coverage.*
+
+# Build
+bin/
+dist/
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# DuckDB specific
+*.duckdb
+*.duckdb.wal
+
+# Log files
+*.log
+
+# Environment variables
+.env
+.env.local
+
+# Temporary files
+.DS_Store
+ipynb_checkpoints
+tmp/

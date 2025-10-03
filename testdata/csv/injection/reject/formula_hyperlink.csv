@@ -1,0 +1,4 @@
+id,name,url
+1,John Doe,"=HYPERLINK(""http://malicious.com"")"
+2,Jane Smith,http://normal.com
+3,Bob Johnson,https://example.com

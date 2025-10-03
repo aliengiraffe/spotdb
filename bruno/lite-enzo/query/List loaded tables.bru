@@ -1,0 +1,15 @@
+meta {
+  name: List loaded tables
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseURL}}/tables
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

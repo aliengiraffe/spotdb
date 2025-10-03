@@ -1,0 +1,4 @@
+ID,Description,Notes
+1,"Item A","Standard item"
+2,"Item B with ""quotes""","Requires escaping the double quotes"
+3,"Another ""quoted"" example","Consistent structure"

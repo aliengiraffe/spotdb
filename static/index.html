@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpotDB Data Explorer</title>
+    <script src="https://unpkg.com/htmx.org@2.0.3" integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq" crossorigin="anonymous"></script>
+    <style>
+      /* Reset and base styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        /* Layout */
+        .container { max-width: 1400px; margin: 0 auto; }
+
+        .two-column-layout {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Components */
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn:hover { background: #5a67d8; transform: translateY(-2px); }
+        .btn:disabled { background: #cbd5e0; cursor: not-allowed; transform: none; opacity: 0.6; }
+        .btn-secondary { background: #48bb78; }
+        .btn-secondary:hover { background: #38a169; }
+
+        .upload-area {
+            border: 2px dashed #ddd;
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            background: none;
+            font: inherit;
+            width: 100%;
+            display: block;
+        }
+
+        .upload-area:hover, .upload-area.dragover { border-color: #667eea; background: #f8f9ff; }
+        .upload-area:focus { outline: 2px solid #667eea; outline-offset: 2px; border-color: #667eea; background: #f8f9ff; }
+
+        .tables-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-top: 1rem;
+            max-height: 400px;
+            overflow-y: auto;
+            padding: 0.5rem 0;
+        }
+
+        .table-item {
+            background: #f7fafc;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .table-item:hover {
+            border-color: #cbd5e0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .table-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .table-header:hover {
+            background: #edf2f7;
+        }
+
+        .table-info {
+            flex: 1;
+        }
+
+        .table-name {
+            font-weight: 600;
+            font-size: 1rem;
+            color: #2d3748;
+            margin-bottom: 0.25rem;
+        }
+
+        .table-meta {
+            font-size: 0.8rem;
+            color: #718096;
+        }
+
+        .table-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .btn-small {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 0.4rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-small:hover {
+            background: #5a67d8;
+            transform: translateY(-1px);
+        }
+
+        .expand-icon {
+            font-size: 1rem;
+            color: #718096;
+            transition: transform 0.2s ease;
+            user-select: none;
+        }
+
+        .table-schema {
+            border-top: 1px solid #e2e8f0;
+            background: white;
+        }
+
+        .schema-content {
+            padding: 1rem;
+        }
+
+        .schema-header {
+            margin-bottom: 0.75rem;
+        }
+
+        .schema-title {
+            font-weight: 600;
+            color: #4a5568;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .columns-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .column-item {
+            display: grid;
+            grid-template-columns: 1fr auto auto;
+            gap: 1rem;
+            padding: 0.5rem 0.75rem;
+            background: #f7fafc;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+
+        .column-name {
+            font-weight: 500;
+            color: #2d3748;
+            font-family: 'Monaco', 'Menlo', monospace;
+        }
+
+        .column-type {
+            color: #805ad5;
+            font-weight: 500;
+            font-family: 'Monaco', 'Menlo', monospace;
+        }
+
+        .column-nullable {
+            color: #718096;
+            font-size: 0.75rem;
+            text-align: right;
+        }
+
+        .query-box {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.9rem;
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .results-container { overflow-x: auto; margin-top: 1rem; }
+
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid #e2e8f0; }
+        th { background: #f7fafc; font-weight: 600; color: #4a5568; }
+        tr:hover { background: #f7fafc; }
+
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-left: 1rem;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .alert {
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+        }
+
+        .alert-success { background: #c6f6d5; color: #22543d; border: 1px solid #9ae6b4; }
+        .alert-error { background: #fed7d7; color: #742a2a; border: 1px solid #fc8181; }
+
+        .file-info {
+            margin-top: 1rem;
+            padding: 0.5rem;
+            background: #f7fafc;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: #4a5568;
+            min-height: 2.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 1rem;
+            background: #f7fafc;
+            border-radius: 6px;
+        }
+
+        .stat-value { font-size: 1.5rem; font-weight: bold; color: #667eea; }
+        .stat-label { font-size: 0.9rem; color: #718096; margin-top: 0.25rem; }
+
+        /* Utilities */
+        input[type="file"] { display: none; }
+        kbd { background: #edf2f7; padding: 2px 6px; border-radius: 3px; border: 1px solid #cbd5e0; }
+
+        /* Responsive design */
+        @media (min-width: 1024px) {
+            .two-column-layout {
+                grid-template-columns: 1fr 1fr;
+                align-items: stretch;
+            }
+            .two-column-layout > .card {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            .tables-list {
+                flex: 1;
+                max-height: none;
+                height: calc(100% - 60px);
+                min-height: 300px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 1rem; }
+            .container { padding: 0; }
+            h1 { font-size: 1.8rem !important; }
+            .card { padding: 1.5rem; }
+            .two-column-layout { gap: 1rem; }
+            .stats { grid-template-columns: 1fr 1fr; }
+
+            .table-header { padding: 0.6rem 0.75rem; }
+            .table-name { font-size: 0.9rem; }
+            .table-meta { font-size: 0.75rem; }
+            .btn-small { padding: 0.3rem 0.6rem; font-size: 0.75rem; }
+            .column-item { grid-template-columns: 1fr auto; gap: 0.5rem; }
+            .column-nullable { display: none; }
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 style="color: white; margin-bottom: 2rem; text-align: center; font-size: 2.5rem;">
+        📊 SpotDB Data Explorer
+      </h1>
+      <div class="two-column-layout">
+        <!-- Upload Section -->
+        <div class="card">
+          <h2 style="margin-bottom: 1rem;">Upload CSV File</h2>
+          <div id="upload-section">
+            <form hx-post="api/v1/upload" hx-encoding="multipart/form-data" hx-target="#upload-result" hx-indicator="#upload-loading" hx-on::before-request="UI.handleUploadStart()" hx-on::after-swap="UI.handleUploadComplete()" hx-on::response-error="UI.handleUploadError(event)">
+              <div style="margin-bottom: 1.5rem;">
+                <label for="table_name" style="display: block; margin-bottom: 0.5rem; color: #4a5568; font-weight: 600;">
+                  Table Name
+                  <span style="color: #e53e3e;">*</span>
+                </label>
+                <input type="text" name="table_name" id="table_name" placeholder="my_data" required style="width: 100%; padding: 0.75rem; border: 2px solid #ddd; border-radius: 6px; font-size: 1rem;" oninput="UI.checkFormValidity(); UI.hideAutoCompleteMessage()">
+                <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #718096;">
+                  Enter a name for your table (letters, numbers, and underscores only)
+                </p>
+                <div id="table-name-auto-message" style="display: none; margin-top: 0.5rem; padding: 0.5rem; background: #c6f6d5; border: 1px solid #9ae6b4; border-radius: 4px; color: #22543d; font-size: 0.85rem;">
+                  ✓ Table name auto-populated from filename
+                </div>
+              </div>
+              <button type="button" class="upload-area" onclick="document.getElementById('csv_file').click();" ondragover="event.preventDefault(); this.classList.add('dragover');" ondragleave="this.classList.remove('dragover');" ondrop="UI.handleDrop(event, this);" aria-label="Click to select CSV file or drag and drop file here">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#cbd5e0" stroke-width="2" style="margin: 0 auto;">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <p style="margin-top: 1rem; color: #718096;">Click or drag CSV file here to upload</p>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #a0aec0;">Maximum file size: 2GB</p>
+                <div id="file-info" class="file-info" style="visibility: hidden;"></div>
+              </button>
+              <input type="file" id="csv_file" name="csv_file" accept=".csv" onchange="UI.handleFileSelect(event)">
+              <input type="hidden" name="has_header" value="true">
+              <input type="hidden" name="smart" value="true">
+              <div style="margin-top: 1rem;">
+                <button type="submit" class="btn" id="upload-btn" disabled>Upload CSV</button>
+                <span id="upload-loading" class="htmx-indicator loading"></span>
+              </div>
+            </form>
+            <div id="upload-result"></div>
+          </div>
+        </div>
+        <!-- Tables Section -->
+        <div class="card" style="display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <h2 style="margin: 0;">Available Tables</h2>
+            <div style="display: flex; align-items: center;">
+              <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.9rem;" hx-get="api/v1/tables" hx-target="#tables-list" hx-trigger="click, load" hx-indicator="#tables-loading">
+                ↻ Refresh
+              </button>
+              <span id="tables-loading" class="htmx-indicator loading" style="margin-left: 0.5rem;"></span>
+            </div>
+          </div>
+          <div id="tables-list" class="tables-list" style="flex: 1;"></div>
+        </div>
+      </div>
+      <!-- Query Section -->
+      <div class="card">
+        <h2 style="margin-bottom: 1rem;">Query Data</h2>
+        <form id="query-form">
+          <textarea name="query" id="query-input" class="query-box" placeholder="Enter SQL query (e.g., SELECT * FROM my_data LIMIT 10)" onkeydown="UI.handleQueryKeydown(event)"></textarea>
+          <div style="margin-top: 1rem;">
+            <button type="button" class="btn" onclick="Query.execute()">Execute Query</button>
+            <span id="keyboard-hint" style="margin-left: 0.5rem; color: #718096; font-size: 0.85rem;"></span>
+            <span id="query-loading" class="loading" style="display: none; margin-left: 1rem;"></span>
+          </div>
+        </form>
+        <div id="query-result"></div>
+      </div>
+    </div>
+    <script>
+      // Utility functions
+        const Utils = {
+            generateTableName(filename) {
+                let tableName = filename.replace(/\.csv$/i, '');
+                tableName = tableName.replace(/[^a-zA-Z0-9]/g, '_');
+                if (/^\d/.test(tableName)) {
+                    tableName = 'table_' + tableName;
+                }
+                return tableName;
+            },
+
+            showFileInfo(file) {
+                const fileInfo = document.getElementById('file-info');
+                const size = (file.size / (1024 * 1024)).toFixed(2);
+                fileInfo.innerHTML = `📄 ${file.name} (${size} MB)`;
+                fileInfo.style.visibility = 'visible';
+            },
+
+            insertTableName(tableName) {
+                const queryBox = document.getElementById('query-input');
+                queryBox.value = `SELECT * FROM ${tableName} LIMIT 10`;
+                queryBox.focus();
+                document.querySelector('.card:last-of-type').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        };
+
+        // UI handlers
+        const UI = {
+            init() {
+                const hintElement = document.getElementById('keyboard-hint');
+                const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+                const key = isMac ? '⌘' : 'Ctrl';
+                hintElement.innerHTML = `or press <kbd>${key}</kbd>+<kbd>Enter</kbd>`;
+            },
+
+            handleUploadStart() {
+                const uploadBtn = document.getElementById('upload-btn');
+                uploadBtn.disabled = true;
+                uploadBtn.textContent = 'Uploading...';
+            },
+
+            handleUploadComplete() {
+                const uploadBtn = document.getElementById('upload-btn');
+                const fileInput = document.getElementById('csv_file');
+                uploadBtn.textContent = 'Upload CSV';
+                uploadBtn.disabled = fileInput.files.length === 0;
+            },
+
+            handleUploadError(event) {
+                // Handle HTMX error response (4xx, 5xx status codes)
+                const xhr = event.detail.xhr;
+                const target = document.getElementById('upload-result');
+
+                try {
+                    const response = JSON.parse(xhr.response);
+                    if (response.errors && Array.isArray(response.errors) && response.errors.length > 0) {
+                        // Show the first error message
+                        const error = response.errors[0];
+                        let errorMessage = error.message || 'Upload failed';
+
+                        // Add suggestion if available
+                        if (error.details && error.details.suggestion) {
+                            errorMessage += '<br><br>' + error.details.suggestion;
+                        }
+
+                        ResponseHandlers.showUploadError(target, errorMessage);
+                    } else if (response.message) {
+                        ResponseHandlers.showUploadError(target, response.message);
+                    } else if (response.error) {
+                        ResponseHandlers.showUploadError(target, response.error);
+                    } else {
+                        ResponseHandlers.showUploadError(target, `Server error (${xhr.status})`);
+                    }
+                } catch (e) {
+                    console.error('Error parsing upload error response:', e);
+                    ResponseHandlers.showUploadError(target, `Server error (${xhr.status})`);
+                }
+
+                // Re-enable the upload button
+                const uploadBtn = document.getElementById('upload-btn');
+                uploadBtn.disabled = false;
+                uploadBtn.textContent = 'Upload CSV';
+            },
+
+            handleQueryKeydown(event) {
+                if ((event.metaKey || event.ctrlKey) && event.key === 'Enter') {
+                    event.preventDefault();
+                    Query.execute();
+                }
+            },
+
+            checkFormValidity() {
+                const tableNameInput = document.getElementById('table_name');
+                const fileInput = document.getElementById('csv_file');
+                const uploadBtn = document.getElementById('upload-btn');
+                uploadBtn.disabled = !(tableNameInput.value.trim() && fileInput.files.length > 0);
+            },
+
+            showAutoCompleteMessage() {
+                const message = document.getElementById('table-name-auto-message');
+                message.style.display = 'block';
+                setTimeout(() => this.hideAutoCompleteMessage(), 5000);
+            },
+
+            hideAutoCompleteMessage() {
+                document.getElementById('table-name-auto-message').style.display = 'none';
+            },
+
+            handleFileSelect(event) {
+                const file = event.target.files[0];
+                if (file) {
+                    Utils.showFileInfo(file);
+                    const tableNameInput = document.getElementById('table_name');
+                    if (!tableNameInput.value.trim()) {
+                        tableNameInput.value = Utils.generateTableName(file.name);
+                        this.showAutoCompleteMessage();
+                    }
+                    this.checkFormValidity();
+                }
+            },
+
+            handleDrop(event, element) {
+                event.preventDefault();
+                element.classList.remove('dragover');
+
+                const file = event.dataTransfer.files[0];
+                if (file && file.name.endsWith('.csv')) {
+                    document.getElementById('csv_file').files = event.dataTransfer.files;
+                    Utils.showFileInfo(file);
+
+                    const tableNameInput = document.getElementById('table_name');
+                    if (!tableNameInput.value.trim()) {
+                        tableNameInput.value = Utils.generateTableName(file.name);
+                        this.showAutoCompleteMessage();
+                    }
+                    this.checkFormValidity();
+                } else {
+                    alert('Please upload a CSV file');
+                }
+            }
+        };
+
+        // Query functionality
+        const Query = {
+            async execute() {
+                const queryInput = document.getElementById('query-input');
+                const queryResult = document.getElementById('query-result');
+                const queryLoading = document.getElementById('query-loading');
+
+                const query = queryInput.value.trim();
+                if (!query) {
+                    alert('Please enter a SQL query');
+                    return;
+                }
+
+                queryLoading.style.display = 'inline-block';
+                queryResult.innerHTML = '';
+
+                try {
+                    const response = await fetch('api/v1/query', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ query })
+                    });
+
+                    const data = await response.json();
+
+                    if (response.ok && data.status === 'success' && data.results) {
+                        this.displayResults(data);
+                    } else {
+                        this.displayError(data.message || 'Unknown error');
+                    }
+                } catch (error) {
+                    this.displayError(error.message);
+                } finally {
+                    queryLoading.style.display = 'none';
+                }
+            },
+
+            displayResults(data) {
+                const queryResult = document.getElementById('query-result');
+
+                if (data.results.length > 0) {
+                    const columns = data.columns || Object.keys(data.results[0]);
+                    const tableHTML = this.buildResultTable(data, columns);
+                    queryResult.innerHTML = tableHTML;
+                } else {
+                    queryResult.innerHTML = '<p style="color: #718096; margin-top: 1rem;">Query returned no results.</p>';
+                }
+            },
+
+            displayError(message) {
+                const queryResult = document.getElementById('query-result');
+                queryResult.innerHTML = `
+                    <div class="alert alert-error" style="margin-top: 1rem;">
+                        ❌ Query failed: ${message}
+                    </div>
+                `;
+            },
+
+            buildResultTable(data, columns) {
+                let html = `
+                    <div style="margin-top: 1rem;">
+                        <p style="color: #718096; margin-bottom: 0.5rem;">
+                            Found ${data.row_count} rows (${data.duration_ms}ms)
+                        </p>
+                        <div class="results-container">
+                            <table>
+                                <thead>
+                                    <tr>${columns.map(col => `<th>${col}</th>`).join('')}</tr>
+                                </thead>
+                                <tbody>
+                `;
+
+                data.results.forEach(row => {
+                    html += '<tr>';
+                    columns.forEach(col => {
+                        const value = row[col];
+                        html += `<td>${value !== null && value !== undefined ? value : ''}</td>`;
+                    });
+                    html += '</tr>';
+                });
+
+                html += '</tbody></table></div></div>';
+                return html;
+            }
+        };
+
+        // Table schema management
+        const TableSchema = {
+            toggle(tableName) {
+                const schemaElement = document.getElementById(`schema-${tableName}`);
+                const iconElement = document.getElementById(`icon-${tableName}`);
+
+                if (schemaElement.style.display === 'none') {
+                    schemaElement.style.display = 'block';
+                    iconElement.textContent = '▼';
+                } else {
+                    schemaElement.style.display = 'none';
+                    iconElement.textContent = '▶';
+                }
+            }
+        };
+
+        // Response handlers
+        const ResponseHandlers = {
+            handleTablesResponse(target, response) {
+                try {
+                    const data = JSON.parse(response);
+                    if (data.tables && data.tables.length > 0) {
+                        target.innerHTML = data.tables
+                            .map(table => this.renderTableItem(table))
+                            .join('');
+                    } else {
+                        target.innerHTML = '<p style="color: #718096;">No tables available. Upload a CSV file to get started.</p>';
+                    }
+                } catch (e) {
+                    console.error('Error parsing tables response:', e);
+                    target.innerHTML = '<p style="color: #e53e3e;">Error loading tables. Please refresh the page.</p>';
+                }
+            },
+
+            renderTableItem(table) {
+                const tableId = `table-${table.name}`;
+                const schemaId = `schema-${table.name}`;
+
+                return `
+                    <div class="table-item" id="${tableId}">
+                        <div class="table-header" onclick="TableSchema.toggle('${table.name}')">
+                            <div class="table-info">
+                                <div class="table-name">${table.name}</div>
+                                <div class="table-meta">${table.columns.length} columns</div>
+                            </div>
+                            <div class="table-actions">
+                                <button class="btn-small" onclick="event.stopPropagation(); Utils.insertTableName('${table.name}')" title="Use in query">
+                                    📝 Query
+                                </button>
+                                <span class="expand-icon" id="icon-${table.name}">▶</span>
+                            </div>
+                        </div>
+                        <div class="table-schema" id="${schemaId}" style="display: none;">
+                            ${this.renderTableSchema(table.columns)}
+                        </div>
+                    </div>
+                `;
+            },
+
+            renderTableSchema(columns) {
+                return `
+                    <div class="schema-content">
+                        <div class="schema-header">
+                            <span class="schema-title">Schema</span>
+                        </div>
+                        <div class="columns-list">
+                            ${columns.map(col => `
+                                <div class="column-item">
+                                    <span class="column-name">${col.name}</span>
+                                    <span class="column-type">${col.type}</span>
+                                    <span class="column-nullable">${col.nullable ? 'NULL' : 'NOT NULL'}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            },
+
+            handleUploadResponse(target, xhr) {
+                if (xhr.status === 200) {
+                    this.handleSuccessResponse(target, xhr);
+                } else {
+                    this.handleErrorResponse(target, xhr);
+                }
+            },
+
+            handleSuccessResponse(target, xhr) {
+                try {
+                    const response = JSON.parse(xhr.response);
+                    if (response.table) {
+                        this.showUploadSuccess(target, response);
+                        this.resetUploadForm();
+                        htmx.trigger(document.querySelector('[hx-get="api/v1/tables"]'), 'click');
+                    } else {
+                        this.showUploadError(target, response.message || response.error);
+                    }
+                } catch (e) {
+                    console.error('Error parsing upload success response:', e);
+                    this.showUploadError(target, 'Could not parse server response');
+                }
+            },
+
+            handleErrorResponse(target, xhr) {
+                try {
+                    const response = JSON.parse(xhr.response);
+                    const errorMessage = this.extractErrorMessage(response, xhr.status);
+                    this.showUploadError(target, errorMessage);
+                } catch (e) {
+                    console.error('Error parsing upload error response:', e);
+                    this.showUploadError(target, `Server error (${xhr.status})`);
+                }
+            },
+
+            extractErrorMessage(response, status) {
+                if (response.errors && Array.isArray(response.errors) && response.errors.length > 0) {
+                    return this.formatErrorWithSuggestion(response.errors[0]);
+                }
+
+                return response.message || response.error || `Server error (${status})`;
+            },
+
+            formatErrorWithSuggestion(error) {
+                let errorMessage = error.message || 'Upload failed';
+                if (error.details && error.details.suggestion) {
+                    errorMessage += '<br><br>' + error.details.suggestion;
+                }
+                return errorMessage;
+            },
+
+            showUploadSuccess(target, response) {
+                target.innerHTML = `
+                    <div class="alert alert-success">
+                        ✅ Successfully uploaded table: <strong>${response.table}</strong>
+                        <div class="stats">
+                            <div class="stat">
+                                <div class="stat-value">${response.row_count}</div>
+                                <div class="stat-label">Rows</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">${response.columns ? response.columns.length : 0}</div>
+                                <div class="stat-label">Columns</div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            },
+
+            showUploadError(target, message) {
+                target.innerHTML = `
+                    <div class="alert alert-error">
+                        ❌ Upload failed: ${message}
+                    </div>
+                `;
+                const uploadBtn = document.getElementById('upload-btn');
+                uploadBtn.disabled = false;
+                uploadBtn.textContent = 'Upload CSV';
+            },
+
+            resetUploadForm() {
+                document.getElementById('csv_file').value = '';
+                document.getElementById('table_name').value = '';
+                document.getElementById('file-info').style.visibility = 'hidden';
+                document.getElementById('file-info').innerHTML = '';
+                document.getElementById('upload-btn').disabled = true;
+                document.getElementById('upload-btn').textContent = 'Upload CSV';
+            }
+        };
+
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', UI.init);
+
+        document.body.addEventListener('htmx:afterSwap', function(event) {
+            const { target, xhr } = event.detail;
+
+            if (target.id === 'tables-list') {
+                ResponseHandlers.handleTablesResponse(target, xhr.response);
+            } else if (target.id === 'upload-result') {
+                ResponseHandlers.handleUploadResponse(target, xhr);
+            }
+        });
+
+        // Global functions for inline handlers
+        window.Utils = Utils;
+        window.UI = UI;
+        window.Query = Query;
+        window.TableSchema = TableSchema;
+    </script>
+  </body>
+</html>

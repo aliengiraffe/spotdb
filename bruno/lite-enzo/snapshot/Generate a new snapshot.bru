@@ -1,0 +1,22 @@
+meta {
+  name: Generate a new snapshot
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseURL}}/snapshot
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "bucket": "my-spotdb-bucket",
+    "key": "spotdb-snapshots/"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,60 @@
+# Binaries and build artifacts
+/bin/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Go specific
+/.go/
+/go.work
+
+# Dependencies
+/vendor/
+/Godeps/
+
+# Version control
+.git/
+.gitignore
+.gitlab-ci.yml
+.github/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Github
+.github/
+
+
+# Test and documentation
+/docs/
+/test/
+*.md
+!README.md
+
+# Docker related
+Dockerfile*
+docker-compose*
+.dockerignore
+
+# Temporary files
+/tmp/
+*.log
+*.bak
+*.cache
+
+# Environment variables
+.env*
+*.env
+
+# Tools and configuration
+.golangci.yml
+.air.toml

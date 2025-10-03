@@ -1,0 +1,21 @@
+meta {
+  name: Examine loaded data
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseURL}}/query
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "query": "select * from patient_data"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

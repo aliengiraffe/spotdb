@@ -1,0 +1,3 @@
+name,email,message
+"John Doe",john@example.com,"<a onmouseover=alert('XSS')>click me</a>"
+"Jane Smith",jane@example.com,"<div onload=alert('XSS')>content</div>"

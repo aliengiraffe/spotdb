@@ -1,0 +1,66 @@
+version: "3"
+
+vars:
+  SOCKET_PORT: "6033"
+  MAX_FILE_SIZE: "2147483648" # 2GB in bytes
+  BUFFER_SIZE: "65536" # 64KB in bytes
+  FILE_VALIDATION_MODE: reject_file
+  SERVER_MODE: debug
+
+tasks:
+  cli:
+    desc: Run CLI
+    cmds:
+      - go run ./cmd/cli/main.go {{.CLI_ARGS}}
+  build:cli:
+    desc: Build CLI
+    cmds:
+      - go build -o ./bin/spotdb-cli ./cmd/cli/
+  dev:
+    desc: Run with hot reload using air
+    cmds:
+      - SOCKET_PORT={{.SOCKET_PORT}} ENV_MAX_FILE_SIZE={{.MAX_FILE_SIZE}} ENV_BUFFER_SIZE={{.BUFFER_SIZE}}  ENV_FILE_VALIDATION_MODE={{.FILE_VALIDATION_MODE}} ENV_SERVER_MODE={{.SERVER_MODE}} air
+
+  dev-simple:
+    desc: Run without hot reload
+    cmds:
+      - SOCKET_PORT={{.SOCKET_PORT}} ENV_MAX_FILE_SIZE={{.MAX_FILE_SIZE}} ENV_BUFFER_SIZE={{.BUFFER_SIZE}} ENV_FILE_VALIDATION_MODE={{.FILE_VALIDATION_MODE}} ENV_SERVER_MODE={{.SERVER_MODE}} go run main.go
+
+  build:
+    desc: Build the binary
+    cmds:
+      - go build -o ./bin/spotdb .
+
+  test:
+    desc: Run tests
+    cmds:
+      - go test ./... -v | grep -v '\[GIN\]'
+
+  swagger:
+    desc: Generates swagger spec
+    cmds:
+      - sh -c "command -v swag > /dev/null 2>&1 || go install github.com/swaggo/swag/cmd/swag@latest"
+      - swag init -g ./pkg/api/server.go
+      - swag fmt
+      - printf "\n" >> docs/swagger.json
+
+  lint:
+    desc: Run linter
+    cmds:
+      - golangci-lint run
+
+  docker:build:
+    desc: Build Docker image
+    deps: ["swagger"]
+    cmds:
+      - docker build -t spotdb .
+
+  docker:
+    desc: Run in Docker\
+    deps: ["docker:build"]
+    cmds:
+      - docker run --rm -p 8080:8080 -p 8081:8081 -p {{.SOCKET_PORT}}:{{.SOCKET_PORT}} -e ENV_MAX_FILE_SIZE={{.MAX_FILE_SIZE}} -e ENV_BUFFER_SIZE={{.BUFFER_SIZE}} -e ENV_FILE_VALIDATION_MODE={{.FILE_VALIDATION_MODE}} -e ENV_SERVER_MODE={{.SERVER_MODE}} spotdb
+
+  default:
+    desc: Default task (build, test, docker)
+    deps: [build, test, lint]

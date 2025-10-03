@@ -1,0 +1,38 @@
+meta {
+  name: Load a CSV file
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseURL}}/upload
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  table_name: patient_data
+  has_header: true
+  override: true
+  csv_file: FILE_PATIENT_DATA
+}
+
+script:pre-request {
+  const ENV_FILE_PATIENT_DATA = bru.getProcessEnv("PATIENT_DATA_PATH");
+  
+  const currentBody = req.getBody();
+
+  // Iterate over body and replace FILE_PATIENT_DATA with uploadPatientData
+  for (const key in currentBody) {
+    if (currentBody[key]["value"] === "FILE_PATIENT_DATA") {
+      currentBody[key]["type"] = "file"
+      currentBody[key]["value"] = [ENV_FILE_PATIENT_DATA]
+    }
+  }
+  req.setBody(currentBody);
+ 
+}
+
+settings {
+  encodeUrl: true
+}
