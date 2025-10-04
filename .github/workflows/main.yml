@@ -120,7 +120,7 @@ jobs:
         with:
           distribution: goreleaser
           version: "~> v2"
-          args: release --clean --snapshot
+          args: release --clean --snapshot --debug
         env:
           GITHUB_TOKEN: ${{ steps.app_token.outputs.token }}
           HOMEBREW_GITHUB_API_TOKEN: ${{ steps.app_token.outputs.token }}
