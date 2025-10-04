@@ -81,9 +81,9 @@ jobs:
           fi
 
   build:
-    if: false # Enable this to build the binary
+    if: true # Enable this to build the binary
     environment:
-      name: main
+      name: fix-workflow
     runs-on: ubuntu-latest
     permissions:
       contents: read
