@@ -54,5 +54,12 @@ Then, you can add the `spotdb` mcp:
 claude mcp add spotdb -s user -- npx -y mcp-remote http://localhost:8081/stream
 ```
 
+## Use Explorer UI
+Open the Explorer UI in your browser and upload files and query the data:
+
+```bash
+open http://localhost:8080/explorer
+```
+
 ## Full Documentation
 👉 [https://github.com/aliengiraffe/spotdb/blob/main/README.md](https://github.com/aliengiraffe/spotdb/blob/main/README.md)
