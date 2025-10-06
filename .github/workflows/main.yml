@@ -135,7 +135,7 @@ jobs:
         with:
           distribution: goreleaser
           version: latest
-          args: release --rm-dist --snapshot
+          args: build --single-target --snapshot
         env:
           GITHUB_TOKEN: ${{ steps.app_token.outputs.token }}
           HOMEBREW_GITHUB_API_TOKEN: ${{ steps.app_token.outputs.token }}
