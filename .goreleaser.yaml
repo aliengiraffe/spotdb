@@ -11,3 +11,17 @@ builds:
       - arm64
     ldflags:
       - -s -w
+
+homebrew_casks:
+  - name: spotdb
+    repository:
+      owner: aliengiraffe
+      name: homebrew-spaceship
+      token: "{{ .Env.HOMEBREW_GITHUB_API_TOKEN }}"
+    description: "SpotDB - A fast, lightweight data analysis tool"
+    homepage: "https://github.com/aliengiraffe/spotdb"
+    license: "MIT"
+    caveats: |
+      SpotDB is a command-line tool for data analysis.
+      Run 'spotdb -version' to verify installation.
+    binary: spotdb
