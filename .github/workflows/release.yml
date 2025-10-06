@@ -14,23 +14,7 @@ jobs:
     if: true # Enable this to build the binary
     environment:
       name: fix-workflow
-    strategy:
-      matrix:
-        include:
-          - os: ubuntu-latest
-            goos: linux
-            goarch: amd64
-          - os: ubuntu-24.04-arm
-            goos: linux
-            goarch: arm64
-          - os: macos-13
-            goos: darwin
-            goarch: amd64
-          - os: macos-latest
-            goos: darwin
-            goarch: arm64
-
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-24.04-arm
     permissions:
       contents: read
       packages: write
