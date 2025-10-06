@@ -1,6 +1,6 @@
 project_name: spotdb
 builds:
-  - env: [CGO_ENABLED=0]
+  - env: [CGO_ENABLED=1]
     goos:
       - linux
       - windows
