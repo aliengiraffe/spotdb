@@ -84,7 +84,22 @@ jobs:
     if: true # Enable this to build the binary
     environment:
       name: fix-workflow
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+            goos: linux
+            goarch: amd64
+          - os: ubuntu-24.04-arm
+            goos: linux
+            goarch: arm64
+          - os: macos-13
+            goos: darwin
+            goarch: amd64
+          - os: macos-latest
+            goos: darwin
+            goarch: arm64
+    runs-on: ${{ matrix.os }}
     permissions:
       contents: read
       packages: write
@@ -120,10 +135,16 @@ jobs:
         with:
           distribution: goreleaser
           version: latest
-          args: release --clean --snapshot
+          args: build --single-target --snapshot
         env:
           GITHUB_TOKEN: ${{ steps.app_token.outputs.token }}
           HOMEBREW_GITHUB_API_TOKEN: ${{ steps.app_token.outputs.token }}
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: spotdb-${{ matrix.goos }}-${{ matrix.goarch }}
+          path: dist/
 
   docker:
     name: build docker image
