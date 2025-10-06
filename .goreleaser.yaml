@@ -4,13 +4,12 @@ project_name: spotdb
 builds:
   - main: .
     binary: spotdb
+    env:
+      - CGO_ENABLED=1
     ldflags: -s -w -X main.version={{.Version}} -X main.commit={{.Commit}} -X main.date={{.Date}}
     goos:
-      - linux
       - darwin
-      - windows
     goarch:
-      - amd64
       - arm64
 
 homebrew_casks:
