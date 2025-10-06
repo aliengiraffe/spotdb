@@ -5,7 +5,9 @@ on:
     branches: [fix-workflow, main]
 
 permissions:
-  contents: read
+  packages: write
+  contents: write
+
 env:
   GOLANG_VERSION: 1.25.1
 
@@ -15,9 +17,6 @@ jobs:
     environment:
       name: fix-workflow
     runs-on: ubuntu-24.04-arm
-    permissions:
-      contents: read
-      packages: write
 
     steps:
       - name: Checkout repository
