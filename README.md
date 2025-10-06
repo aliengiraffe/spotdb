@@ -62,4 +62,4 @@ open http://localhost:8080/explorer
 ```
 
 ## Full Documentation
-👉 [https://github.com/aliengiraffe/spotdb/blob/main/README.md](https://github.com/aliengiraffe/spotdb/blob/main/README.md)
+👉 [https://github.com/aliengiraffe/spotdb/blob/main/DOCS.md](https://github.com/aliengiraffe/spotdb/blob/main/DOCS.md)
