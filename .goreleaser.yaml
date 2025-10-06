@@ -2,28 +2,13 @@ version: 2
 
 project_name: spotdb
 builds:
-  - id: linux-amd64
-    env: [CGO_ENABLED=1]
-    goos: [linux]
-    goarch: [amd64]
-    ldflags:
-      - -s -w
-  - id: linux-arm64
-    env: [CGO_ENABLED=1]
-    goos: [linux]
-    goarch: [arm64]
-    ldflags:
-      - -s -w
-  - id: darwin-amd64
-    env: [CGO_ENABLED=1]
-    goos: [darwin]
-    goarch: [amd64]
-    ldflags:
-      - -s -w
-  - id: darwin-arm64
-    env: [CGO_ENABLED=1]
-    goos: [darwin]
-    goarch: [arm64]
+  - env: [CGO_ENABLED=0]
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+      - arm64
     ldflags:
       - -s -w
 

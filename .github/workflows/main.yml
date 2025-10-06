@@ -92,22 +92,7 @@ jobs:
     if: true # Enable this to build the binary
     environment:
       name: fix-workflow
-    strategy:
-      matrix:
-        include:
-          - os: ubuntu-latest
-            goos: linux
-            goarch: amd64
-          - os: ubuntu-24.04-arm
-            goos: linux
-            goarch: arm64
-          - os: macos-13
-            goos: darwin
-            goarch: amd64
-          - os: macos-latest
-            goos: darwin
-            goarch: arm64
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write
@@ -124,10 +109,10 @@ jobs:
         with:
           go-version: "${{ env.GOLANG_VERSION }}"
 
-      - name: Build binary and get version
+      - name: Install cross-compilation dependencies
         run: |
-          go build -ldflags='-s' -v -o bin/spotdb .
-          echo "VERSION=$(./bin/spotdb -version)" >> $GITHUB_ENV
+          sudo apt-get update
+          sudo apt-get install -y gcc-multilib gcc-mingw-w64
 
       - name: Get token from Github App
         uses: actions/create-github-app-token@v2
@@ -143,16 +128,10 @@ jobs:
         with:
           distribution: goreleaser
           version: latest
-          args: release --single-target --clean
+          args: release --clean
         env:
           GITHUB_TOKEN: ${{ steps.app_token.outputs.token }}
           HOMEBREW_GITHUB_API_TOKEN: ${{ steps.app_token.outputs.token }}
-
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: spotdb-${{ matrix.goos }}-${{ matrix.goarch }}
-          path: dist/
 
   docker:
     name: build docker image
