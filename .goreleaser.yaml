@@ -2,7 +2,8 @@ version: 2
 
 project_name: spotdb
 builds:
-  - env: [CGO_ENABLED=0]
+  - env: 
+      - CGO_ENABLED=1
     goos:
       - linux
       - darwin
@@ -11,6 +12,17 @@ builds:
       - arm64
     ldflags:
       - -s -w
+    overrides:
+      - goos: linux
+        goarch: arm64
+        env:
+          - CGO_ENABLED=1
+          - CC=aarch64-linux-gnu-gcc
+      - goos: linux
+        goarch: amd64
+        env:
+          - CGO_ENABLED=1
+          - CC=x86_64-linux-gnu-gcc
 
 homebrew_casks:
   - name: spotdb
