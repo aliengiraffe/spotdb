@@ -143,7 +143,7 @@ jobs:
         with:
           distribution: goreleaser
           version: latest
-          args: release --clean
+          args: release --single-target --clean
         env:
           GITHUB_TOKEN: ${{ steps.app_token.outputs.token }}
           HOMEBREW_GITHUB_API_TOKEN: ${{ steps.app_token.outputs.token }}
