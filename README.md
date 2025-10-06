@@ -21,7 +21,8 @@ This project provides a lightweight, **ephemeral data sandbox** designed for lar
 1. Tap the repository and install the package:
 
 ```bash
-brew tap aliengiraffe/spaceship && brew install spotdb
+brew tap aliengiraffe/spaceship && \\
+brew install spotdb
 ```
 2. Start the server:
 
