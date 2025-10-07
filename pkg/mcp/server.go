@@ -435,11 +435,5 @@ func InitMCP(ctx context.Context, db *database.DuckDB, log *slog.Logger) *http.S
 		}
 	}()
 
-	// Monitor context in a separate goroutine
-	go func() {
-		<-ctx.Done()
-		log.Info("MCP server context cancelled")
-	}()
-
 	return mcpServer
 }
