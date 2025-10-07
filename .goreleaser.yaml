@@ -1,56 +1,30 @@
 version: 2
 
 project_name: spotdb
-
 builds:
-  - id: linux-amd64
+  - main: .
     binary: spotdb
     env:
-      - CGO_ENABLED=1
-    goos: [linux]
-    goarch: [amd64]
-    no_unique_dist_dir: true
-    dir: /home/runner/work/spotdb/spotdb/dist/spotdb_linux_amd64/
-    main: ./spotdb
-    
-  - id: linux-arm64
-    binary: spotdb  
-    env:
-      - CGO_ENABLED=1
-    goos: [linux]
-    goarch: [arm64]
-    no_unique_dist_dir: true
-    dir: /home/runner/work/spotdb/spotdb/dist/spotdb_linux_arm64/
-    main: ./spotdb
-    
-  - id: darwin-amd64
-    binary: spotdb
-    env:
-      - CGO_ENABLED=1
-    goos: [darwin]
-    goarch: [amd64]
-    no_unique_dist_dir: true
-    dir: /home/runner/work/spotdb/spotdb/dist/spotdb_darwin_amd64/
-    main: ./spotdb
-    
-  - id: darwin-arm64
-    binary: spotdb
-    env:
-      - CGO_ENABLED=1
-    goos: [darwin]
-    goarch: [arm64]
-    no_unique_dist_dir: true
-    dir: /home/runner/work/spotdb/spotdb/dist/spotdb_darwin_arm64/
-    main: ./spotdb
+      - CGO_ENABLED=0
+    ldflags: -s -w -X main.version={{.Version}} -X main.commit={{.Commit}} -X main.date={{.Date}}
+    goos:
+      - linux
+      - windows
+      - darwin
 
 archives:
-  - name_template: >-
+  - format: tar.gz
+    name_template: >-
       {{ .ProjectName }}_
       {{- title .Os }}_
       {{- if eq .Arch "amd64" }}x86_64
       {{- else if eq .Arch "386" }}i386
       {{- else }}{{ .Arch }}{{ end }}
       {{- if .Arm }}v{{ .Arm }}{{ end }}
+    # use zip for windows archives
+    format_overrides:
+      - goos: windows
+        format: zip
 
 homebrew_casks:
   - name: spotdb

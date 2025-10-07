@@ -12,55 +12,12 @@ env:
   GOLANG_VERSION: 1.25.1
 
 jobs:
-  build:
-    strategy:
-      matrix:
-        include:
-          - os: ubuntu-latest
-            goos: linux
-            goarch: amd64
-          - os: ubuntu-24.04-arm  
-            goos: linux
-            goarch: arm64
-          - os: macos-13
-            goos: darwin
-            goarch: amd64
-          - os: macos-latest
-            goos: darwin
-            goarch: arm64
-    runs-on: ${{ matrix.os }}
-    
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v5
-        with:
-          fetch-depth: 0
-
-      - name: Setup Go
-        uses: actions/setup-go@v6
-        with:
-          go-version: "${{ env.GOLANG_VERSION }}"
-
-      - name: Build for target platform
-        env:
-          CGO_ENABLED: 1
-          GOOS: ${{ matrix.goos }}
-          GOARCH: ${{ matrix.goarch }}
-        run: |
-          go build -ldflags="-s -w" -o spotdb-${{ matrix.goos }}-${{ matrix.goarch }}${{ matrix.goos == 'windows' && '.exe' || '' }} .
-
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: spotdb-${{ matrix.goos }}-${{ matrix.goarch }}
-          path: spotdb-${{ matrix.goos }}-${{ matrix.goarch }}${{ matrix.goos == 'windows' && '.exe' || '' }}
-
   release:
     if: true # Enable this to build the binary
     environment:
       name: fix-workflow
-    needs: build
-    runs-on: ubuntu-latest
+
+    runs-on: ubuntu-24.04-arm
 
     steps:
       - name: Checkout repository
@@ -72,34 +29,6 @@ jobs:
         uses: actions/setup-go@v6
         with:
           go-version: "${{ env.GOLANG_VERSION }}"
-
-      - name: Download all artifacts
-        uses: actions/download-artifact@v4
-        with:
-          path: dist/
-
-      - name: Organize artifacts for GoReleaser
-        run: |
-          ls -la dist/
-          # Create the expected directory structure
-          mkdir -p dist/spotdb_linux_amd64
-          mkdir -p dist/spotdb_linux_arm64
-          mkdir -p dist/spotdb_darwin_amd64
-          mkdir -p dist/spotdb_darwin_arm64
-          
-          # Move binaries to expected locations
-          cp dist/spotdb-linux-amd64/spotdb-linux-amd64 dist/spotdb_linux_amd64/spotdb
-          cp dist/spotdb-linux-arm64/spotdb-linux-arm64 dist/spotdb_linux_arm64/spotdb
-          cp dist/spotdb-darwin-amd64/spotdb-darwin-amd64 dist/spotdb_darwin_amd64/spotdb
-          cp dist/spotdb-darwin-arm64/spotdb-darwin-arm64 dist/spotdb_darwin_arm64/spotdb
-          
-          # List final structure
-          find dist/ -type f -name "spotdb" -exec ls -la {} \;
-
-          # Get current directory
-          echo "Current directory: $(pwd)"
-          echo "Files in current directory:"
-          ls -la
 
       - name: Get token from Github App
         uses: actions/create-github-app-token@v2
