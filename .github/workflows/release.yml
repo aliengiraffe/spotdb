@@ -12,11 +12,55 @@ env:
   GOLANG_VERSION: 1.25.1
 
 jobs:
+  build:
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+            goos: linux
+            goarch: amd64
+          - os: ubuntu-24.04-arm  
+            goos: linux
+            goarch: arm64
+          - os: macos-13
+            goos: darwin
+            goarch: amd64
+          - os: macos-latest
+            goos: darwin
+            goarch: arm64
+    runs-on: ${{ matrix.os }}
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Setup Go
+        uses: actions/setup-go@v6
+        with:
+          go-version: "${{ env.GOLANG_VERSION }}"
+
+      - name: Build for target platform
+        env:
+          CGO_ENABLED: 1
+          GOOS: ${{ matrix.goos }}
+          GOARCH: ${{ matrix.goarch }}
+        run: |
+          go build -ldflags="-s -w" -o spotdb-${{ matrix.goos }}-${{ matrix.goarch }}${{ matrix.goos == 'windows' && '.exe' || '' }} .
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: spotdb-${{ matrix.goos }}-${{ matrix.goarch }}
+          path: spotdb-${{ matrix.goos }}-${{ matrix.goarch }}${{ matrix.goos == 'windows' && '.exe' || '' }}
+
   release:
     if: true # Enable this to build the binary
     environment:
       name: fix-workflow
-    runs-on: ubuntu-24.04-arm
+    needs: build
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
@@ -28,6 +72,11 @@ jobs:
         uses: actions/setup-go@v6
         with:
           go-version: "${{ env.GOLANG_VERSION }}"
+
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: dist/
 
       - name: Get token from Github App
         uses: actions/create-github-app-token@v2

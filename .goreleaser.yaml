@@ -2,15 +2,19 @@ version: 2
 
 project_name: spotdb
 builds:
-  - main: .
-    binary: spotdb
-    env:
-      - CGO_ENABLED=1
-    ldflags: -s -w -X main.version={{.Version}} -X main.commit={{.Commit}} -X main.date={{.Date}}
-    goos:
-      - linux
-    goarch:
-      - arm64
+  - skip: true
+
+archives:
+  - id: default
+    builds_info:
+      group: root
+      owner: root
+    files:
+      - dist/**/*
+    format: tar.gz
+    format_overrides:
+      - goos: windows
+        format: zip
 
 homebrew_casks:
   - name: spotdb
