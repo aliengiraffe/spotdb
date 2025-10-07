@@ -78,6 +78,24 @@ jobs:
         with:
           path: dist/
 
+      - name: Organize artifacts for GoReleaser
+        run: |
+          ls -la dist/
+          # Create the expected directory structure
+          mkdir -p dist/spotdb_linux_amd64
+          mkdir -p dist/spotdb_linux_arm64
+          mkdir -p dist/spotdb_darwin_amd64
+          mkdir -p dist/spotdb_darwin_arm64
+          
+          # Move binaries to expected locations
+          cp dist/spotdb-linux-amd64/spotdb-linux-amd64 dist/spotdb_linux_amd64/spotdb
+          cp dist/spotdb-linux-arm64/spotdb-linux-arm64 dist/spotdb_linux_arm64/spotdb
+          cp dist/spotdb-darwin-amd64/spotdb-darwin-amd64 dist/spotdb_darwin_amd64/spotdb
+          cp dist/spotdb-darwin-arm64/spotdb-darwin-arm64 dist/spotdb_darwin_arm64/spotdb
+          
+          # List final structure
+          find dist/ -type f -name "spotdb" -exec ls -la {} \;
+
       - name: Get token from Github App
         uses: actions/create-github-app-token@v2
         id: app_token

@@ -1,20 +1,56 @@
 version: 2
 
 project_name: spotdb
+
 builds:
-  - skip: true
+  - id: linux-amd64
+    binary: spotdb
+    env:
+      - CGO_ENABLED=1
+    goos: [linux]
+    goarch: [amd64]
+    no_unique_dist_dir: true
+    dir: dist/spotdb_linux_amd64/
+    main: ./spotdb
+    
+  - id: linux-arm64
+    binary: spotdb  
+    env:
+      - CGO_ENABLED=1
+    goos: [linux]
+    goarch: [arm64]
+    no_unique_dist_dir: true
+    dir: dist/spotdb_linux_arm64/
+    main: ./spotdb
+    
+  - id: darwin-amd64
+    binary: spotdb
+    env:
+      - CGO_ENABLED=1
+    goos: [darwin]
+    goarch: [amd64]
+    no_unique_dist_dir: true
+    dir: dist/spotdb_darwin_amd64/
+    main: ./spotdb
+    
+  - id: darwin-arm64
+    binary: spotdb
+    env:
+      - CGO_ENABLED=1
+    goos: [darwin]
+    goarch: [arm64]
+    no_unique_dist_dir: true
+    dir: dist/spotdb_darwin_arm64/
+    main: ./spotdb
 
 archives:
-  - id: default
-    builds_info:
-      group: root
-      owner: root
-    files:
-      - dist/**/*
-    format: tar.gz
-    format_overrides:
-      - goos: windows
-        format: zip
+  - name_template: >-
+      {{ .ProjectName }}_
+      {{- title .Os }}_
+      {{- if eq .Arch "amd64" }}x86_64
+      {{- else if eq .Arch "386" }}i386
+      {{- else }}{{ .Arch }}{{ end }}
+      {{- if .Arm }}v{{ .Arm }}{{ end }}
 
 homebrew_casks:
   - name: spotdb
