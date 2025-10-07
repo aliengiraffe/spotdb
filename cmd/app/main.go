@@ -18,6 +18,7 @@ import (
 var (
 	db         *database.DuckDB
 	httpServer *http.Server
+	mcpServer  *http.Server
 	sockServer *socket.Server
 	wg         sync.WaitGroup
 	ctx        context.Context
@@ -39,14 +40,10 @@ func Run(log *slog.Logger) error {
 	log.Info("Database initialized successfully")
 
 	// Start HTTP server for CSV uploads with API key middleware if needed
-	httpServer := api.NewServer(db, log)
+	httpServer = api.NewServer(db, log)
 
-	// Start MCP server
-	wg.Add(1)
-	go func() {
-		defer wg.Done()
-		mcp.InitMCP(db, log)
-	}()
+	// Initialize and start MCP server
+	mcpServer = mcp.InitMCP(ctx, db, log)
 
 	// Start HTTP server
 	wg.Add(1)
@@ -104,6 +101,13 @@ func Shutdown(log *slog.Logger) {
 	if httpServer != nil {
 		if err := httpServer.Shutdown(shutdownCtx); err != nil {
 			log.Error("HTTP server shutdown error", slog.Any("error", err))
+		}
+	}
+
+	// Shutdown MCP server
+	if mcpServer != nil {
+		if err := mcpServer.Shutdown(shutdownCtx); err != nil {
+			log.Error("MCP server shutdown error", slog.Any("error", err))
 		}
 	}
 

@@ -285,7 +285,8 @@ func (s *A10eServer) SynthesizeMemo() string {
 // It sets up a health check endpoint, conditionally applies API key authentication based on the environment, and uses the provided DuckDB
 // connection for executing SQL queries throughout the server's operations. The function also starts a goroutine to run the SSE server
 // and configures handlers for operational tools such as query execution and datasource management.
-func InitMCP(db *database.DuckDB, log *slog.Logger) {
+// Returns the HTTP server for graceful shutdown.
+func InitMCP(ctx context.Context, db *database.DuckDB, log *slog.Logger) *http.Server {
 	// Create A10e server instance
 	log.Info("Initializing A10e MCP Server", slog.String("version", "1.0"))
 	a10e := NewA10eServer(db, log)
@@ -420,9 +421,25 @@ func InitMCP(db *database.DuckDB, log *slog.Logger) {
 		server.WithEndpointPath("/stream"),
 	)
 
-	log.Info("Starting HTTP server", slog.String("port", "8081"))
-	err := http.ListenAndServe(":8081", a10e.routes(sseServer, streamableServer, log))
-	if err != nil && err != http.ErrServerClosed {
-		log.Error("WebSocket server error", slog.Any("error", err))
+	// Create HTTP server
+	mcpServer := &http.Server{
+		Addr:    ":8081",
+		Handler: a10e.routes(sseServer, streamableServer, log),
 	}
+
+	// Start server in goroutine
+	go func() {
+		log.Info("Starting MCP HTTP server", slog.String("port", "8081"))
+		if err := mcpServer.ListenAndServe(); err != nil && err != http.ErrServerClosed {
+			log.Error("MCP server error", slog.Any("error", err))
+		}
+	}()
+
+	// Monitor context in a separate goroutine
+	go func() {
+		<-ctx.Done()
+		log.Info("MCP server context cancelled")
+	}()
+
+	return mcpServer
 }
