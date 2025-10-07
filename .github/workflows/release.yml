@@ -40,15 +40,6 @@ jobs:
           go clean -modcache
           go mod download
           go mod tidy
-          
-      - name: Test build locally first
-        env:
-          CGO_ENABLED: 1
-        run: |
-          echo "Testing build with DuckDB..."
-          export CGO_CFLAGS="-I$(brew --prefix duckdb)/include"
-          export CGO_LDFLAGS="-L$(brew --prefix duckdb)/lib"
-          go build -v .
 
       - name: Get token from Github App
         uses: actions/create-github-app-token@v2
@@ -68,4 +59,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           HOMEBREW_GITHUB_API_TOKEN: ${{ steps.app_token.outputs.token }}
-          CGO_ENABLED: 1
