@@ -96,6 +96,11 @@ jobs:
           # List final structure
           find dist/ -type f -name "spotdb" -exec ls -la {} \;
 
+          # Get current directory
+          echo "Current directory: $(pwd)"
+          echo "Files in current directory:"
+          ls -la
+
       - name: Get token from Github App
         uses: actions/create-github-app-token@v2
         id: app_token
