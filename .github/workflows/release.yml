@@ -30,6 +30,26 @@ jobs:
         with:
           go-version: "${{ env.GOLANG_VERSION }}"
 
+      - name: Install DuckDB dependencies
+        run: |
+          brew install duckdb
+          echo "DUCKDB_PREFIX=$(brew --prefix duckdb)" >> $GITHUB_ENV
+          
+      - name: Clean and download dependencies
+        run: |
+          go clean -modcache
+          go mod download
+          go mod tidy
+          
+      - name: Test build locally first
+        env:
+          CGO_ENABLED: 1
+        run: |
+          echo "Testing build with DuckDB..."
+          export CGO_CFLAGS="-I$(brew --prefix duckdb)/include"
+          export CGO_LDFLAGS="-L$(brew --prefix duckdb)/lib"
+          go build -v .
+
       - name: Get token from Github App
         uses: actions/create-github-app-token@v2
         id: app_token
@@ -48,3 +68,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           HOMEBREW_GITHUB_API_TOKEN: ${{ steps.app_token.outputs.token }}
+          CGO_ENABLED: 1
