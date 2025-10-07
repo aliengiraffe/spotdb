@@ -17,7 +17,7 @@ jobs:
     environment:
       name: fix-workflow
 
-    runs-on: darwin-latest
+    runs-on: macos-latest
 
     steps:
       - name: Checkout repository
