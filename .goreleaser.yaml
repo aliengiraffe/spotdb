@@ -10,7 +10,7 @@ builds:
     goos: [linux]
     goarch: [amd64]
     no_unique_dist_dir: true
-    dir: dist/spotdb_linux_amd64/
+    dir: /home/runner/work/spotdb/spotdb/dist/spotdb_linux_amd64/
     main: ./spotdb
     
   - id: linux-arm64
@@ -20,7 +20,7 @@ builds:
     goos: [linux]
     goarch: [arm64]
     no_unique_dist_dir: true
-    dir: dist/spotdb_linux_arm64/
+    dir: /home/runner/work/spotdb/spotdb/dist/spotdb_linux_arm64/
     main: ./spotdb
     
   - id: darwin-amd64
@@ -30,7 +30,7 @@ builds:
     goos: [darwin]
     goarch: [amd64]
     no_unique_dist_dir: true
-    dir: dist/spotdb_darwin_amd64/
+    dir: /home/runner/work/spotdb/spotdb/dist/spotdb_darwin_amd64/
     main: ./spotdb
     
   - id: darwin-arm64
@@ -40,7 +40,7 @@ builds:
     goos: [darwin]
     goarch: [arm64]
     no_unique_dist_dir: true
-    dir: dist/spotdb_darwin_arm64/
+    dir: /home/runner/work/spotdb/spotdb/dist/spotdb_darwin_arm64/
     main: ./spotdb
 
 archives:
