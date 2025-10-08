@@ -1,0 +1,60 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  packages: write
+  contents: write
+
+env:
+  GOLANG_VERSION: 1.25.1
+
+jobs:
+  release:
+    if: true #Enable this to build the binary
+    environment:
+      name: main
+    runs-on: macos-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Setup Go
+        uses: actions/setup-go@v6
+        with:
+          go-version: "${{ env.GOLANG_VERSION }}"
+
+      - name: Install DuckDB dependencies
+        run: |
+          brew install duckdb
+          echo "DUCKDB_PREFIX=$(brew --prefix duckdb)" >> $GITHUB_ENV
+          
+      - name: Clean and download dependencies
+        run: |
+          go clean -modcache
+          go mod download
+          go mod tidy
+
+      - name: Get token from Github App
+        uses: actions/create-github-app-token@v2
+        id: app_token
+        with:
+          app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY}}
+          owner: ${{ github.repository_owner }}
+          repositories: homebrew-spaceship
+
+      - name: Run GoReleaser
+        uses: goreleaser/goreleaser-action@a08664b80c0ab417b1babcbf750274aed2018fef
+        with:
+          distribution: goreleaser
+          version: latest
+          args: release --clean
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HOMEBREW_GITHUB_API_TOKEN: ${{ steps.app_token.outputs.token }}
