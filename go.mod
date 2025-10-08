@@ -13,7 +13,7 @@ require (
 	github.com/go-playground/validator/v10 v10.28.0
 	github.com/google/uuid v1.6.0
 	github.com/gorilla/websocket v1.5.3
-	github.com/marcboeker/go-duckdb/v2 v2.4.1
+	github.com/marcboeker/go-duckdb/v2 v2.4.2
 	github.com/mark3labs/mcp-go v0.41.1
 	github.com/matoous/go-nanoid/v2 v2.1.0
 	github.com/spf13/cobra v1.10.1
@@ -52,12 +52,12 @@ require (
 	github.com/cloudwego/base64x v0.1.6 // indirect
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
 	github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f // indirect
-	github.com/duckdb/duckdb-go-bindings v0.1.20 // indirect
-	github.com/duckdb/duckdb-go-bindings/darwin-amd64 v0.1.20 // indirect
-	github.com/duckdb/duckdb-go-bindings/darwin-arm64 v0.1.20 // indirect
-	github.com/duckdb/duckdb-go-bindings/linux-amd64 v0.1.20 // indirect
-	github.com/duckdb/duckdb-go-bindings/linux-arm64 v0.1.20 // indirect
-	github.com/duckdb/duckdb-go-bindings/windows-amd64 v0.1.20 // indirect
+	github.com/duckdb/duckdb-go-bindings v0.1.21 // indirect
+	github.com/duckdb/duckdb-go-bindings/darwin-amd64 v0.1.21 // indirect
+	github.com/duckdb/duckdb-go-bindings/darwin-arm64 v0.1.21 // indirect
+	github.com/duckdb/duckdb-go-bindings/linux-amd64 v0.1.21 // indirect
+	github.com/duckdb/duckdb-go-bindings/linux-arm64 v0.1.21 // indirect
+	github.com/duckdb/duckdb-go-bindings/windows-amd64 v0.1.21 // indirect
 	github.com/gin-contrib/sse v1.1.0 // indirect
 	github.com/go-openapi/jsonpointer v0.21.1 // indirect
 	github.com/go-openapi/jsonreference v0.21.0 // indirect
@@ -77,8 +77,8 @@ require (
 	github.com/klauspost/cpuid/v2 v2.3.0 // indirect
 	github.com/leodido/go-urn v1.4.0 // indirect
 	github.com/mailru/easyjson v0.9.0 // indirect
-	github.com/marcboeker/go-duckdb/arrowmapping v0.0.20 // indirect
-	github.com/marcboeker/go-duckdb/mapping v0.0.20 // indirect
+	github.com/marcboeker/go-duckdb/arrowmapping v0.0.21 // indirect
+	github.com/marcboeker/go-duckdb/mapping v0.0.21 // indirect
 	github.com/mattn/go-isatty v0.0.20 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
