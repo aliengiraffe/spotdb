@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 env:
-  GOLANG_VERSION: 1.25.1
+  GOLANG_VERSION: 1.25.2
   MCP_PUBLISHER_VERSION: 1.2.3
 
 jobs:
