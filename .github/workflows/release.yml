@@ -2,7 +2,8 @@ name: Release
 
 on:
   push:
-    branches: [fix-workflow, main]
+    tags:
+      - "v*"
 
 permissions:
   packages: write
@@ -13,12 +14,10 @@ env:
 
 jobs:
   release:
-    if: true # Enable this to build the binary
+    if: true #Enable this to build the binary
     environment:
-      name: fix-workflow
-
+      name: main
     runs-on: macos-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
