@@ -1,0 +1,30 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "ai.aliengiraffe/spotdb",
+  "description": "Ephemeral data sandbox for AI workflows with guardrails and security",
+  "repository": {
+    "url": "https://github.com/aliengiraffe/spotdb",
+    "source": "github"
+  },
+  "version": "v1.3.0",
+  "packages": [
+    {
+      "registryType": "oci",
+      "registryBaseUrl": "https://docker.io",
+      "identifier": "aliengiraffe/spotdb",
+      "version": "v1.3.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "description": "Optional API key for request authentication",
+          "isRequired": false,
+          "format": "string",
+          "isSecret": true,
+          "name": "X-API-Key"
+        }
+      ]
+    }
+  ]
+}
