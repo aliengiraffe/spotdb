@@ -15,7 +15,6 @@ This project provides a lightweight, **ephemeral data sandbox** designed for lar
 - 🚂 **Guardrails**: Enforce rules and constraints to ensure data safety and privacy.
 - 🛡️ **Security**: Protect data from unauthorized access and modification.
 
-
 ## Quick Start
 
 1. Tap the repository and install the package:
@@ -24,6 +23,7 @@ This project provides a lightweight, **ephemeral data sandbox** designed for lar
 brew tap aliengiraffe/spaceship && \\
 brew install spotdb
 ```
+
 2. Start the server:
 
 ```bash
@@ -43,11 +43,14 @@ curl -X POST \
 4. Query the data:
 
 ```bash
-curl http://localhost:8080/api/v1/query?sql=SELECT%20*%20FROM%20mytable
+curl -X POST \
+  http://localhost:8080/api/v1/query \
+  -H "Content-Type: application/json" \
+  -d '{"query": "SELECT * FROM mytable LIMIT 10"}'
 ```
 
 5. Setup Claude Code
-You must have the `claude` command installed.
+   You must have the `claude` command installed.
 
 Then, you can add the `spotdb` mcp:
 
@@ -56,6 +59,7 @@ claude mcp add spotdb -s user -- npx -y mcp-remote http://localhost:8081/stream
 ```
 
 ## Use Explorer UI
+
 Open the Explorer UI in your browser and upload files and query the data:
 
 ```bash
@@ -63,4 +67,5 @@ open http://localhost:8080/explorer
 ```
 
 ## Full Documentation
+
 👉 [https://github.com/aliengiraffe/spotdb/blob/main/DOCS.md](https://github.com/aliengiraffe/spotdb/blob/main/DOCS.md)
