@@ -94,7 +94,10 @@ curl -X POST -F "file=@data.csv" http://localhost:8080/upload
 5. Query the data:
 
 ```bash
-curl http://localhost:8080/query?sql=SELECT%20*%20FROM%20data
+curl -X POST \
+  http://localhost:8080/api/v1/query \
+  -H "Content-Type: application/json" \
+  -d '{"query": "SELECT * FROM mytable LIMIT 10"}'
 ```
 
 6. Stop the server:
@@ -331,6 +334,7 @@ http://localhost:8080/explorer
 The Explorer UI provides the following capabilities:
 
 #### 1. CSV File Upload
+
 - **Drag-and-drop interface**: Simply drag your CSV file onto the upload area or click to browse
 - **Auto-generated table names**: The UI automatically suggests table names based on your filename
 - **File validation**: Validates file size (up to 2GB) and format before upload
@@ -338,6 +342,7 @@ The Explorer UI provides the following capabilities:
 - **Real-time feedback**: Shows upload progress and displays success/error messages with detailed information
 
 #### 2. Table Management
+
 - **Live table listing**: View all available tables in your database
 - **Schema inspection**: Click on any table to expand and view its complete schema, including:
   - Column names
@@ -347,6 +352,7 @@ The Explorer UI provides the following capabilities:
 - **Responsive design**: Works seamlessly on desktop and mobile devices
 
 #### 3. SQL Query Editor
+
 - **Interactive query box**: Write and execute SQL queries directly in the browser
 - **Keyboard shortcuts**: Use `Cmd+Enter` (Mac) or `Ctrl+Enter` (Windows/Linux) to execute queries
 - **One-click query generation**: Click the "Query" button next to any table to auto-populate a sample SELECT query
@@ -354,6 +360,7 @@ The Explorer UI provides the following capabilities:
 - **Performance metrics**: Shows row count and query execution time
 
 #### 4. User Experience
+
 - **Auto-complete**: Table names are automatically populated from uploaded filenames
 - **Error handling**: Clear error messages with suggestions for resolution
 - **Loading indicators**: Visual feedback during uploads and queries
@@ -370,6 +377,7 @@ The Explorer UI provides the following capabilities:
 7. Press `Cmd+Enter` to execute the query and view results
 
 The Explorer UI is particularly useful for:
+
 - Quick data exploration without writing API calls
 - Validating CSV imports before integrating with AI workflows
 - Prototyping SQL queries before using them in production
