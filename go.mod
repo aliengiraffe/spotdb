@@ -13,7 +13,7 @@ require (
 	github.com/go-playground/validator/v10 v10.28.0
 	github.com/google/uuid v1.6.0
 	github.com/gorilla/websocket v1.5.3
-	github.com/marcboeker/go-duckdb/v2 v2.4.2
+	github.com/marcboeker/go-duckdb/v2 v2.4.3
 	github.com/mark3labs/mcp-go v0.41.1
 	github.com/matoous/go-nanoid/v2 v2.1.0
 	github.com/spf13/cobra v1.10.1
