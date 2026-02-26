@@ -32,7 +32,7 @@ jobs:
         run: go test -coverprofile=test_results/coverage.out -json ./... > test_results/test-report.json
 
       - name: Upload test results
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: test-artifact
           path: test_results/
@@ -45,7 +45,7 @@ jobs:
       - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - uses: actions/download-artifact@v5
+      - uses: actions/download-artifact@v8
         with:
           name: test-artifact
           path: test_results/
