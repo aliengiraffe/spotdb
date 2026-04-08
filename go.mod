@@ -16,7 +16,7 @@ require (
 	github.com/marcboeker/go-duckdb/v2 v2.4.2
 	github.com/mark3labs/mcp-go v0.41.1
 	github.com/matoous/go-nanoid/v2 v2.1.0
-	github.com/spf13/cobra v1.10.1
+	github.com/spf13/cobra v1.10.2
 	github.com/stretchr/testify v1.11.1
 	github.com/swaggo/swag v1.16.6
 	github.com/thessem/zap-prettyconsole v0.5.2
