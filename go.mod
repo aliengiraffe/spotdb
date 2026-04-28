@@ -21,7 +21,7 @@ require (
 	github.com/swaggo/swag v1.16.6
 	github.com/thessem/zap-prettyconsole v0.5.2
 	github.com/wlynxg/chardet v1.0.4
-	go.uber.org/zap v1.27.0
+	go.uber.org/zap v1.28.0
 	go.uber.org/zap/exp v0.3.0
 )
 
