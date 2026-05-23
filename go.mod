@@ -20,7 +20,7 @@ require (
 	github.com/stretchr/testify v1.11.1
 	github.com/swaggo/swag v1.16.6
 	github.com/thessem/zap-prettyconsole v0.5.2
-	github.com/wlynxg/chardet v1.0.4
+	github.com/wlynxg/chardet v1.0.5
 	go.uber.org/zap v1.27.0
 	go.uber.org/zap/exp v0.3.0
 )
